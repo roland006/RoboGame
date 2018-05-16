@@ -73,11 +73,11 @@
                     </properties>
                     <instance-variables>
                         <idmob>0</idmob>
-                        <Head>1</Head>
-                        <Body>1</Body>
+                        <Head>2</Head>
+                        <Body>2</Body>
                         <GunR>2</GunR>
                         <GunL>2</GunL>
-                        <Leg>1</Leg>
+                        <Leg>2</Leg>
                         <SprDirection></SprDirection>
                         <iUid>5</iUid>
                     </instance-variables>
@@ -1413,11 +1413,11 @@
                         <x>150</x>
                         <y>393</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>17</width>
+                        <height>38</height>
                         <depth>0</depth>
-                        <hotspotX>0.484375</hotspotX>
-                        <hotspotY>0.4375</hotspotY>
+                        <hotspotX>0.470588237</hotspotX>
+                        <hotspotY>-0.210526317</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1904,11 +1904,11 @@
                     </properties>
                     <instance-variables>
                         <idmob>0</idmob>
-                        <Head>2</Head>
-                        <Body>3</Body>
+                        <Head>1</Head>
+                        <Body>1</Body>
                         <GunR>1</GunR>
-                        <GunL>3</GunL>
-                        <Leg>3</Leg>
+                        <GunL>1</GunL>
+                        <Leg>1</Leg>
                         <SprDirection></SprDirection>
                         <iUid>5</iUid>
                     </instance-variables>

@@ -35,6 +35,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Slider/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
         <folder expanded="1" path="animation-folder/spr_Leg/" />
+        <folder expanded="1" path="animation-folder/spr_Leg/Leg1/" />
+        <folder expanded="1" path="animation-folder/spr_Leg/Leg2/" />
+        <folder expanded="1" path="animation-folder/spr_Leg/Leg3/" />
         <folder expanded="1" path="animation-folder/spr_Body/" />
         <folder expanded="1" path="animation-folder/spr_Body/Body1/" />
         <folder expanded="1" path="animation-folder/spr_Body/Body2/" />
