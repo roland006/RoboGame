@@ -27,6 +27,7 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -253,10 +254,10 @@
                         <frame duration="1" hotspotX="0.470588" hotspotY="-0.210526" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg1Right" pingpong="0" repeatcount="1" repeatto="0" sid="513385571239538" speed="5">
-                        <frame duration="1" hotspotX="0.484375" hotspotY="0.4375" />
+                        <frame duration="1" hotspotX="0.470588" hotspotY="0.447368" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg1Left" pingpong="0" repeatcount="1" repeatto="0" sid="934927414696682" speed="5">
-                        <frame duration="1" hotspotX="0.515625" hotspotY="0.4375">
+                        <frame duration="1" hotspotX="0.529412" hotspotY="0.447368">
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -266,7 +267,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Leg1Up" pingpong="0" repeatcount="1" repeatto="0" sid="886728859160794" speed="5">
-                        <frame duration="1" hotspotX="0.484375" hotspotY="0.4375" />
+                        <frame duration="1" hotspotX="0.470588" hotspotY="0.447368" />
                     </animation>
                 </animation-folder>
                 <animation-folder name="Leg2" />
@@ -304,8 +305,8 @@
                     <animation framecount="1" loop="0" name="Body1Down" pingpong="0" repeatcount="1" repeatto="0" sid="947713786914343" speed="5">
                         <frame duration="1" hotspotX="0.48" hotspotY="0.421053">
                             <image-point name="Head" x="0.48" y="0.0526316" />
-                            <image-point name="GunL" x="0.88" y="0.157895" />
-                            <image-point name="GunR" x="0.08" y="0.157895" />
+                            <image-point name="GunL" x="0.88" y="0.842105" />
+                            <image-point name="GunR" x="0.08" y="0.842105" />
                             <image-point name="Leg" x="0.48" y="1.05263" />
                         </frame>
                     </animation>
@@ -523,7 +524,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Gun1Down" pingpong="0" repeatcount="1" repeatto="0" sid="191136393872598" speed="5">
-                        <frame duration="1" hotspotX="0.48" hotspotY="0.25" />
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Gun1Left" pingpong="0" repeatcount="1" repeatto="0" sid="136026507115646" speed="5">
                         <frame duration="1" hotspotX="0.703125" hotspotY="0.4375">
@@ -653,7 +654,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Gun1Down" pingpong="0" repeatcount="1" repeatto="0" sid="830994864921239" speed="5">
-                        <frame duration="1" hotspotX="0.453125" hotspotY="0.25" />
+                        <frame duration="1" hotspotX="0.333333" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Gun1Left" pingpong="0" repeatcount="1" repeatto="0" sid="918566650924660" speed="5">
                         <frame duration="1" hotspotX="0.75" hotspotY="0.46875">
@@ -892,6 +893,19 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="314802480229263" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wall" sid="266179792841035">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="288442344641236">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="985975870823096" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
