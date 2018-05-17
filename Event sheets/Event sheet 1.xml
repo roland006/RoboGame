@@ -973,6 +973,68 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="939742269405955" title="Enemy AI" />
+        <event-group description="" sid="939742269405955" title="Enemy AI">
+            <sub-events>
+                <event-block sid="138282142429842">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="775652683335255" type="Enemy">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                        <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="314532854274120" type="Enemy">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="943249315918986" type="Enemy">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="162192448874770" type="Enemy">
+                            <param id="0" name="X">Sprite.X</param>
+                            <param id="1" name="Y">Sprite.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="973374773761210">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="410188825608946" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="673097401804830" type="Enemy">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="895787987605335">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="598365590108608" type="Enemy" />
+                <condition id="-6" name="Every X seconds" sid="244732029857642" type="System">
+                    <param id="0" name="Interval (seconds)">0.3</param>
+                </condition>
+                <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="197223602963918" type="Enemy">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="293821244452503" type="Enemy" />
+            </actions>
+        </event-block>
+        <event-block sid="910890822506127">
+            <conditions>
+                <condition behavior="Range" id="0" name="Has LOS to object" sid="465385189246959" type="Enemy">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="7" name="Set max speed" sid="937624566021227" type="Enemy">
+                    <param id="0" name="Speed">0.001</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="515290168316958" type="Enemy">
+                    <param id="0" name="X">Sprite.X</param>
+                    <param id="1" name="Y">Sprite.Y</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

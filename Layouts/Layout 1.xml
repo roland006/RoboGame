@@ -73,11 +73,11 @@
                     </properties>
                     <instance-variables>
                         <idmob>0</idmob>
-                        <Head>2</Head>
-                        <Body>2</Body>
-                        <GunR>2</GunR>
-                        <GunL>2</GunL>
-                        <Leg>2</Leg>
+                        <Head>3</Head>
+                        <Body>3</Body>
+                        <GunR>1</GunR>
+                        <GunL>1</GunL>
+                        <Leg>3</Leg>
                         <SprDirection></SprDirection>
                         <iUid>5</iUid>
                     </instance-variables>
@@ -100,11 +100,65 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>733</x>
-                        <y>256</y>
+                        <x>336.681549072</x>
+                        <y>365.880004883</y>
                         <z>0</z>
                         <width>19.830408096</width>
                         <height>19.230194092</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy" uid="64">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>300</range>
+                                <cone-of-view>110</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Range">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>100</range>
+                                <cone-of-view>180</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>-1</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>200</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>360</rotate-speed>
+                                <rotate-object>Yes</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>319.786773682</x>
+                        <y>207.061157227</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1905,9 +1959,9 @@
                     <instance-variables>
                         <idmob>0</idmob>
                         <Head>1</Head>
-                        <Body>1</Body>
-                        <GunR>1</GunR>
-                        <GunL>1</GunL>
+                        <Body>2</Body>
+                        <GunR>3</GunR>
+                        <GunL>2</GunL>
                         <Leg>1</Leg>
                         <SprDirection></SprDirection>
                         <iUid>5</iUid>
@@ -1943,28 +1997,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy" uid="64">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>548</x>
-                        <y>208</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Wall" uid="68">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1982,8 +2014,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>410</x>
-                        <y>170</y>
+                        <x>915.25958252</x>
+                        <y>410.421844482</y>
                         <z>0</z>
                         <width>55</width>
                         <height>190</height>
@@ -2011,8 +2043,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>502</x>
-                        <y>294</y>
+                        <x>747.113891602</x>
+                        <y>512.820373535</y>
                         <z>0</z>
                         <width>241</width>
                         <height>58</height>
