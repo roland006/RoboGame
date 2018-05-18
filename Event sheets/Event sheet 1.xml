@@ -275,30 +275,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="611896294404166">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="875867336283164" type="System" />
-                <condition id="-7" name="Compare instance variable" sid="548039598119008" type="spr_gunl">
-                    <param id="0" name="Instance variable">idmob</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">Sprite2.idmob</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="576516903518444" type="spr_gunl">
-                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunR,1)</param>
-                    <param id="1" name="From">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="966631973145809" type="spr_gunl">
-                    <param id="0" name="Instance variable">Damage</param>
-                    <param id="1" name="Value">arr_gun_l.At(Sprite2.GunR,2)</param>
-                </action>
-                <action disabled="1" id="-9" name="Set value" sid="244682676692536" type="System">
-                    <param id="0" name="Variable">local</param>
-                    <param id="1" name="Value">arr_gun_l.At(Sprite2.GunR,1)+&quot;Left&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="979220650491454" title="RobotPath">
             <sub-events>
                 <event-block sid="142727849019068">
@@ -434,6 +410,17 @@
                                     <param id="0" name="Pin to">Sprite2</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
+                                <action id="-3" name="Set position" sid="809678982251240" type="BodyTurn">
+                                    <param id="0" name="X">Sprite2.X</param>
+                                    <param id="1" name="Y">Sprite2.Y</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="251846500652519" type="BodyTurn">
+                                    <param id="0" name="Pin to">Sprite2</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="384883196194508" type="spr_Head">
+                                    <param id="0" name="Layer">6</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -441,77 +428,103 @@
                 <event-group description="" sid="918359296332619" title="Right direction">
                     <sub-events>
                         <variable constant="0" name="Position" sid="329153046384242" static="0" type="text"></variable>
-                        <event-block sid="906938095151352">
+                        <event-block sid="472295391132769">
                             <conditions>
-                                <condition id="-13" name="Is between angles" sid="233352104186981" type="Sprite2">
+                                <condition id="-13" name="Is between angles" sid="106059821949560" type="Sprite2">
                                     <param id="0" name="First angle">316</param>
                                     <param id="1" name="Second angle">45</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="413846272966916" type="Sprite2">
+                                <action id="-10" name="Set value" sid="698971650743041" type="Sprite2">
                                     <param id="0" name="Instance variable">SprDirection</param>
                                     <param id="1" name="Value">&quot;Right&quot;</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="380228992444977" type="spr_Body">
-                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="953727063198952" type="spr_Body">
-                                    <param id="0" name="Object">Sprite2</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="918908117267036" type="spr_Body">
-                                    <param id="0" name="Pin to">Sprite2</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="882387006171031" type="spr_gunl">
-                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="175818220924694" type="spr_gunl">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="349135723105722" type="spr_gunl">
-                                    <param id="0" name="Pin to">spr_Body</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="953068946283715" type="spr_gunr">
-                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="749956403066240" type="spr_gunr">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">3</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="377946447254786" type="spr_gunr">
-                                    <param id="0" name="Pin to">spr_Body</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="888467337678056" type="spr_Head">
-                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="371968634637696" type="spr_Head">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="965773753442199" type="spr_Head">
-                                    <param id="0" name="Pin to">spr_Body</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="449349716112444" type="spr_Leg">
+                                <action id="4" name="Set animation" sid="121639888570069" type="spr_Leg">
                                     <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="890961181358894" type="spr_Leg">
+                                <action id="-4" name="Set position to another object" sid="976405498905096" type="spr_Leg">
                                     <param id="0" name="Object">spr_Body</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="833674750158451" type="spr_Leg">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="688871911709436" type="spr_Leg">
+                                    <param id="0" name="Pin to">BodyTurn</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="906938095151352">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="233352104186981" type="BodyTurn">
+                                    <param id="0" name="First angle">316</param>
+                                    <param id="1" name="Second angle">45</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="413846272966916" type="BodyTurn">
+                                    <param id="0" name="Instance variable">SprDirection</param>
+                                    <param id="1" name="Value">&quot;Right&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="542945243820206" type="spr_Body">
+                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="240657989021206" type="spr_Body">
+                                    <param id="0" name="Object">Sprite2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="796999077800662" type="spr_Body">
                                     <param id="0" name="Pin to">Sprite2</param>
                                     <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="859601073733033" type="spr_gunl">
+                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp;BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="584783593368812" type="spr_gunl">
+                                    <param id="0" name="Object">spr_Body</param>
+                                    <param id="1" name="Image point (optional)">3</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="246691646789075" type="spr_gunl">
+                                    <param id="0" name="Pin to">spr_Body</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="756319361843599" type="spr_gunr">
+                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="803152599807607" type="spr_gunr">
+                                    <param id="0" name="Object">spr_Body</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="529593877117827" type="spr_gunr">
+                                    <param id="0" name="Pin to">spr_Body</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="958098952797360" type="spr_Head">
+                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="868014138887815" type="spr_Head">
+                                    <param id="0" name="Object">spr_Body</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="213098844515316" type="spr_Head">
+                                    <param id="0" name="Pin to">spr_Body</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="598341564504606" type="spr_Body">
+                                    <param id="0" name="Layer">3</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="652754945269312" type="spr_gunl">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="271466643592770" type="spr_gunr">
+                                    <param id="0" name="Layer">5</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="863106742828127" type="spr_Leg">
+                                    <param id="0" name="Layer">4</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -531,9 +544,31 @@
                                     <param id="0" name="Instance variable">SprDirection</param>
                                     <param id="1" name="Value">&quot;Left&quot;</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="915364951879966" type="spr_Body">
-                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; Sprite2.SprDirection</param>
+                                <action id="4" name="Set animation" sid="909507413295660" type="spr_Leg">
+                                    <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="361100432527800" type="spr_Leg">
+                                    <param id="0" name="Object">spr_Body</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="580533072270602" type="spr_Leg">
+                                    <param id="0" name="Pin to">BodyTurn</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="638662395224880">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="708477492590010" type="BodyTurn">
+                                    <param id="0" name="First angle">136</param>
+                                    <param id="1" name="Second angle">225</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="251765618628658" type="BodyTurn">
+                                    <param id="0" name="Instance variable">SprDirection</param>
+                                    <param id="1" name="Value">&quot;Left&quot;</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="597169339316834" type="spr_Body">
                                     <param id="0" name="Object">Sprite2</param>
@@ -543,33 +578,21 @@
                                     <param id="0" name="Pin to">Sprite2</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="117771599117907" type="spr_gunl">
-                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="397374421317951" type="spr_gunl">
                                     <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">2</param>
+                                    <param id="1" name="Image point (optional)">3</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="103055781633025" type="spr_gunl">
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="658919446335267" type="spr_gunr">
-                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="911067465145933" type="spr_gunr">
                                     <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">3</param>
+                                    <param id="1" name="Image point (optional)">2</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="345692942059417" type="spr_gunr">
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="740068752253596" type="spr_Head">
-                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="373446342393083" type="spr_Head">
                                     <param id="0" name="Object">spr_Body</param>
@@ -579,17 +602,33 @@
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="725592551124188" type="spr_Leg">
-                                    <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
+                                <action id="4" name="Set animation" sid="443678113093076" type="spr_Body">
+                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; BodyTurn.SprDirection</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="194571393448063" type="spr_Leg">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">0</param>
+                                <action id="4" name="Set animation" sid="467556533119836" type="spr_gunl">
+                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp;BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="633955989891524" type="spr_Leg">
-                                    <param id="0" name="Pin to">Sprite2</param>
-                                    <param id="1" name="Mode">1</param>
+                                <action id="4" name="Set animation" sid="195250351858094" type="spr_gunr">
+                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="247319543292214" type="spr_Head">
+                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="892916795104806" type="spr_Body">
+                                    <param id="0" name="Layer">3</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="889412884292374" type="spr_gunl">
+                                    <param id="0" name="Layer">5</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="164161511944446" type="spr_gunr">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="129411401919238" type="spr_Leg">
+                                    <param id="0" name="Layer">4</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -609,9 +648,31 @@
                                     <param id="0" name="Instance variable">SprDirection</param>
                                     <param id="1" name="Value">&quot;Up&quot;</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="440633355565823" type="spr_Body">
-                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; Sprite2.SprDirection</param>
+                                <action id="4" name="Set animation" sid="603117777226951" type="spr_Leg">
+                                    <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="645715843234404" type="spr_Leg">
+                                    <param id="0" name="Object">spr_Body</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="170386295678530" type="spr_Leg">
+                                    <param id="0" name="Pin to">BodyTurn</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="918629745765481">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="644051734827785" type="BodyTurn">
+                                    <param id="0" name="First angle">226</param>
+                                    <param id="1" name="Second angle">315</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="809770269563251" type="BodyTurn">
+                                    <param id="0" name="Instance variable">SprDirection</param>
+                                    <param id="1" name="Value">&quot;Up&quot;</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="513473037332922" type="spr_Body">
                                     <param id="0" name="Object">Sprite2</param>
@@ -621,33 +682,21 @@
                                     <param id="0" name="Pin to">Sprite2</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="634502691342042" type="spr_gunl">
-                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="581963704536378" type="spr_gunl">
                                     <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">2</param>
+                                    <param id="1" name="Image point (optional)">3</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="371887968671520" type="spr_gunl">
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="558783810545253" type="spr_gunr">
-                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="468941340329837" type="spr_gunr">
                                     <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">3</param>
+                                    <param id="1" name="Image point (optional)">2</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="539454309406180" type="spr_gunr">
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="254463863996214" type="spr_Head">
-                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="193317478080197" type="spr_Head">
                                     <param id="0" name="Object">spr_Body</param>
@@ -657,17 +706,33 @@
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="877371136779558" type="spr_Leg">
-                                    <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
+                                <action id="4" name="Set animation" sid="881538940917425" type="spr_Body">
+                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; BodyTurn.SprDirection</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="961505122007544" type="spr_Leg">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">0</param>
+                                <action id="4" name="Set animation" sid="173173675729593" type="spr_gunl">
+                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp;BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="383837060413006" type="spr_Leg">
-                                    <param id="0" name="Pin to">Sprite2</param>
-                                    <param id="1" name="Mode">1</param>
+                                <action id="4" name="Set animation" sid="695858812351146" type="spr_gunr">
+                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="952340067334950" type="spr_Head">
+                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="939664059179090" type="spr_Body">
+                                    <param id="0" name="Layer">5</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="295564807889693" type="spr_gunl">
+                                    <param id="0" name="Layer">3</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="385353954628400" type="spr_gunr">
+                                    <param id="0" name="Layer">3</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="919066466345336" type="spr_Leg">
+                                    <param id="0" name="Layer">4</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -687,9 +752,31 @@
                                     <param id="0" name="Instance variable">SprDirection</param>
                                     <param id="1" name="Value">&quot;Down&quot;</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="557306557743647" type="spr_Body">
-                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; Sprite2.SprDirection</param>
+                                <action id="4" name="Set animation" sid="783837625037700" type="spr_Leg">
+                                    <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="365384399229682" type="spr_Leg">
+                                    <param id="0" name="Object">spr_Body</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="103004051405344" type="spr_Leg">
+                                    <param id="0" name="Pin to">BodyTurn</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="522731269996692">
+                            <conditions>
+                                <condition id="-13" name="Is between angles" sid="230760883825238" type="BodyTurn">
+                                    <param id="0" name="First angle">46</param>
+                                    <param id="1" name="Second angle">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="101776892352354" type="BodyTurn">
+                                    <param id="0" name="Instance variable">SprDirection</param>
+                                    <param id="1" name="Value">&quot;Down&quot;</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="126148065560894" type="spr_Body">
                                     <param id="0" name="Object">Sprite2</param>
@@ -699,33 +786,21 @@
                                     <param id="0" name="Pin to">Sprite2</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="557561497501921" type="spr_gunl">
-                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="258710834416139" type="spr_gunl">
                                     <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">2</param>
+                                    <param id="1" name="Image point (optional)">3</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="455291660045796" type="spr_gunl">
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="853758915763452" type="spr_gunr">
-                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="-4" name="Set position to another object" sid="448731128939781" type="spr_gunr">
                                     <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">3</param>
+                                    <param id="1" name="Image point (optional)">2</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="321852586098329" type="spr_gunr">
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="958972737269177" type="spr_Head">
-                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="538325231768154" type="spr_Head">
                                     <param id="0" name="Object">spr_Body</param>
@@ -735,17 +810,33 @@
                                     <param id="0" name="Pin to">spr_Body</param>
                                     <param id="1" name="Mode">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="680085847693506" type="spr_Leg">
-                                    <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
+                                <action id="4" name="Set animation" sid="773458726540316" type="spr_Body">
+                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; BodyTurn.SprDirection</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-4" name="Set position to another object" sid="771104303128212" type="spr_Leg">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">0</param>
+                                <action id="4" name="Set animation" sid="175591666117540" type="spr_gunl">
+                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp;BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="925596192494851" type="spr_Leg">
-                                    <param id="0" name="Pin to">Sprite2</param>
-                                    <param id="1" name="Mode">1</param>
+                                <action id="4" name="Set animation" sid="892811005060695" type="spr_gunr">
+                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="938186019320069" type="spr_Head">
+                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; BodyTurn.SprDirection</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="259367037780913" type="spr_Body">
+                                    <param id="0" name="Layer">4</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="497768229725068" type="spr_gunl">
+                                    <param id="0" name="Layer">5</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="568710827547219" type="spr_gunr">
+                                    <param id="0" name="Layer">4</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="514059745863224" type="spr_Leg">
+                                    <param id="0" name="Layer">3</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -994,6 +1085,22 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="700782394566765">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="158337274084598" type="System" />
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="142339240061113" type="Enemy">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                        <condition behavior="Range" id="0" name="Has LOS to object" sid="777513233548340" type="Enemy">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="562264760543058" type="Enemy">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="973374773761210">
                     <conditions>
                         <condition id="-22" name="Else" sid="410188825608946" type="System" />
@@ -1004,35 +1111,84 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="895787987605335">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="598365590108608" type="Enemy" />
+                        <condition id="-6" name="Every X seconds" sid="244732029857642" type="System">
+                            <param id="0" name="Interval (seconds)">0.3</param>
+                        </condition>
+                        <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="197223602963918" type="Enemy">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="293821244452503" type="Enemy" />
+                        <action behavior="Pathfinding" id="7" name="Set max speed" sid="567616341625014" type="Enemy">
+                            <param id="0" name="Speed">200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="910890822506127">
+                    <conditions>
+                        <condition behavior="Range" id="0" name="Has LOS to object" sid="465385189246959" type="Enemy">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="7" name="Set max speed" sid="937624566021227" type="Enemy">
+                            <param id="0" name="Speed">0.001</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="515290168316958" type="Enemy">
+                            <param id="0" name="X">Sprite.X</param>
+                            <param id="1" name="Y">Sprite.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="506239946771722">
+                    <conditions>
+                        <condition behavior="Range" id="0" name="Has LOS to object" sid="971014496528005" type="Enemy">
+                            <param id="0" name="Object">Sprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="7" name="Set max speed" sid="416409923086459" type="Enemy">
+                            <param id="0" name="Speed">0.001</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="759377906533540" type="Enemy">
+                            <param id="0" name="X">Sprite.X</param>
+                            <param id="1" name="Y">Sprite.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="978586655032342">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="124829537630209" type="System">
+                                    <param id="0" name="Interval (seconds)">1.0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="133872024963006" type="Enemy">
+                                    <param id="0" name="Object">spr_EnemyBullet</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="895787987605335">
+        <event-block sid="255926812542738">
             <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="598365590108608" type="Enemy" />
-                <condition id="-6" name="Every X seconds" sid="244732029857642" type="System">
-                    <param id="0" name="Interval (seconds)">0.3</param>
-                </condition>
-                <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="197223602963918" type="Enemy">
-                    <param id="0" name="Object">Sprite</param>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="493359249859367" type="BodyTurn">
+                    <param id="0" name="Object">Enemy</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="293821244452503" type="Enemy" />
-            </actions>
-        </event-block>
-        <event-block sid="910890822506127">
-            <conditions>
-                <condition behavior="Range" id="0" name="Has LOS to object" sid="465385189246959" type="Enemy">
-                    <param id="0" name="Object">Sprite</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="7" name="Set max speed" sid="937624566021227" type="Enemy">
-                    <param id="0" name="Speed">0.001</param>
-                </action>
-                <action id="-22" name="Set angle toward position" sid="515290168316958" type="Enemy">
-                    <param id="0" name="X">Sprite.X</param>
-                    <param id="1" name="Y">Sprite.Y</param>
+                <action id="-21" name="Rotate toward position" sid="725936458868035" type="BodyTurn">
+                    <param id="0" name="Degrees">90*dt</param>
+                    <param id="1" name="X">Enemy.X</param>
+                    <param id="2" name="Y">Enemy.Y</param>
                 </action>
             </actions>
         </event-block>
