@@ -28,6 +28,7 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -972,6 +973,8 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="SprDirection" sid="345896324636807" type="string" />
+                <instance-variable name="Var1" sid="318578417886493" type="boolean" />
+                <instance-variable name="Var2" sid="912335446084346" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="920638983914428">
@@ -980,8 +983,11 @@
                 <behavior-type name="LineOfSight" sid="723002513583726">
                     <behavior id="LOS" />
                 </behavior-type>
-                <behavior-type name="Turret" sid="354372660723714">
+                <behavior-type name="RightArm" sid="354372660723714">
                     <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="188890275507869">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <container>
@@ -996,7 +1002,8 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170932770749331" speed="5">
                     <frame duration="1" hotspotX="0.0333333" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="2.18333" y="0.566667" />
+                        <image-point name="Imagepoint 1" x="1.25" y="0.233333" />
+                        <image-point name="Imagepoint 2" x="1.3" y="0.9" />
                     </frame>
                 </animation>
             </animation-folder>

@@ -664,6 +664,8 @@
                     </properties>
                     <instance-variables>
                         <SprDirection></SprDirection>
+                        <Var1>false</Var1>
+                        <Var2>0</Var2>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -675,10 +677,10 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Turret">
+                        <behavior-instance type="RightArm">
                             <properties>
                                 <range>300</range>
-                                <rate-of-fire>1</rate-of-fire>
+                                <rate-of-fire>0.1</rate-of-fire>
                                 <rotate>Yes</rotate>
                                 <rotate-speed>180</rotate-speed>
                                 <target-mode>Nearest</target-mode>
@@ -688,6 +690,7 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -769,7 +772,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <HP>20</HP>
+                        <HP>20000</HP>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -807,8 +810,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>616.960266113</x>
-                        <y>-41.417541504</y>
+                        <x>889</x>
+                        <y>368</y>
                         <z>0</z>
                         <width>40.456363678</width>
                         <height>40.456363678</height>
@@ -859,7 +862,7 @@
                         <Active>false</Active>
                         <Timer>10</Timer>
                         <Level>0</Level>
-                        <EngineHP>100</EngineHP>
+                        <EngineHP>20</EngineHP>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -922,8 +925,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>684.228271484</x>
-                        <y>802</y>
+                        <x>682</x>
+                        <y>738</y>
                         <z>0</z>
                         <width>1366</width>
                         <height>54</height>

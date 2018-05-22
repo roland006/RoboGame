@@ -10,46 +10,6 @@
         <variable constant="0" name="id" sid="294452994775092" static="0" type="number">0</variable>
         <event-group description="" sid="238578034355261" title="Player">
             <sub-events>
-                <event-group description="" sid="290494262302353" title="PlayerDirection">
-                    <sub-events>
-                        <event-block disabled="1" sid="316744095594861">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="556404362137043" type="Sprite">
-                                    <param id="0" name="First angle">315</param>
-                                    <param id="1" name="Second angle">45</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                        <event-block disabled="1" sid="702178645864900">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="912783811469479" type="Sprite">
-                                    <param id="0" name="First angle">225</param>
-                                    <param id="1" name="Second angle">315</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                        <event-block disabled="1" sid="552827687249872">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="421768289124440" type="Sprite">
-                                    <param id="0" name="First angle">45</param>
-                                    <param id="1" name="Second angle">135</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                        <event-block disabled="1" sid="372975674490886">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="665199464302857" type="Sprite">
-                                    <param id="0" name="First angle">135</param>
-                                    <param id="1" name="Second angle">225</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                    </sub-events>
-                </event-group>
                 <event-block sid="552060024849190">
                     <conditions>
                         <condition id="2" name="Key is down" sid="863473348716596" type="Keyboard">
@@ -116,168 +76,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="492215930263984" title="id и массив">
-            <sub-events>
-                <event-block sid="285822222537964">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="947298577027537" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="3" name="Set at XY" sid="886036065392698" type="Array">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">0</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="137105802933674" type="Array">
-                            <param id="0" name="X">1</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">1</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="603278421205003" type="Array">
-                            <param id="0" name="X">2</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">2</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="442895529819486" type="Array">
-                            <param id="0" name="X">3</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="642609063530736">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="235892371210987" type="System" />
-                        <condition id="-11" name="For Each" sid="693876682404751" type="System">
-                            <param id="0" name="Object">Sprite2</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="332196000139325" type="Sprite2">
-                            <param id="0" name="Instance variable">idmob</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="197955678493052">
-                            <conditions>
-                                <condition id="1" name="Compare at XY" sid="403852742980621" type="Array">
-                                    <param id="0" name="X">N</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="298094056217953" type="System">
-                                    <param id="0" name="Variable">N</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="3" name="Set at XY" sid="455792131435864" type="Array">
-                                    <param id="0" name="X">N</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">Sprite2.UID</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="171309938585195" type="Array">
-                                    <param id="0" name="X">N</param>
-                                    <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">Sprite2.GunR</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="832021402315315" type="Array">
-                                    <param id="0" name="X">N</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">Sprite2.GunL</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="647516960902981" type="Array">
-                                    <param id="0" name="X">N</param>
-                                    <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">Sprite2.Head</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="924859036470007" type="Array">
-                                    <param id="0" name="X">N</param>
-                                    <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">Sprite2.Body</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="322876349427341" type="Array">
-                                    <param id="0" name="X">N</param>
-                                    <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">Sprite2.Leg</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="301859476937991" type="Sprite2">
-                                    <param id="0" name="Instance variable">idmob</param>
-                                    <param id="1" name="Value">N</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="726575292040156" type="System">
-                                    <param id="0" name="Variable">quantity</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="477114816669658" type="System">
-                                    <param id="0" name="Variable">N</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="764479556349409">
-                    <conditions>
-                        <condition id="0" name="On clicked" sid="936560984553163" type="Button" />
-                        <condition id="-14" name="Compare variable" sid="838875689299053" type="System">
-                            <param id="0" name="Variable">quantity</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="162578221050862" type="Sprite">
-                            <param id="0" name="Object">Sprite2</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="813197314217577" type="Sprite2">
-                            <param id="0" name="Instance variable">idmob</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="724017801568356" type="System">
-                            <param id="0" name="Variable">quantity</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="829131780210079">
-                            <conditions>
-                                <condition id="-12" name="Repeat" sid="724950058814763" type="System">
-                                    <param id="0" name="Count">Array.Width</param>
-                                </condition>
-                                <condition id="1" name="Compare at XY" sid="445439713653628" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-24" name="Stop loop" sid="188648284723899" type="System" />
-                                <action id="3" name="Set at XY" sid="406729222691535" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">Sprite2.UID</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="261447654691333" type="Sprite2">
-                                    <param id="0" name="Instance variable">idmob</param>
-                                    <param id="1" name="Value">loopindex</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="810995857507466">
-                            <conditions />
-                            <actions />
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-block sid="970420700061925">
             <conditions>
                 <condition id="0" name="On click" sid="323892120423618" type="Mouse">
@@ -289,20 +87,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="-9" name="Set value" sid="598628721517344" type="System">
-                    <param id="0" name="Variable">dstr</param>
-                    <param id="1" name="Value">sprite2.UID</param>
-                </action>
                 <action id="-9" name="Destroy" sid="182554564515325" type="Sprite2" />
-                <action disabled="1" id="-11" name="Subtract from" sid="200390375604969" type="System">
-                    <param id="0" name="Variable">quantity</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action disabled="1" id="3" name="Set at XY" sid="894911869894342" type="Array">
-                    <param id="0" name="X">Sprite2.idmob</param>
-                    <param id="1" name="Y">1</param>
-                    <param id="2" name="Value">0</param>
-                </action>
             </actions>
         </event-block>
         <event-group description="" sid="552739033624094" title="Json to array">
@@ -331,363 +116,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="979220650491454" title="RobotPath">
-            <sub-events>
-                <event-block sid="142727849019068">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="761861199778420" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="816837742044789" type="Sprite2">
-                            <param id="0" name="Instance variable">idmob</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="168857309488586" type="Sprite2">
-                            <param id="0" name="X">Sprite.ImagePointX(1)</param>
-                            <param id="1" name="Y">Sprite.ImagePointY(1)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="940531998947290">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="634090655474985" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="158258433878758" type="Sprite2">
-                            <param id="0" name="Instance variable">idmob</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="204084110956296" type="Sprite2">
-                            <param id="0" name="X">Sprite.ImagePointX(2)</param>
-                            <param id="1" name="Y">Sprite.ImagePointY(2)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="580963461054591">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="919235124957123" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="657803889407343" type="Sprite2">
-                            <param id="0" name="Instance variable">idmob</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="594179999036621" type="Sprite2">
-                            <param id="0" name="X">Sprite.ImagePointX(3)</param>
-                            <param id="1" name="Y">Sprite.ImagePointY(3)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="640069216851444">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="258470715303088" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="389573372228279" type="Sprite2">
-                            <param id="0" name="Instance variable">idmob</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="899153032030229" type="Sprite2">
-                            <param id="0" name="X">Sprite.ImagePointX(4)</param>
-                            <param id="1" name="Y">Sprite.ImagePointY(4)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="401090822277192">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="296717921894167" type="Sprite2" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="841428902629002" type="Sprite2" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <variable constant="0" name="local" sid="621761418210752" static="0" type="text"></variable>
-        <event-group description="" sid="734602228370030" title="RobotDirection">
-            <sub-events>
-                <event-group description="" sid="581672266593862" title="LayoutStart">
-                    <sub-events>
-                        <comment>При старте игры все мобы стоят лицом вправо. Мы присваиваем переменной &quot;Position&quot; значение Right. Затем мы задаем значение переменной &quot;local&quot; данные из Sprite2 , а именно, что экипированно. Экипировка = имени анимации без указания направления. Затем мы в переменную &quot;local&quot; добавляем переменную &quot;Position&quot;, и задаем объектам анимацию local (AnimationName+Position)</comment>
-                        <event-block sid="269984157842190">
-                            <conditions>
-                                <condition id="-2" name="On start of layout" sid="831926099929674" type="System" />
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="-4" name="Set position to another object" sid="636305939270268" type="spr_Body">
-                                    <param id="0" name="Object">Sprite2</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action disabled="1" id="-4" name="Set position to another object" sid="112511453414901" type="spr_gunl">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action disabled="1" id="-4" name="Set position to another object" sid="310035947961938" type="spr_gunr">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">3</param>
-                                </action>
-                                <action disabled="1" id="-4" name="Set position to another object" sid="749674649389232" type="spr_Head">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">1</param>
-                                </action>
-                                <action disabled="1" id="-4" name="Set position to another object" sid="655722277444617" type="spr_Leg">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="838031439287710" type="BodyTurn">
-                                    <param id="0" name="X">Sprite2.X</param>
-                                    <param id="1" name="Y">Sprite2.Y</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="251846500652519" type="BodyTurn">
-                                    <param id="0" name="Pin to">Sprite2</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="384883196194508" type="spr_Head">
-                                    <param id="0" name="Layer">6</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="404786138120621">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="530904990767439" type="System" />
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="-3" name="Set position" sid="809678982251240" type="BodyTurn">
-                                    <param id="0" name="X">Sprite2.X</param>
-                                    <param id="1" name="Y">Sprite2.Y</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="240657989021206" type="spr_Body">
-                                    <param id="0" name="Object">Sprite2</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="542945243820206" type="spr_Body">
-                                    <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; BodyTurn.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="976405498905096" type="spr_Leg">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">0</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="121639888570069" type="spr_Leg">
-                                    <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="584783593368812" type="spr_gunl">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">3</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="859601073733033" type="spr_gunl">
-                                    <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp;BodyTurn.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="803152599807607" type="spr_gunr">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">2</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="756319361843599" type="spr_gunr">
-                                    <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; BodyTurn.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-4" name="Set position to another object" sid="868014138887815" type="spr_Head">
-                                    <param id="0" name="Object">spr_Body</param>
-                                    <param id="1" name="Image point (optional)">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="958098952797360" type="spr_Head">
-                                    <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; BodyTurn.SprDirection</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="918359296332619" title="Right direction">
-                    <sub-events>
-                        <variable constant="0" name="Position" sid="329153046384242" static="0" type="text"></variable>
-                        <event-block sid="472295391132769">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="106059821949560" type="Sprite2">
-                                    <param id="0" name="First angle">315</param>
-                                    <param id="1" name="Second angle">45</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="698971650743041" type="Sprite2">
-                                    <param id="0" name="Instance variable">SprDirection</param>
-                                    <param id="1" name="Value">&quot;Right&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="906938095151352">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="233352104186981" type="BodyTurn">
-                                    <param id="0" name="First angle">315</param>
-                                    <param id="1" name="Second angle">45</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="413846272966916" type="BodyTurn">
-                                    <param id="0" name="Instance variable">SprDirection</param>
-                                    <param id="1" name="Value">&quot;Right&quot;</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="652754945269312" type="spr_gunl">
-                                    <param id="0" name="Layer">2</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="271466643592770" type="spr_gunr">
-                                    <param id="0" name="Layer">5</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="863106742828127" type="spr_Leg">
-                                    <param id="0" name="Layer">4</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="914093331646268" title="Left direction">
-                    <sub-events>
-                        <event-block sid="364159755474525">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="671652761323427" type="Sprite2">
-                                    <param id="0" name="First angle">135</param>
-                                    <param id="1" name="Second angle">225</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="906593500823178" type="Sprite2">
-                                    <param id="0" name="Instance variable">SprDirection</param>
-                                    <param id="1" name="Value">&quot;Left&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="638662395224880">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="708477492590010" type="BodyTurn">
-                                    <param id="0" name="First angle">135</param>
-                                    <param id="1" name="Second angle">225</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="251765618628658" type="BodyTurn">
-                                    <param id="0" name="Instance variable">SprDirection</param>
-                                    <param id="1" name="Value">&quot;Left&quot;</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="892916795104806" type="spr_Body">
-                                    <param id="0" name="Layer">3</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="889412884292374" type="spr_gunl">
-                                    <param id="0" name="Layer">5</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="164161511944446" type="spr_gunr">
-                                    <param id="0" name="Layer">2</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="129411401919238" type="spr_Leg">
-                                    <param id="0" name="Layer">4</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="306558573310155" title="Up direction">
-                    <sub-events>
-                        <event-block sid="692883056892793">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="579070687245525" type="Sprite2">
-                                    <param id="0" name="First angle">225</param>
-                                    <param id="1" name="Second angle">315</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="418706089377679" type="Sprite2">
-                                    <param id="0" name="Instance variable">SprDirection</param>
-                                    <param id="1" name="Value">&quot;Up&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="918629745765481">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="644051734827785" type="BodyTurn">
-                                    <param id="0" name="First angle">225</param>
-                                    <param id="1" name="Second angle">315</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="809770269563251" type="BodyTurn">
-                                    <param id="0" name="Instance variable">SprDirection</param>
-                                    <param id="1" name="Value">&quot;Up&quot;</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="939664059179090" type="spr_Body">
-                                    <param id="0" name="Layer">5</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="295564807889693" type="spr_gunl">
-                                    <param id="0" name="Layer">3</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="385353954628400" type="spr_gunr">
-                                    <param id="0" name="Layer">3</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="919066466345336" type="spr_Leg">
-                                    <param id="0" name="Layer">4</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="898450390364297" title="Down direction">
-                    <sub-events>
-                        <event-block sid="984001786714097">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="925251687581161" type="Sprite2">
-                                    <param id="0" name="First angle">45</param>
-                                    <param id="1" name="Second angle">135</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="220591987049698" type="Sprite2">
-                                    <param id="0" name="Instance variable">SprDirection</param>
-                                    <param id="1" name="Value">&quot;Down&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="522731269996692">
-                            <conditions>
-                                <condition id="-13" name="Is between angles" sid="230760883825238" type="BodyTurn">
-                                    <param id="0" name="First angle">45</param>
-                                    <param id="1" name="Second angle">135</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="101776892352354" type="BodyTurn">
-                                    <param id="0" name="Instance variable">SprDirection</param>
-                                    <param id="1" name="Value">&quot;Down&quot;</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="259367037780913" type="spr_Body">
-                                    <param id="0" name="Layer">4</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="497768229725068" type="spr_gunl">
-                                    <param id="0" name="Layer">5</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="568710827547219" type="spr_gunr">
-                                    <param id="0" name="Layer">4</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="514059745863224" type="spr_Leg">
-                                    <param id="0" name="Layer">3</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-            </sub-events>
-        </event-group>
         <event-group description="" disabled="1" sid="502265013513209" title="Всплывающее окно">
             <sub-events>
                 <event-group description="" disabled="1" sid="951612334665620" title="Анимация всплытия">
@@ -1119,88 +548,32 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="936495346027739" title="RoboAi">
-            <sub-events>
-                <event-block sid="444619774052397">
-                    <conditions>
-                        <condition id="-19" name="On destroyed" sid="592224341018444" type="Sprite2" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="751388751043585" type="System">
-                            <param id="0" name="Variable">dstr</param>
-                            <param id="1" name="Value">sprite2.UID</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="143796164594530" type="Sprite2" />
-                        <action id="-11" name="Subtract from" sid="236778341521974" type="System">
-                            <param id="0" name="Variable">quantity</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="3" name="Set at XY" sid="921650093501392" type="Array">
-                            <param id="0" name="X">Sprite2.idmob</param>
-                            <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="289713094641097">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="500592330159974" type="Sprite2">
-                            <param id="0" name="Instance variable">HP</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="848114882882691" type="Sprite2" />
-                    </actions>
-                </event-block>
-                <event-block sid="605319011178250">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="954283981394417" type="spr_EnemyBullet">
-                            <param id="0" name="Object">Sprite2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="750303012355230" type="Sprite2">
-                            <param id="0" name="Instance variable">HP</param>
-                            <param id="1" name="Value">20</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="145500336747117" type="spr_EnemyBullet" />
-                    </actions>
-                </event-block>
-                <event-block sid="255926812542738">
-                    <conditions>
-                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="493359249859367" type="BodyTurn">
-                            <param id="0" name="Object">EnemyBase</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-21" name="Rotate toward position" sid="725936458868035" type="BodyTurn">
-                            <param id="0" name="Degrees">90*dt</param>
-                            <param id="1" name="X">EnemyBase.X</param>
-                            <param id="2" name="Y">EnemyBase.Y</param>
-                        </action>
-                        <action behavior="Turret" id="1" name="Add object to target" sid="976393605446224" type="BodyTurn">
-                            <param id="0" name="Target">EnemyBase</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="559576356922312">
-                    <conditions>
-                        <condition behavior="Turret" id="1" name="On shoot" sid="536749931640582" type="BodyTurn" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="753976345733091" type="BodyTurn">
-                            <param id="0" name="Object">spr_RoboBullet</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="852755992723441" title="Levels">
             <sub-events>
+                <event-block sid="959937545666181">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="574944110375397" type="spr_EnemyBullet">
+                            <param id="0" name="Object">Engine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="114292768587843" type="Engine">
+                            <param id="0" name="Instance variable">EngineHP</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="203340792198604" type="spr_EnemyBullet" />
+                    </actions>
+                </event-block>
+                <event-block sid="211147102916249">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="660175910674391" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set progress" sid="705550981793729" type="ProgressBar">
+                            <param id="0" name="Value">Engine.EngineHP</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="634622195206165">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="269020354179438" type="Sprite">
@@ -1378,6 +751,59 @@
         </event-group>
         <event-group description="" sid="129679014786477" title="EasyEnemyAI">
             <sub-events>
+                <event-block sid="527347349152555">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="485583380532872" type="EnemyGun">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition behavior="Range" id="0" name="Has LOS to object" sid="506100316679525" type="EnemyGun">
+                            <param id="0" name="Object">Engine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Turret" id="0" name="Acquire target" sid="493579726823722" type="EnemyGun">
+                            <param id="0" name="Target">Engine</param>
+                        </action>
+                        <action behavior="Pathfinding" id="7" name="Set max speed" sid="806883696884171" type="EnemyBase">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="711428560207072">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="626111714818578" type="EnemyGun">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="972431129069356" type="EnemyGun">
+                            <param id="0" name="Object">Engine</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="983625577020991">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="180547922680599" type="System">
+                                    <param id="0" name="Interval (seconds)">0.3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Turret" id="2" name="Clear targets" sid="421231504564805" type="EnemyGun" />
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="591350403051725" type="EnemyBase">
+                                    <param id="0" name="X">Engine.X</param>
+                                    <param id="1" name="Y">Engine.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="685925665496904">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="340889010040329" type="EnemyBase" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="936695582183826" type="EnemyBase" />
+                    </actions>
+                </event-block>
                 <event-block sid="619920746400530">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="579264536241551" type="spr_RoboBullet">
@@ -1424,14 +850,6 @@
                             <param id="0" name="X">EnemyBase.X</param>
                             <param id="1" name="Y">EnemyBase.Y</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="685925665496904">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="340889010040329" type="EnemyBase" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="936695582183826" type="EnemyBase" />
                     </actions>
                 </event-block>
                 <event-block sid="166978041795845">
@@ -1502,36 +920,609 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="527347349152555">
+        <event-group description="" sid="887897770209835" title="Robots">
+            <sub-events>
+                <event-group description="" sid="492215930263984" title="id и массив">
+                    <sub-events>
+                        <event-block sid="285822222537964">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="947298577027537" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="886036065392698" type="Array">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="137105802933674" type="Array">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="603278421205003" type="Array">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="442895529819486" type="Array">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="642609063530736">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="235892371210987" type="System" />
+                                <condition id="-11" name="For Each" sid="693876682404751" type="System">
+                                    <param id="0" name="Object">Sprite2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="332196000139325" type="Sprite2">
+                                    <param id="0" name="Instance variable">idmob</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="197955678493052">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="403852742980621" type="Array">
+                                            <param id="0" name="X">N</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="298094056217953" type="System">
+                                            <param id="0" name="Variable">N</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="455792131435864" type="Array">
+                                            <param id="0" name="X">N</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">Sprite2.UID</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="171309938585195" type="Array">
+                                            <param id="0" name="X">N</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">Sprite2.GunR</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="832021402315315" type="Array">
+                                            <param id="0" name="X">N</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">Sprite2.GunL</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="647516960902981" type="Array">
+                                            <param id="0" name="X">N</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">Sprite2.Head</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="924859036470007" type="Array">
+                                            <param id="0" name="X">N</param>
+                                            <param id="1" name="Y">5</param>
+                                            <param id="2" name="Value">Sprite2.Body</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="322876349427341" type="Array">
+                                            <param id="0" name="X">N</param>
+                                            <param id="1" name="Y">6</param>
+                                            <param id="2" name="Value">Sprite2.Leg</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="301859476937991" type="Sprite2">
+                                            <param id="0" name="Instance variable">idmob</param>
+                                            <param id="1" name="Value">N</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="726575292040156" type="System">
+                                            <param id="0" name="Variable">quantity</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="477114816669658" type="System">
+                                            <param id="0" name="Variable">N</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="764479556349409">
+                            <conditions>
+                                <condition id="0" name="On clicked" sid="936560984553163" type="Button" />
+                                <condition id="-14" name="Compare variable" sid="838875689299053" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="162578221050862" type="Sprite">
+                                    <param id="0" name="Object">Sprite2</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="813197314217577" type="Sprite2">
+                                    <param id="0" name="Instance variable">idmob</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="724017801568356" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="829131780210079">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="724950058814763" type="System">
+                                            <param id="0" name="Count">Array.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="445439713653628" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-24" name="Stop loop" sid="188648284723899" type="System" />
+                                        <action id="3" name="Set at XY" sid="406729222691535" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">Sprite2.UID</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="261447654691333" type="Sprite2">
+                                            <param id="0" name="Instance variable">idmob</param>
+                                            <param id="1" name="Value">loopindex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="810995857507466">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="979220650491454" title="RobotPath">
+                    <sub-events>
+                        <event-block sid="142727849019068">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="761861199778420" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="816837742044789" type="Sprite2">
+                                    <param id="0" name="Instance variable">idmob</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="168857309488586" type="Sprite2">
+                                    <param id="0" name="X">Sprite.ImagePointX(1)</param>
+                                    <param id="1" name="Y">Sprite.ImagePointY(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="940531998947290">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="634090655474985" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="158258433878758" type="Sprite2">
+                                    <param id="0" name="Instance variable">idmob</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="204084110956296" type="Sprite2">
+                                    <param id="0" name="X">Sprite.ImagePointX(2)</param>
+                                    <param id="1" name="Y">Sprite.ImagePointY(2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="580963461054591">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="919235124957123" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="657803889407343" type="Sprite2">
+                                    <param id="0" name="Instance variable">idmob</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="594179999036621" type="Sprite2">
+                                    <param id="0" name="X">Sprite.ImagePointX(3)</param>
+                                    <param id="1" name="Y">Sprite.ImagePointY(3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="640069216851444">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="258470715303088" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="389573372228279" type="Sprite2">
+                                    <param id="0" name="Instance variable">idmob</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="899153032030229" type="Sprite2">
+                                    <param id="0" name="X">Sprite.ImagePointX(4)</param>
+                                    <param id="1" name="Y">Sprite.ImagePointY(4)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="401090822277192">
+                            <conditions>
+                                <condition behavior="Pathfinding" id="0" name="On path found" sid="296717921894167" type="Sprite2" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="1" name="Move along path" sid="841428902629002" type="Sprite2" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="734602228370030" title="RobotDirection">
+                    <sub-events>
+                        <event-group description="" sid="581672266593862" title="LayoutStart">
+                            <sub-events>
+                                <comment>При старте игры все мобы стоят лицом вправо. Мы присваиваем переменной &quot;Position&quot; значение Right. Затем мы задаем значение переменной &quot;local&quot; данные из Sprite2 , а именно, что экипированно. Экипировка = имени анимации без указания направления. Затем мы в переменную &quot;local&quot; добавляем переменную &quot;Position&quot;, и задаем объектам анимацию local (AnimationName+Position)</comment>
+                                <event-block sid="269984157842190">
+                                    <conditions>
+                                        <condition id="-2" name="On start of layout" sid="831926099929674" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="838031439287710" type="BodyTurn">
+                                            <param id="0" name="X">Sprite2.X</param>
+                                            <param id="1" name="Y">Sprite2.Y</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="251846500652519" type="BodyTurn">
+                                            <param id="0" name="Pin to">Sprite2</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="384883196194508" type="spr_Head">
+                                            <param id="0" name="Layer">6</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="404786138120621">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="530904990767439" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="240657989021206" type="spr_Body">
+                                            <param id="0" name="Object">Sprite2</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="542945243820206" type="spr_Body">
+                                            <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; BodyTurn.SprDirection</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="976405498905096" type="spr_Leg">
+                                            <param id="0" name="Object">spr_Body</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="121639888570069" type="spr_Leg">
+                                            <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="584783593368812" type="spr_gunl">
+                                            <param id="0" name="Object">spr_Body</param>
+                                            <param id="1" name="Image point (optional)">3</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="859601073733033" type="spr_gunl">
+                                            <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp;BodyTurn.SprDirection</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="803152599807607" type="spr_gunr">
+                                            <param id="0" name="Object">spr_Body</param>
+                                            <param id="1" name="Image point (optional)">2</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="756319361843599" type="spr_gunr">
+                                            <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; BodyTurn.SprDirection</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set position to another object" sid="868014138887815" type="spr_Head">
+                                            <param id="0" name="Object">spr_Body</param>
+                                            <param id="1" name="Image point (optional)">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="958098952797360" type="spr_Head">
+                                            <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; BodyTurn.SprDirection</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="918359296332619" title="Right direction">
+                            <sub-events>
+                                <variable constant="0" name="Position" sid="329153046384242" static="0" type="text"></variable>
+                                <event-block sid="472295391132769">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="106059821949560" type="Sprite2">
+                                            <param id="0" name="First angle">315</param>
+                                            <param id="1" name="Second angle">45</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="698971650743041" type="Sprite2">
+                                            <param id="0" name="Instance variable">SprDirection</param>
+                                            <param id="1" name="Value">&quot;Right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="906938095151352">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="233352104186981" type="BodyTurn">
+                                            <param id="0" name="First angle">315</param>
+                                            <param id="1" name="Second angle">45</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="413846272966916" type="BodyTurn">
+                                            <param id="0" name="Instance variable">SprDirection</param>
+                                            <param id="1" name="Value">&quot;Right&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="652754945269312" type="spr_gunl">
+                                            <param id="0" name="Layer">2</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="271466643592770" type="spr_gunr">
+                                            <param id="0" name="Layer">5</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="863106742828127" type="spr_Leg">
+                                            <param id="0" name="Layer">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="914093331646268" title="Left direction">
+                            <sub-events>
+                                <event-block sid="364159755474525">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="671652761323427" type="Sprite2">
+                                            <param id="0" name="First angle">135</param>
+                                            <param id="1" name="Second angle">225</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="906593500823178" type="Sprite2">
+                                            <param id="0" name="Instance variable">SprDirection</param>
+                                            <param id="1" name="Value">&quot;Left&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="638662395224880">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="708477492590010" type="BodyTurn">
+                                            <param id="0" name="First angle">135</param>
+                                            <param id="1" name="Second angle">225</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="251765618628658" type="BodyTurn">
+                                            <param id="0" name="Instance variable">SprDirection</param>
+                                            <param id="1" name="Value">&quot;Left&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="892916795104806" type="spr_Body">
+                                            <param id="0" name="Layer">3</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="889412884292374" type="spr_gunl">
+                                            <param id="0" name="Layer">5</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="164161511944446" type="spr_gunr">
+                                            <param id="0" name="Layer">2</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="129411401919238" type="spr_Leg">
+                                            <param id="0" name="Layer">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="306558573310155" title="Up direction">
+                            <sub-events>
+                                <event-block sid="692883056892793">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="579070687245525" type="Sprite2">
+                                            <param id="0" name="First angle">225</param>
+                                            <param id="1" name="Second angle">315</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="418706089377679" type="Sprite2">
+                                            <param id="0" name="Instance variable">SprDirection</param>
+                                            <param id="1" name="Value">&quot;Up&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="918629745765481">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="644051734827785" type="BodyTurn">
+                                            <param id="0" name="First angle">225</param>
+                                            <param id="1" name="Second angle">315</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="809770269563251" type="BodyTurn">
+                                            <param id="0" name="Instance variable">SprDirection</param>
+                                            <param id="1" name="Value">&quot;Up&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="939664059179090" type="spr_Body">
+                                            <param id="0" name="Layer">5</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="295564807889693" type="spr_gunl">
+                                            <param id="0" name="Layer">3</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="385353954628400" type="spr_gunr">
+                                            <param id="0" name="Layer">3</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="919066466345336" type="spr_Leg">
+                                            <param id="0" name="Layer">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="898450390364297" title="Down direction">
+                            <sub-events>
+                                <event-block sid="984001786714097">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="925251687581161" type="Sprite2">
+                                            <param id="0" name="First angle">45</param>
+                                            <param id="1" name="Second angle">135</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="220591987049698" type="Sprite2">
+                                            <param id="0" name="Instance variable">SprDirection</param>
+                                            <param id="1" name="Value">&quot;Down&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="522731269996692">
+                                    <conditions>
+                                        <condition id="-13" name="Is between angles" sid="230760883825238" type="BodyTurn">
+                                            <param id="0" name="First angle">45</param>
+                                            <param id="1" name="Second angle">135</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="101776892352354" type="BodyTurn">
+                                            <param id="0" name="Instance variable">SprDirection</param>
+                                            <param id="1" name="Value">&quot;Down&quot;</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="259367037780913" type="spr_Body">
+                                            <param id="0" name="Layer">4</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="497768229725068" type="spr_gunl">
+                                            <param id="0" name="Layer">5</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="568710827547219" type="spr_gunr">
+                                            <param id="0" name="Layer">4</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="514059745863224" type="spr_Leg">
+                                            <param id="0" name="Layer">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="936495346027739" title="RoboAi">
+                    <sub-events>
+                        <event-block sid="444619774052397">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="592224341018444" type="Sprite2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="751388751043585" type="System">
+                                    <param id="0" name="Variable">dstr</param>
+                                    <param id="1" name="Value">sprite2.UID</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="143796164594530" type="Sprite2" />
+                                <action id="-11" name="Subtract from" sid="236778341521974" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="921650093501392" type="Array">
+                                    <param id="0" name="X">Sprite2.idmob</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="289713094641097">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="500592330159974" type="Sprite2">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="848114882882691" type="Sprite2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="605319011178250">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="954283981394417" type="spr_EnemyBullet">
+                                    <param id="0" name="Object">Sprite2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="750303012355230" type="Sprite2">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Value">20</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="145500336747117" type="spr_EnemyBullet" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="255926812542738">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="493359249859367" type="BodyTurn">
+                                    <param id="0" name="Object">EnemyBase</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="RightArm" id="1" name="Add object to target" sid="976393605446224" type="BodyTurn">
+                                    <param id="0" name="Target">EnemyBase</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="559576356922312">
+                            <conditions>
+                                <condition behavior="RightArm" id="1" name="On shoot" sid="536749931640582" type="BodyTurn" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="623773264553870">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="908889677793135" type="System">
+                                            <param id="0" name="Interval (seconds)">0.2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="519922609679794" type="BodyTurn">
+                                            <param id="0" name="Object">spr_RoboBullet</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="904915006134774">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="688075165802045" type="System">
+                                            <param id="0" name="Interval (seconds)">0.3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="848821926430342" type="BodyTurn">
+                                            <param id="0" name="Object">spr_RoboBullet</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="422894996766788" title="RoboFight" />
+            </sub-events>
+        </event-group>
+        <event-block sid="779418285509157">
             <conditions>
-                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="485583380532872" type="EnemyGun">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-                <condition behavior="Range" id="0" name="Has LOS to object" sid="506100316679525" type="EnemyGun">
-                    <param id="0" name="Object">Engine</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="819313597774699" type="System" />
             </conditions>
-            <actions>
-                <action behavior="Turret" id="0" name="Acquire target" sid="493579726823722" type="EnemyGun">
-                    <param id="0" name="Target">Engine</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="959937545666181">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="574944110375397" type="spr_EnemyBullet">
-                    <param id="0" name="Object">Engine</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="114292768587843" type="Engine">
-                    <param id="0" name="Instance variable">EngineHP</param>
-                    <param id="1" name="Value">5</param>
-                </action>
-                <action id="3" name="Set progress" sid="705550981793729" type="ProgressBar">
-                    <param id="0" name="Value">Engine.EngineHP</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
