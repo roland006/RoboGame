@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
@@ -67,25 +68,25 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="431008419698097" speed="5">
                     <frame duration="1" hotspotX="0.478261" hotspotY="0.428571">
-                        <image-point name="Imagepoint 1" x="2.21739" y="0.47619" />
-                        <image-point name="Imagepoint 2" x="0.478261" y="2.25397" />
-                        <image-point name="Imagepoint 3" x="-1.08696" y="0.571429" />
-                        <image-point name="Imagepoint 4" x="0.478261" y="-1.04762" />
+                        <image-point name="Imagepoint 1" x="2.82609" y="0.444444" />
+                        <image-point name="Imagepoint 2" x="0.434783" y="1.65079" />
+                        <image-point name="Imagepoint 3" x="-2.08696" y="0.539683" />
+                        <image-point name="Imagepoint 4" x="0.478261" y="-0.68254" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="479993233583275" speed="5">
                     <frame duration="1" hotspotX="0.564103" hotspotY="0.446154">
                         <image-point name="Imagepoint 1" x="0.461538" y="2.04615" />
-                        <image-point name="Imagepoint 2" x="-1.07692" y="0.507692" />
+                        <image-point name="Imagepoint 2" x="-1.5641" y="0.492308" />
                         <image-point name="Imagepoint 3" x="0.461538" y="-0.923077" />
-                        <image-point name="Imagepoint 4" x="2.10256" y="0.430769" />
+                        <image-point name="Imagepoint 4" x="2.35897" y="0.461538" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="462537279507438" speed="5">
                     <frame duration="1" hotspotX="0.565217" hotspotY="0.444444">
-                        <image-point name="Imagepoint 1" x="-1.69565" y="0.444444" />
-                        <image-point name="Imagepoint 2" x="0.391304" y="-1.01587" />
-                        <image-point name="Imagepoint 3" x="2.56522" y="0.444444" />
+                        <image-point name="Imagepoint 1" x="-2.21739" y="0.47619" />
+                        <image-point name="Imagepoint 2" x="0.478261" y="-0.761905" />
+                        <image-point name="Imagepoint 3" x="3.13043" y="0.428571" />
                         <image-point name="Imagepoint 4" x="0.347826" y="1.95238" />
                     </frame>
                 </animation>
@@ -261,10 +262,10 @@
                         <frame duration="1" hotspotX="0.470588" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg1Right" pingpong="0" repeatcount="1" repeatto="0" sid="513385571239538" speed="5">
-                        <frame duration="1" hotspotX="0.473684" hotspotY="0.0909091" />
+                        <frame duration="1" hotspotX="0.466667" hotspotY="0.097561" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg1Left" pingpong="0" repeatcount="1" repeatto="0" sid="934927414696682" speed="5">
-                        <frame duration="1" hotspotX="0.473684" hotspotY="0.0681818" />
+                        <frame duration="1" hotspotX="0.466667" hotspotY="0.0731707" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg1Up" pingpong="0" repeatcount="1" repeatto="0" sid="886728859160794" speed="5">
                         <frame duration="1" hotspotX="0.470588" hotspotY="0" />
@@ -275,10 +276,10 @@
                         <frame duration="1" hotspotX="0.448276" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg2Right" pingpong="0" repeatcount="1" repeatto="0" sid="920753565452783" speed="5">
-                        <frame duration="1" hotspotX="0.444444" hotspotY="0" />
+                        <frame duration="1" hotspotX="0.433333" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg2Left" pingpong="0" repeatcount="1" repeatto="0" sid="128174546191763" speed="5">
-                        <frame duration="1" hotspotX="0.444444" hotspotY="0" />
+                        <frame duration="1" hotspotX="0.433333" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg2Up" pingpong="0" repeatcount="1" repeatto="0" sid="334967020236874" speed="5">
                         <frame duration="1" hotspotX="0.413793" hotspotY="0" />
@@ -289,13 +290,13 @@
                         <frame duration="1" hotspotX="0.411765" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg3Left" pingpong="0" repeatcount="1" repeatto="0" sid="633069194609469" speed="5">
-                        <frame duration="1" hotspotX="0.454545" hotspotY="0" />
+                        <frame duration="1" hotspotX="0.428571" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg3Up" pingpong="0" repeatcount="1" repeatto="0" sid="931131216091230" speed="5">
                         <frame duration="1" hotspotX="0.411765" hotspotY="0" />
                     </animation>
                     <animation framecount="1" loop="0" name="Leg3Right" pingpong="0" repeatcount="1" repeatto="0" sid="478101329225606" speed="5">
-                        <frame duration="1" hotspotX="0.454545" hotspotY="0">
+                        <frame duration="1" hotspotX="0.428571" hotspotY="0">
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -329,11 +330,11 @@
             <animation-folder>
                 <animation-folder name="Body1">
                     <animation framecount="1" loop="1" name="Body1Right" pingpong="0" repeatcount="1" repeatto="0" sid="475049964126290" speed="5">
-                        <frame duration="1" hotspotX="0.470588" hotspotY="0.884615">
-                            <image-point name="Head" x="0.529412" y="0.153846" />
-                            <image-point name="GunR" x="0.352941" y="0.807692" />
-                            <image-point name="GunL" x="0.764706" y="0.461538" />
-                            <image-point name="Leg" x="0.588235" y="0.884615" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.863636">
+                            <image-point name="Head" x="0.5" y="0.136364" />
+                            <image-point name="GunR" x="0.357143" y="0.818182" />
+                            <image-point name="GunL" x="0.785714" y="0.454545" />
+                            <image-point name="Leg" x="0.571429" y="0.863636" />
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body1Down" pingpong="0" repeatcount="1" repeatto="0" sid="947713786914343" speed="5">
@@ -345,11 +346,11 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body1Left" pingpong="0" repeatcount="1" repeatto="0" sid="296322943603313" speed="5">
-                        <frame duration="1" hotspotX="0.470588" hotspotY="0.884615">
-                            <image-point name="Head" x="0.411765" y="0.153846" />
-                            <image-point name="GunR" x="0.176471" y="0.5" />
-                            <image-point name="GunL" x="0.588235" y="0.807692" />
-                            <image-point name="Leg" x="0.411765" y="0.884615" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.863636">
+                            <image-point name="Head" x="0.428571" y="0.136364" />
+                            <image-point name="GunR" x="0.142857" y="0.5" />
+                            <image-point name="GunL" x="0.571429" y="0.818182" />
+                            <image-point name="Leg" x="0.428571" y="0.863636" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -369,11 +370,11 @@
                 </animation-folder>
                 <animation-folder name="Body2">
                     <animation framecount="1" loop="1" name="Body2Right" pingpong="0" repeatcount="1" repeatto="0" sid="474719029041329" speed="5">
-                        <frame duration="1" hotspotX="0.411765" hotspotY="1">
-                            <image-point name="Head" x="0.411765" y="0" />
-                            <image-point name="GunR" x="0.411765" y="0.789474" />
-                            <image-point name="GunL" x="0.411765" y="0.789474" />
-                            <image-point name="Leg" x="0.411765" y="1" />
+                        <frame duration="1" hotspotX="0.421053" hotspotY="1">
+                            <image-point name="Head" x="0.421053" y="0" />
+                            <image-point name="GunR" x="0.421053" y="0.772727" />
+                            <image-point name="GunL" x="0.421053" y="0.772727" />
+                            <image-point name="Leg" x="0.421053" y="1" />
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body2Down" pingpong="0" repeatcount="1" repeatto="0" sid="101281204241360" speed="5">
@@ -385,11 +386,11 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body2Left" pingpong="0" repeatcount="1" repeatto="0" sid="942417628184524" speed="5">
-                        <frame duration="1" hotspotX="0.529412" hotspotY="1">
-                            <image-point name="Head" x="0.470588" y="0" />
-                            <image-point name="GunR" x="0.529412" y="0.631579" />
-                            <image-point name="GunL" x="0.470588" y="0.789474" />
-                            <image-point name="Leg" x="0.470588" y="1" />
+                        <frame duration="1" hotspotX="0.526316" hotspotY="1">
+                            <image-point name="Head" x="0.473684" y="0" />
+                            <image-point name="GunR" x="0.526316" y="0.636364" />
+                            <image-point name="GunL" x="0.473684" y="0.772727" />
+                            <image-point name="Leg" x="0.473684" y="1" />
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body2Up" pingpong="0" repeatcount="1" repeatto="0" sid="939560393475438" speed="5">
@@ -403,11 +404,11 @@
                 </animation-folder>
                 <animation-folder name="Body3">
                     <animation framecount="1" loop="1" name="Body3Right" pingpong="0" repeatcount="1" repeatto="0" sid="525564258421738" speed="5">
-                        <frame duration="1" hotspotX="0.466667" hotspotY="1">
-                            <image-point name="Head" x="0.466667" y="0" />
-                            <image-point name="GunR" x="0.4" y="0.8" />
-                            <image-point name="GunL" x="0.466667" y="0.8" />
-                            <image-point name="Leg" x="0.466667" y="1" />
+                        <frame duration="1" hotspotX="0.473684" hotspotY="1">
+                            <image-point name="Head" x="0.473684" y="0" />
+                            <image-point name="GunR" x="0.421053" y="0.818182" />
+                            <image-point name="GunL" x="0.473684" y="0.818182" />
+                            <image-point name="Leg" x="0.473684" y="1" />
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body3Down" pingpong="0" repeatcount="1" repeatto="0" sid="684371224189580" speed="5">
@@ -419,11 +420,11 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body3Left" pingpong="0" repeatcount="1" repeatto="0" sid="285103465921251" speed="5">
-                        <frame duration="1" hotspotX="0.466667" hotspotY="1">
-                            <image-point name="Head" x="0.466667" y="0" />
-                            <image-point name="GunR" x="0.4" y="0.75" />
-                            <image-point name="GunL" x="0.4" y="0.75" />
-                            <image-point name="Leg" x="0.466667" y="1" />
+                        <frame duration="1" hotspotX="0.444444" hotspotY="1">
+                            <image-point name="Head" x="0.444444" y="0" />
+                            <image-point name="GunR" x="0.388889" y="0.73913" />
+                            <image-point name="GunL" x="0.388889" y="0.73913" />
+                            <image-point name="Leg" x="0.444444" y="1" />
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body3Up" pingpong="0" repeatcount="1" repeatto="0" sid="846935532660984" speed="5">
@@ -973,8 +974,8 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="SprDirection" sid="345896324636807" type="string" />
-                <instance-variable name="Var1" sid="318578417886493" type="boolean" />
-                <instance-variable name="Var2" sid="912335446084346" type="number" />
+                <instance-variable name="LeftGun" sid="318578417886493" type="boolean" />
+                <instance-variable name="RightGun" sid="912335446084346" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="920638983914428">
@@ -1002,8 +1003,8 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170932770749331" speed="5">
                     <frame duration="1" hotspotX="0.0333333" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="1.25" y="0.233333" />
-                        <image-point name="Imagepoint 2" x="1.3" y="0.9" />
+                        <image-point name="Imagepoint 1" x="1.3" y="0.0833333" />
+                        <image-point name="Imagepoint 2" x="1.31667" y="0.95" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -1141,6 +1142,9 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="345941993194522">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>

@@ -10,6 +10,17 @@
         <variable constant="0" name="id" sid="294452994775092" static="0" type="number">0</variable>
         <event-group description="" sid="238578034355261" title="Player">
             <sub-events>
+                <event-block sid="895881114077855">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="314179027286572" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="827640748062601" type="Sprite3">
+                            <param id="0" name="X">Sprite.X</param>
+                            <param id="1" name="Y">Sprite.Y-50</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="552060024849190">
                     <conditions>
                         <condition id="2" name="Key is down" sid="863473348716596" type="Keyboard">
@@ -98,10 +109,10 @@
                     </conditions>
                     <actions>
                         <action id="11" name="Load" sid="591882997330621" type="arr_gun_l">
-                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Gun1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Gun2&quot;&quot;],[10]], [[3],[&quot;&quot;Gun3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
+                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,4,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Gun1&quot;&quot;],[1.5],[10]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Gun2&quot;&quot;],[1],[6]], [[3],[&quot;&quot;Gun3&quot;&quot;],[0.2],[1.2]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
                         </action>
                         <action id="11" name="Load" sid="699100391297107" type="arr_gun_r">
-                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Gun1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Gun2&quot;&quot;],[10]], [[3],[&quot;&quot;Gun3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
+                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,4,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Gun1&quot;&quot;],[1.5],[10]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Gun2&quot;&quot;],[1],[6]], [[3],[&quot;&quot;Gun3&quot;&quot;],[0.2],[1.2]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
                         </action>
                         <action id="11" name="Load" sid="128106861062738" type="arr_body">
                             <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Body1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Body2&quot;&quot;],[10]], &#x0D;&#x0A;&#x09;&#x09;[[3],[&quot;&quot;Body3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
@@ -1028,7 +1039,12 @@
                         </event-block>
                         <event-block sid="764479556349409">
                             <conditions>
-                                <condition id="0" name="On clicked" sid="936560984553163" type="Button" />
+                                <condition id="0" name="On key pressed" sid="652601783857216" type="Keyboard">
+                                    <param id="0" name="Key">70</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="322799238158618" type="Sprite">
+                                    <param id="0" name="Object">Table</param>
+                                </condition>
                                 <condition id="-14" name="Compare variable" sid="838875689299053" type="System">
                                     <param id="0" name="Variable">quantity</param>
                                     <param id="1" name="Comparison">2</param>
@@ -1036,7 +1052,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="162578221050862" type="Sprite">
+                                <action id="0" name="Spawn another object" sid="162578221050862" type="Table">
                                     <param id="0" name="Object">Sprite2</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="Image point">0</param>
@@ -1479,50 +1495,112 @@
                         </event-block>
                         <event-block sid="559576356922312">
                             <conditions>
-                                <condition behavior="RightArm" id="1" name="On shoot" sid="536749931640582" type="BodyTurn" />
+                                <condition behavior="RightArm" id="0" name="Has target" sid="536749931640582" type="BodyTurn" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="899920789295199" type="BodyTurn">
+                                    <param id="0" name="Instance variable">LeftGun</param>
+                                </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="623773264553870">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="908889677793135" type="System">
-                                            <param id="0" name="Interval (seconds)">0.2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Spawn another object" sid="519922609679794" type="BodyTurn">
-                                            <param id="0" name="Object">spr_RoboBullet</param>
-                                            <param id="1" name="Layer">0</param>
-                                            <param id="2" name="Image point">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="904915006134774">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="688075165802045" type="System">
-                                            <param id="0" name="Interval (seconds)">0.3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Spawn another object" sid="848821926430342" type="BodyTurn">
-                                            <param id="0" name="Object">spr_RoboBullet</param>
-                                            <param id="1" name="Layer">0</param>
-                                            <param id="2" name="Image point">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="519922609679794" type="BodyTurn">
+                                    <param id="0" name="Object">spr_RoboBullet</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="147624896666979" type="BodyTurn">
+                                    <param id="0" name="Instance variable">LeftGun</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="423152667262104" type="BodyTurn">
+                                    <param id="0" name="Duration">arr_gun_l.At(Sprite2.GunL,2)</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;LeftCD&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="467497002772568" type="Text">
+                                    <param id="0" name="Text">arr_gun_l.At(Sprite2.GunL,2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="951519062685478">
+                            <conditions>
+                                <condition behavior="RightArm" id="0" name="Has target" sid="288277699927995" type="BodyTurn" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="375370660947023" type="BodyTurn">
+                                    <param id="0" name="Instance variable">RightGun</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="834506156329005" type="BodyTurn">
+                                    <param id="0" name="Object">spr_RoboBullet</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="912670833656343" type="BodyTurn">
+                                    <param id="0" name="Instance variable">RightGun</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="761655061208527" type="BodyTurn">
+                                    <param id="0" name="Duration">arr_gun_r.At(Sprite2.GunR,2)</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;RightCD&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="257543190327958">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="792761449187658" type="BodyTurn">
+                            <param id="0" name="Tag">&quot;LeftCD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="355739248563592" type="BodyTurn">
+                            <param id="0" name="Instance variable">LeftGun</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="395968009543313">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="173176996557050" type="BodyTurn">
+                            <param id="0" name="Tag">&quot;RightCD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="219707736552252" type="BodyTurn">
+                            <param id="0" name="Instance variable">RightGun</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-group description="" sid="422894996766788" title="RoboFight" />
             </sub-events>
         </event-group>
-        <event-block sid="779418285509157">
+        <event-block sid="869046529077423">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="819313597774699" type="System" />
+                <condition id="1" name="Is overlapping another object" sid="607240851519062" type="Sprite">
+                    <param id="0" name="Object">Table</param>
+                </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-15" name="Set visible" sid="584545674979752" type="Sprite3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="297806452173279">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="856708644815432" type="Sprite">
+                    <param id="0" name="Object">Table</param>
+                </condition>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="614532760573323" type="Sprite">
+                    <param id="0" name="Object">Engine</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="728577085369211" type="Sprite3">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

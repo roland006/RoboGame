@@ -29,6 +29,27 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="ProgressBar" uid="77">
+                    <properties>
+                        <value>20</value>
+                        <maximum>20</maximum>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>426</x>
+                        <y>121</y>
+                        <z>0</z>
+                        <width>45.897949219</width>
+                        <height>8.065933228</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
                 <instance type="Sprite" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -664,8 +685,8 @@
                     </properties>
                     <instance-variables>
                         <SprDirection></SprDirection>
-                        <Var1>false</Var1>
-                        <Var2>0</Var2>
+                        <LeftGun>true</LeftGun>
+                        <RightGun>true</RightGun>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -772,7 +793,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <HP>20000</HP>
+                        <HP>100</HP>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -896,7 +917,7 @@
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -2370,27 +2391,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ProgressBar" uid="77">
-                    <properties>
-                        <value>20</value>
-                        <maximum>20</maximum>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>426</x>
-                        <y>121</y>
-                        <z>0</z>
-                        <width>45.897949219</width>
-                        <height>8.065933228</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
                 <instance type="Sprite3" uid="78">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -2413,6 +2413,55 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Sprite2" uid="80">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <idmob>0</idmob>
+                        <Head>1</Head>
+                        <Body>1</Body>
+                        <GunR>1</GunR>
+                        <GunL>2</GunL>
+                        <Leg>1</Leg>
+                        <SprDirection></SprDirection>
+                        <iUid>5</iUid>
+                        <HP>100</HP>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>50</cell-size>
+                                <cell-border>-1</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>200</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>Yes</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>269</x>
+                        <y>368</y>
+                        <z>0</z>
+                        <width>19.830408096</width>
+                        <height>19.230194092</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2428,7 +2477,7 @@
         <instance type="arr_gun_l" uid="2">
             <properties>
                 <width>4</width>
-                <height>3</height>
+                <height>4</height>
                 <depth>1</depth>
             </properties>
         </instance>
@@ -2447,7 +2496,7 @@
         <instance type="arr_gun_r" uid="10">
             <properties>
                 <width>4</width>
-                <height>3</height>
+                <height>4</height>
                 <depth>1</depth>
             </properties>
         </instance>
