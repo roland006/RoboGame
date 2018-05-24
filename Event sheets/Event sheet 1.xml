@@ -17,10 +17,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="622615869037735" type="Sprite">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="622615869037735" type="Chat">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action id="4" name="Set animation" sid="915593282276208" type="Sprite">
+                        <action id="4" name="Set animation" sid="915593282276208" type="Chat">
                             <param id="0" name="Animation">&quot;Up&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -33,10 +33,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="319689437647163" type="Sprite">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="319689437647163" type="Chat">
                             <param id="0" name="Control">3</param>
                         </action>
-                        <action id="4" name="Set animation" sid="852457337024806" type="Sprite">
+                        <action id="4" name="Set animation" sid="852457337024806" type="Chat">
                             <param id="0" name="Animation">&quot;Down&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -49,10 +49,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="361335113263343" type="Sprite">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="361335113263343" type="Chat">
                             <param id="0" name="Control">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="223516746628839" type="Sprite">
+                        <action id="4" name="Set animation" sid="223516746628839" type="Chat">
                             <param id="0" name="Animation">&quot;Right&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -65,10 +65,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="661865393649844" type="Sprite">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="661865393649844" type="Chat">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="685689462738826" type="Sprite">
+                        <action id="4" name="Set animation" sid="685689462738826" type="Chat">
                             <param id="0" name="Animation">&quot;Left&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -83,11 +83,11 @@
                     <param id="1" name="Click type">0</param>
                 </condition>
                 <condition id="7" name="Cursor is over object" sid="727754310007890" type="Mouse">
-                    <param id="0" name="Object">Sprite2</param>
+                    <param id="0" name="Object">robotBase</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="182554564515325" type="Sprite2" />
+                <action id="-9" name="Destroy" sid="182554564515325" type="robotBase" />
             </actions>
         </event-block>
         <event-group description="" sid="552739033624094" title="Json to array">
@@ -322,12 +322,12 @@
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="554649486902180" type="Sprite4">
-                                            <param id="0" name="Animation">arr_head.At(Sprite2.Head,1)</param>
+                                            <param id="0" name="Animation">arr_head.At(robotBase.Head,1)</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="653427602581314" type="System">
                                             <param id="0" name="Variable">test</param>
-                                            <param id="1" name="Value">arr_head.At(Sprite2.Head,1)</param>
+                                            <param id="1" name="Value">arr_head.At(robotBase.Head,1)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -396,8 +396,8 @@
                             </conditions>
                             <actions>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="134718144375589" type="EnemyBase">
-                                    <param id="0" name="X">Sprite.X</param>
-                                    <param id="1" name="Y">Sprite.Y</param>
+                                    <param id="0" name="X">Chat.X</param>
+                                    <param id="1" name="Y">Chat.Y</param>
                                 </action>
                                 <action id="5" name="Set frame" sid="943249315918986" type="EnemyBase">
                                     <param id="0" name="Frame number">1</param>
@@ -412,17 +412,17 @@
                             </conditions>
                             <actions>
                                 <action behavior="Turret" id="0" name="Acquire target" sid="741144012233187" type="EnemyGun">
-                                    <param id="0" name="Target">Sprite</param>
+                                    <param id="0" name="Target">Chat</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="138282142429842">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="775652683335255" type="EnemyBase">
-                                    <param id="0" name="Object">Sprite</param>
+                                    <param id="0" name="Object">Chat</param>
                                 </condition>
                                 <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="314532854274120" type="EnemyBase">
-                                    <param id="0" name="Object">Sprite</param>
+                                    <param id="0" name="Object">Chat</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -431,8 +431,8 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="162192448874770" type="EnemyBase">
-                                    <param id="0" name="X">Sprite.X</param>
-                                    <param id="1" name="Y">Sprite.Y</param>
+                                    <param id="0" name="X">Chat.X</param>
+                                    <param id="1" name="Y">Chat.Y</param>
                                 </action>
                                 <action behavior="Turret" disabled="1" id="2" name="Clear targets" sid="321046109632283" type="EnemyGun" />
                             </actions>
@@ -441,10 +441,10 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="158337274084598" type="System" />
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="142339240061113" type="EnemyBase">
-                                    <param id="0" name="Object">Sprite</param>
+                                    <param id="0" name="Object">Chat</param>
                                 </condition>
                                 <condition behavior="Range" id="0" name="Has LOS to object" sid="777513233548340" type="EnemyBase">
-                                    <param id="0" name="Object">Sprite</param>
+                                    <param id="0" name="Object">Chat</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -471,7 +471,7 @@
                                     <param id="0" name="Interval (seconds)">0.3</param>
                                 </condition>
                                 <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="197223602963918" type="EnemyBase">
-                                    <param id="0" name="Object">Sprite</param>
+                                    <param id="0" name="Object">Chat</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -484,16 +484,16 @@
                         <event-block any="1" disabled="1" sid="506239946771722">
                             <conditions>
                                 <condition behavior="Range" id="0" name="Has LOS to object" sid="971014496528005" type="EnemyBase">
-                                    <param id="0" name="Object">Sprite</param>
+                                    <param id="0" name="Object">Chat</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-22" name="Set angle toward position" sid="759377906533540" type="EnemyBase">
-                                    <param id="0" name="X">Sprite.X</param>
-                                    <param id="1" name="Y">Sprite.Y</param>
+                                    <param id="0" name="X">Chat.X</param>
+                                    <param id="1" name="Y">Chat.Y</param>
                                 </action>
                                 <action behavior="Turret" id="0" name="Acquire target" sid="181842957722071" type="EnemyGun">
-                                    <param id="0" name="Target">Sprite</param>
+                                    <param id="0" name="Target">Chat</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -576,7 +576,7 @@
                 </event-block>
                 <event-block sid="634622195206165">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="269020354179438" type="Sprite">
+                        <condition id="1" name="Is overlapping another object" sid="269020354179438" type="Chat">
                             <param id="0" name="Object">Engine</param>
                         </condition>
                     </conditions>
@@ -601,7 +601,7 @@
                         <condition id="0" name="On key pressed" sid="562572515451728" type="Keyboard">
                             <param id="0" name="Key">70</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="968684298670959" type="Sprite">
+                        <condition id="1" name="Is overlapping another object" sid="968684298670959" type="Chat">
                             <param id="0" name="Object">Engine</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="442733369224469" type="Engine">
@@ -724,7 +724,7 @@
                         <condition id="0" name="On key pressed" sid="566436656339792" type="Keyboard">
                             <param id="0" name="Key">70</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="461995431222062" type="Sprite">
+                        <condition id="1" name="Is overlapping another object" sid="461995431222062" type="Chat">
                             <param id="0" name="Object">Door</param>
                         </condition>
                         <condition id="2" name="Is playing" sid="791474559695059" type="Door">
@@ -955,9 +955,9 @@
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="235892371210987" type="System" />
                                 <condition id="-11" name="For Each" sid="693876682404751" type="System">
-                                    <param id="0" name="Object">Sprite2</param>
+                                    <param id="0" name="Object">robotBase</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="332196000139325" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="332196000139325" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -983,34 +983,34 @@
                                         <action id="3" name="Set at XY" sid="455792131435864" type="Array">
                                             <param id="0" name="X">N</param>
                                             <param id="1" name="Y">1</param>
-                                            <param id="2" name="Value">Sprite2.UID</param>
+                                            <param id="2" name="Value">robotBase.UID</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="171309938585195" type="Array">
                                             <param id="0" name="X">N</param>
                                             <param id="1" name="Y">2</param>
-                                            <param id="2" name="Value">Sprite2.GunR</param>
+                                            <param id="2" name="Value">robotBase.GunR</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="832021402315315" type="Array">
                                             <param id="0" name="X">N</param>
                                             <param id="1" name="Y">3</param>
-                                            <param id="2" name="Value">Sprite2.GunL</param>
+                                            <param id="2" name="Value">robotBase.GunL</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="647516960902981" type="Array">
                                             <param id="0" name="X">N</param>
                                             <param id="1" name="Y">4</param>
-                                            <param id="2" name="Value">Sprite2.Head</param>
+                                            <param id="2" name="Value">robotBase.Head</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="924859036470007" type="Array">
                                             <param id="0" name="X">N</param>
                                             <param id="1" name="Y">5</param>
-                                            <param id="2" name="Value">Sprite2.Body</param>
+                                            <param id="2" name="Value">robotBase.Body</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="322876349427341" type="Array">
                                             <param id="0" name="X">N</param>
                                             <param id="1" name="Y">6</param>
-                                            <param id="2" name="Value">Sprite2.Leg</param>
+                                            <param id="2" name="Value">robotBase.Leg</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="301859476937991" type="Sprite2">
+                                        <action id="-10" name="Set value" sid="301859476937991" type="robotBase">
                                             <param id="0" name="Instance variable">idmob</param>
                                             <param id="1" name="Value">N</param>
                                         </action>
@@ -1036,12 +1036,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="162578221050862" type="Sprite">
-                                    <param id="0" name="Object">Sprite2</param>
+                                <action id="0" name="Spawn another object" sid="162578221050862" type="Chat">
+                                    <param id="0" name="Object">robotBase</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="813197314217577" type="Sprite2">
+                                <action id="-10" name="Set value" sid="813197314217577" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -1068,9 +1068,9 @@
                                         <action id="3" name="Set at XY" sid="406729222691535" type="Array">
                                             <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">1</param>
-                                            <param id="2" name="Value">Sprite2.UID</param>
+                                            <param id="2" name="Value">robotBase.UID</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="261447654691333" type="Sprite2">
+                                        <action id="-10" name="Set value" sid="261447654691333" type="robotBase">
                                             <param id="0" name="Instance variable">idmob</param>
                                             <param id="1" name="Value">loopindex</param>
                                         </action>
@@ -1091,16 +1091,16 @@
                                 <condition id="-6" name="Every X seconds" sid="761861199778420" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="816837742044789" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="816837742044789" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="168857309488586" type="Sprite2">
-                                    <param id="0" name="X">Sprite.ImagePointX(1)</param>
-                                    <param id="1" name="Y">Sprite.ImagePointY(1)</param>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="168857309488586" type="robotBase">
+                                    <param id="0" name="X">Chat.ImagePointX(1)</param>
+                                    <param id="1" name="Y">Chat.ImagePointY(1)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1109,16 +1109,16 @@
                                 <condition id="-6" name="Every X seconds" sid="634090655474985" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="158258433878758" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="158258433878758" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="204084110956296" type="Sprite2">
-                                    <param id="0" name="X">Sprite.ImagePointX(2)</param>
-                                    <param id="1" name="Y">Sprite.ImagePointY(2)</param>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="204084110956296" type="robotBase">
+                                    <param id="0" name="X">Chat.ImagePointX(2)</param>
+                                    <param id="1" name="Y">Chat.ImagePointY(2)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1127,16 +1127,16 @@
                                 <condition id="-6" name="Every X seconds" sid="919235124957123" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="657803889407343" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="657803889407343" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="594179999036621" type="Sprite2">
-                                    <param id="0" name="X">Sprite.ImagePointX(3)</param>
-                                    <param id="1" name="Y">Sprite.ImagePointY(3)</param>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="594179999036621" type="robotBase">
+                                    <param id="0" name="X">Chat.ImagePointX(3)</param>
+                                    <param id="1" name="Y">Chat.ImagePointY(3)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1145,25 +1145,25 @@
                                 <condition id="-6" name="Every X seconds" sid="258470715303088" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="389573372228279" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="389573372228279" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="899153032030229" type="Sprite2">
-                                    <param id="0" name="X">Sprite.ImagePointX(4)</param>
-                                    <param id="1" name="Y">Sprite.ImagePointY(4)</param>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="899153032030229" type="robotBase">
+                                    <param id="0" name="X">Chat.ImagePointX(4)</param>
+                                    <param id="1" name="Y">Chat.ImagePointY(4)</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="401090822277192">
                             <conditions>
-                                <condition behavior="Pathfinding" id="0" name="On path found" sid="296717921894167" type="Sprite2" />
+                                <condition behavior="Pathfinding" id="0" name="On path found" sid="296717921894167" type="robotBase" />
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="1" name="Move along path" sid="841428902629002" type="Sprite2" />
+                                <action behavior="Pathfinding" id="1" name="Move along path" sid="841428902629002" type="robotBase" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1179,11 +1179,11 @@
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Set position" sid="838031439287710" type="BodyTurn">
-                                            <param id="0" name="X">Sprite2.X</param>
-                                            <param id="1" name="Y">Sprite2.Y</param>
+                                            <param id="0" name="X">robotBase.X</param>
+                                            <param id="1" name="Y">robotBase.Y</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="251846500652519" type="BodyTurn">
-                                            <param id="0" name="Pin to">Sprite2</param>
+                                            <param id="0" name="Pin to">robotBase</param>
                                             <param id="1" name="Mode">0</param>
                                         </action>
                                         <action id="-26" name="Move to layer" sid="384883196194508" type="spr_Head">
@@ -1197,11 +1197,11 @@
                                     </conditions>
                                     <actions>
                                         <action id="-4" name="Set position to another object" sid="240657989021206" type="spr_Body">
-                                            <param id="0" name="Object">Sprite2</param>
+                                            <param id="0" name="Object">robotBase</param>
                                             <param id="1" name="Image point (optional)">0</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="542945243820206" type="spr_Body">
-                                            <param id="0" name="Animation">arr_body.At(Sprite2.Body,1) &amp; BodyTurn.SprDirection</param>
+                                            <param id="0" name="Animation">arr_body.At(robotBase.Body,1) &amp; BodyTurn.SprDirection</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="-4" name="Set position to another object" sid="976405498905096" type="spr_Leg">
@@ -1209,7 +1209,7 @@
                                             <param id="1" name="Image point (optional)">0</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="121639888570069" type="spr_Leg">
-                                            <param id="0" name="Animation">arr_leg.At(Sprite2.Leg,1) &amp; Sprite2.SprDirection</param>
+                                            <param id="0" name="Animation">arr_leg.At(robotBase.Leg,1) &amp; robotBase.SprDirection</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="-4" name="Set position to another object" sid="584783593368812" type="spr_gunl">
@@ -1217,7 +1217,7 @@
                                             <param id="1" name="Image point (optional)">3</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="859601073733033" type="spr_gunl">
-                                            <param id="0" name="Animation">arr_gun_l.At(Sprite2.GunL,1) &amp;BodyTurn.SprDirection</param>
+                                            <param id="0" name="Animation">arr_gun_l.At(robotBase.GunL,1) &amp;BodyTurn.SprDirection</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="-4" name="Set position to another object" sid="803152599807607" type="spr_gunr">
@@ -1225,7 +1225,7 @@
                                             <param id="1" name="Image point (optional)">2</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="756319361843599" type="spr_gunr">
-                                            <param id="0" name="Animation">arr_gun_r.At(Sprite2.GunR,1) &amp; BodyTurn.SprDirection</param>
+                                            <param id="0" name="Animation">arr_gun_r.At(robotBase.GunR,1) &amp; BodyTurn.SprDirection</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action id="-4" name="Set position to another object" sid="868014138887815" type="spr_Head">
@@ -1233,7 +1233,7 @@
                                             <param id="1" name="Image point (optional)">1</param>
                                         </action>
                                         <action id="4" name="Set animation" sid="958098952797360" type="spr_Head">
-                                            <param id="0" name="Animation">arr_head.At(Sprite2.Head,1) &amp; BodyTurn.SprDirection</param>
+                                            <param id="0" name="Animation">arr_head.At(robotBase.Head,1) &amp; BodyTurn.SprDirection</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
@@ -1245,13 +1245,13 @@
                                 <variable constant="0" name="Position" sid="329153046384242" static="0" type="text"></variable>
                                 <event-block sid="472295391132769">
                                     <conditions>
-                                        <condition id="-13" name="Is between angles" sid="106059821949560" type="Sprite2">
+                                        <condition id="-13" name="Is between angles" sid="106059821949560" type="robotBase">
                                             <param id="0" name="First angle">315</param>
                                             <param id="1" name="Second angle">45</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="698971650743041" type="Sprite2">
+                                        <action id="-10" name="Set value" sid="698971650743041" type="robotBase">
                                             <param id="0" name="Instance variable">SprDirection</param>
                                             <param id="1" name="Value">&quot;Right&quot;</param>
                                         </action>
@@ -1286,13 +1286,13 @@
                             <sub-events>
                                 <event-block sid="364159755474525">
                                     <conditions>
-                                        <condition id="-13" name="Is between angles" sid="671652761323427" type="Sprite2">
+                                        <condition id="-13" name="Is between angles" sid="671652761323427" type="robotBase">
                                             <param id="0" name="First angle">135</param>
                                             <param id="1" name="Second angle">225</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="906593500823178" type="Sprite2">
+                                        <action id="-10" name="Set value" sid="906593500823178" type="robotBase">
                                             <param id="0" name="Instance variable">SprDirection</param>
                                             <param id="1" name="Value">&quot;Left&quot;</param>
                                         </action>
@@ -1330,13 +1330,13 @@
                             <sub-events>
                                 <event-block sid="692883056892793">
                                     <conditions>
-                                        <condition id="-13" name="Is between angles" sid="579070687245525" type="Sprite2">
+                                        <condition id="-13" name="Is between angles" sid="579070687245525" type="robotBase">
                                             <param id="0" name="First angle">225</param>
                                             <param id="1" name="Second angle">315</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="418706089377679" type="Sprite2">
+                                        <action id="-10" name="Set value" sid="418706089377679" type="robotBase">
                                             <param id="0" name="Instance variable">SprDirection</param>
                                             <param id="1" name="Value">&quot;Up&quot;</param>
                                         </action>
@@ -1374,13 +1374,13 @@
                             <sub-events>
                                 <event-block sid="984001786714097">
                                     <conditions>
-                                        <condition id="-13" name="Is between angles" sid="925251687581161" type="Sprite2">
+                                        <condition id="-13" name="Is between angles" sid="925251687581161" type="robotBase">
                                             <param id="0" name="First angle">45</param>
                                             <param id="1" name="Second angle">135</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="220591987049698" type="Sprite2">
+                                        <action id="-10" name="Set value" sid="220591987049698" type="robotBase">
                                             <param id="0" name="Instance variable">SprDirection</param>
                                             <param id="1" name="Value">&quot;Down&quot;</param>
                                         </action>
@@ -1420,20 +1420,20 @@
                     <sub-events>
                         <event-block sid="444619774052397">
                             <conditions>
-                                <condition id="-19" name="On destroyed" sid="592224341018444" type="Sprite2" />
+                                <condition id="-19" name="On destroyed" sid="592224341018444" type="robotBase" />
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="751388751043585" type="System">
                                     <param id="0" name="Variable">dstr</param>
-                                    <param id="1" name="Value">sprite2.UID</param>
+                                    <param id="1" name="Value">robotBase.UID</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="143796164594530" type="Sprite2" />
+                                <action id="-9" name="Destroy" sid="143796164594530" type="robotBase" />
                                 <action id="-11" name="Subtract from" sid="236778341521974" type="System">
                                     <param id="0" name="Variable">quantity</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="921650093501392" type="Array">
-                                    <param id="0" name="X">Sprite2.idmob</param>
+                                    <param id="0" name="X">robotBase.idmob</param>
                                     <param id="1" name="Y">1</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
@@ -1441,24 +1441,24 @@
                         </event-block>
                         <event-block sid="289713094641097">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="500592330159974" type="Sprite2">
+                                <condition id="-7" name="Compare instance variable" sid="500592330159974" type="robotBase">
                                     <param id="0" name="Instance variable">HP</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="848114882882691" type="Sprite2" />
+                                <action id="-9" name="Destroy" sid="848114882882691" type="robotBase" />
                             </actions>
                         </event-block>
                         <event-block sid="605319011178250">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="954283981394417" type="spr_EnemyBullet">
-                                    <param id="0" name="Object">Sprite2</param>
+                                    <param id="0" name="Object">robotBase</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Subtract from" sid="750303012355230" type="Sprite2">
+                                <action id="-12" name="Subtract from" sid="750303012355230" type="robotBase">
                                     <param id="0" name="Instance variable">HP</param>
                                     <param id="1" name="Value">20</param>
                                 </action>
