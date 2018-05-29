@@ -15,6 +15,9 @@
                         <condition id="2" name="Key is down" sid="863473348716596" type="Keyboard">
                             <param id="0" name="Key">87</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="279337629116935" type="Chat">
+                            <param id="0" name="Instance variable">Atck</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="622615869037735" type="Chat">
@@ -30,6 +33,9 @@
                     <conditions>
                         <condition id="2" name="Key is down" sid="511728962535701" type="Keyboard">
                             <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="973017321721332" type="Chat">
+                            <param id="0" name="Instance variable">Atck</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -47,6 +53,9 @@
                         <condition id="2" name="Key is down" sid="327504234856460" type="Keyboard">
                             <param id="0" name="Key">68</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="502257259913391" type="Chat">
+                            <param id="0" name="Instance variable">Atck</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="361335113263343" type="Chat">
@@ -62,6 +71,9 @@
                     <conditions>
                         <condition id="2" name="Key is down" sid="794477410574928" type="Keyboard">
                             <param id="0" name="Key">65</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="118310405010472" type="Chat">
+                            <param id="0" name="Instance variable">Atck</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1518,11 +1530,344 @@
                 <event-group description="" sid="422894996766788" title="RoboFight" />
             </sub-events>
         </event-group>
-        <event-block sid="779418285509157">
+        <event-block sid="620245302900608">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="819313597774699" type="System" />
+                <condition id="-1" name="Every tick" sid="672345703765053" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-3" name="Set position" sid="735343531615733" type="Sprite">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="356979504941555">
+            <conditions>
+                <condition id="0" name="On click" sid="132830305184253" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="269624558115962" type="System">
+                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">-45.</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="645438692256486" type="System">
+                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">45</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="527499783486698" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="714586111004862" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="865127730192300" type="Chat">
+                    <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="687574408897799" type="Chat">
+                    <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action id="0" name="Set text" sid="727099850448841" type="Text">
+                    <param id="0" name="Text">&quot;Right&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="268510539416631" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackRight&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="890778259370579">
+            <conditions>
+                <condition id="0" name="On click" sid="934184791178465" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="499848202051554" type="System">
+                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">-45</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="914665331645500" type="System">
+                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">-135</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="286540415478238" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="946345299763779" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="515584985858072" type="Chat">
+                    <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="397260463592705" type="Chat">
+                    <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action id="0" name="Set text" sid="433257069453019" type="Text">
+                    <param id="0" name="Text">&quot;Up&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="353890573988961" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackUp&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="880824454648106">
+            <conditions>
+                <condition id="0" name="On click" sid="162174653769807" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="926223947072544" type="System">
+                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">45</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="607165821085252" type="System">
+                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">135</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="699824098390035" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="122351530185894" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="522882781749513" type="Chat">
+                    <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="402333172234574" type="Chat">
+                    <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action id="0" name="Set text" sid="947799973494120" type="Text">
+                    <param id="0" name="Text">&quot;Down&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="483977165996384" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackDown&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="503687065110340">
+            <conditions>
+                <condition id="0" name="On click" sid="933862834809437" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="646359973319824" type="System">
+                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">-135</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="291229162841942" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="955441425888042" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="515142788167852" type="Chat">
+                    <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="211867217898015" type="Chat">
+                    <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action id="0" name="Set text" sid="826685141723844" type="Text">
+                    <param id="0" name="Text">&quot;Left&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="568850118229236" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="702424306550132">
+            <conditions>
+                <condition id="0" name="On click" sid="475710595470012" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="191455919351857" type="System">
+                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">135</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="208035736045210" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="461692213715451" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="662687734952618" type="Chat">
+                    <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="314934627940973" type="Chat">
+                    <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
+                </action>
+                <action id="0" name="Set text" sid="987417736054943" type="Text">
+                    <param id="0" name="Text">&quot;Left&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="557620068567529" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="528092214723712">
+            <conditions>
+                <condition id="4" name="On finished" sid="955322389973429" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackRight&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="826912421374995" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="750491020536743">
+            <conditions>
+                <condition id="4" name="On finished" sid="210271582899023" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="207220763473438" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="153964797902494">
+            <conditions>
+                <condition id="4" name="On finished" sid="937645607539433" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackDown&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="421188832162072" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="769374191778132">
+            <conditions>
+                <condition id="4" name="On finished" sid="820707085960333" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackUp&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="438403393926538" type="Chat">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="483419885922754">
+            <conditions>
+                <condition id="4" name="On finished" sid="620393960632956" type="HitBox">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="560780765803828" type="HitBox" />
+            </actions>
+        </event-block>
+        <event-block sid="762653362346107">
+            <conditions>
+                <condition id="2" name="Is playing" sid="502772532407296" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackRight&quot;</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="829989052209994" type="Chat">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="813612281323567" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="109041661591655" type="Chat">
+                    <param id="0" name="Object">HitBox</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="401788807160398">
+            <conditions>
+                <condition id="2" name="Is playing" sid="497054856867972" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="499550507727585" type="Chat">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="660496805652896" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="399061931603650" type="Chat">
+                    <param id="0" name="Object">HitBox</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="813633906752115">
+            <conditions>
+                <condition id="2" name="Is playing" sid="282052490147470" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackUp&quot;</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="202161896833966" type="Chat">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="792035656493127" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="885143127560220" type="Chat">
+                    <param id="0" name="Object">HitBox</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="606154851604168">
+            <conditions>
+                <condition id="2" name="Is playing" sid="659849863281250" type="Chat">
+                    <param id="0" name="Animation">&quot;AttackDown&quot;</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="676230655325231" type="Chat">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="807541842103460" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="648636457227433" type="Chat">
+                    <param id="0" name="Object">HitBox</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
