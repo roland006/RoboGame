@@ -1793,6 +1793,58 @@
                 <action id="-9" name="Destroy" sid="560780765803828" type="HitBox" />
             </actions>
         </event-block>
+        <event-block sid="760159120742597">
+            <conditions>
+                <condition id="4" name="On finished" sid="943731413752311" type="Char">
+                    <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="962831736254648" type="Char">
+                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="429298545169756">
+            <conditions>
+                <condition id="4" name="On finished" sid="885388350829439" type="Char">
+                    <param id="0" name="Animation">&quot;AttackRight&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="779080747374806" type="Char">
+                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="958214214631393">
+            <conditions>
+                <condition id="4" name="On finished" sid="481070547503883" type="Char">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="596309453947770" type="Char">
+                    <param id="0" name="Animation">&quot;Down&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="955609014251435">
+            <conditions>
+                <condition id="4" name="On finished" sid="369788104002368" type="Char">
+                    <param id="0" name="Animation">&quot;AttackUp&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="526066235480501" type="Char">
+                    <param id="0" name="Animation">&quot;Up&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="762653362346107">
             <conditions>
                 <condition id="2" name="Is playing" sid="502772532407296" type="Char">
@@ -1869,12 +1921,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="635390758542424">
+        <event-block sid="749442407563984">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="872982842409207" type="System">
-                    <param id="0" name="Variable">dstr</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                <condition id="1" name="Is overlapping another object" sid="375520891382899" type="HitBox">
+                    <param id="0" name="Object">Enemy</param>
                 </condition>
             </conditions>
             <actions />

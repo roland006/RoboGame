@@ -67,10 +67,13 @@
                 <behavior-type name="8Direction" sid="153610629234900">
                     <behavior id="EightDir" />
                 </behavior-type>
+                <behavior-type name="Solid" sid="783295694903118">
+                    <behavior id="solid" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation-folder name="Attack">
-                    <animation framecount="3" loop="0" name="AttackRight" pingpong="0" repeatcount="1" repeatto="0" sid="650610286984021" speed="5">
+                    <animation framecount="3" loop="0" name="AttackRight" pingpong="0" repeatcount="1" repeatto="0" sid="650610286984021" speed="10">
                         <frame duration="1" hotspotX="0.15873" hotspotY="0.444444">
                             <image-point name="Imagepoint 1" x="2.22222" y="0.47619" />
                             <image-point name="Imagepoint 2" x="0.47619" y="2.25397" />
@@ -78,14 +81,14 @@
                             <image-point name="Imagepoint 4" x="0.47619" y="-1.04762" />
                             <image-point name="Imagepoint 5" x="0.761905" y="0.507937" />
                         </frame>
-                        <frame duration="1" hotspotX="0.15873" hotspotY="0.444444">
+                        <frame duration="3" hotspotX="0.15873" hotspotY="0.444444">
                             <image-point name="Imagepoint 1" x="2.22222" y="0.47619" />
                             <image-point name="Imagepoint 2" x="0.47619" y="2.25397" />
                             <image-point name="Imagepoint 3" x="-1.07937" y="0.571429" />
                             <image-point name="Imagepoint 4" x="0.47619" y="-1.04762" />
                             <image-point name="Imagepoint 5" x="0.761905" y="0.507937" />
                         </frame>
-                        <frame duration="1" hotspotX="0.15873" hotspotY="0.444444">
+                        <frame duration="1" hotspotX="0.126984" hotspotY="0.412698">
                             <image-point name="Imagepoint 1" x="2.22222" y="0.47619" />
                             <image-point name="Imagepoint 2" x="0.47619" y="2.25397" />
                             <image-point name="Imagepoint 3" x="-1.07937" y="0.571429" />
@@ -93,8 +96,21 @@
                             <image-point name="Imagepoint 5" x="0.761905" y="0.507937" />
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="AttackLeft" pingpong="0" repeatcount="1" repeatto="0" sid="711513730034459" speed="5">
+                    <animation framecount="3" loop="0" name="AttackLeft" pingpong="0" repeatcount="1" repeatto="0" sid="711513730034459" speed="10">
                         <frame duration="1" hotspotX="0.84127" hotspotY="0.444444">
+                            <image-point name="Imagepoint 1" x="-1.22222" y="0.47619" />
+                            <image-point name="Imagepoint 2" x="0.52381" y="2.25397" />
+                            <image-point name="Imagepoint 3" x="2.07937" y="0.571429" />
+                            <image-point name="Imagepoint 4" x="0.52381" y="-1.04762" />
+                            <image-point name="Imagepoint 5" x="0.238095" y="0.507937" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="3" hotspotX="0.84127" hotspotY="0.444444">
                             <image-point name="Imagepoint 1" x="-1.22222" y="0.47619" />
                             <image-point name="Imagepoint 2" x="0.52381" y="2.25397" />
                             <image-point name="Imagepoint 3" x="2.07937" y="0.571429" />
@@ -120,21 +136,8 @@
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.84127" hotspotY="0.444444">
-                            <image-point name="Imagepoint 1" x="-1.22222" y="0.47619" />
-                            <image-point name="Imagepoint 2" x="0.52381" y="2.25397" />
-                            <image-point name="Imagepoint 3" x="2.07937" y="0.571429" />
-                            <image-point name="Imagepoint 4" x="0.52381" y="-1.04762" />
-                            <image-point name="Imagepoint 5" x="0.238095" y="0.507937" />
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="AttackDown" pingpong="0" repeatcount="1" repeatto="0" sid="549425736678960" speed="5">
+                    <animation framecount="3" loop="0" name="AttackDown" pingpong="0" repeatcount="1" repeatto="0" sid="549425736678960" speed="10">
                         <frame duration="1" hotspotX="0.492308" hotspotY="0.3">
                             <image-point name="Imagepoint 1" x="0.523077" y="0.95" />
                             <image-point name="Imagepoint 2" x="-0.353846" y="0.28" />
@@ -148,7 +151,7 @@
                                 <point x="0.2" y="0.83" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.492308" hotspotY="0.3">
+                        <frame duration="3" hotspotX="0.492308" hotspotY="0.3">
                             <image-point name="Imagepoint 1" x="0.523077" y="0.95" />
                             <image-point name="Imagepoint 2" x="-0.353846" y="0.28" />
                             <image-point name="Imagepoint 3" x="0.476923" y="-0.42" />
@@ -175,7 +178,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="AttackUp" pingpong="0" repeatcount="1" repeatto="0" sid="670164685243523" speed="5">
+                    <animation framecount="3" loop="0" name="AttackUp" pingpong="0" repeatcount="1" repeatto="0" sid="670164685243523" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.71">
                             <image-point name="Imagepoint 1" x="0.53125" y="-0.08" />
                             <image-point name="Imagepoint 2" x="1.3125" y="0.6" />
@@ -189,7 +192,7 @@
                                 <point x="0.15625" y="0.83" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.71">
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.71">
                             <image-point name="Imagepoint 1" x="0.546875" y="-0.1" />
                             <image-point name="Imagepoint 2" x="1.25" y="0.63" />
                             <image-point name="Imagepoint 3" x="0.484375" y="1.16" />
@@ -1087,6 +1090,9 @@
                 <behavior-type name="Pathfinding" sid="555900618316599">
                     <behavior id="Pathfinding" />
                 </behavior-type>
+                <behavior-type name="Solid" sid="844530730418467">
+                    <behavior id="solid" />
+                </behavior-type>
             </behaviors>
             <container>
                 <type>EnemyGun</type>
@@ -1373,6 +1379,12 @@
             <members>
                 <member>Char</member>
                 <member>robotBase</member>
+            </members>
+        </family>
+        <family name="Enemy" plugin-id="Sprite" sid="721566580777602">
+            <members>
+                <member>EnemyBase</member>
+                <member>EnemyGun</member>
             </members>
         </family>
     </families>
