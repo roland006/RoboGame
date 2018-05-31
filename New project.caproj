@@ -58,7 +58,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Chat" sid="231562020153465">
+        <object-type name="Char" sid="231562020153465">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Atck" sid="919878160031595" type="boolean" />
@@ -1371,7 +1371,7 @@
         </family>
         <family name="Player" plugin-id="Sprite" sid="727885136295975">
             <members>
-                <member>Chat</member>
+                <member>Char</member>
                 <member>robotBase</member>
             </members>
         </family>

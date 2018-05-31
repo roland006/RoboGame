@@ -15,15 +15,15 @@
                         <condition id="2" name="Key is down" sid="863473348716596" type="Keyboard">
                             <param id="0" name="Key">87</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="279337629116935" type="Chat">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="279337629116935" type="Char">
                             <param id="0" name="Instance variable">Atck</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="622615869037735" type="Chat">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="622615869037735" type="Char">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action id="4" name="Set animation" sid="915593282276208" type="Chat">
+                        <action id="4" name="Set animation" sid="915593282276208" type="Char">
                             <param id="0" name="Animation">&quot;Up&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -34,15 +34,15 @@
                         <condition id="2" name="Key is down" sid="511728962535701" type="Keyboard">
                             <param id="0" name="Key">83</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="973017321721332" type="Chat">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="973017321721332" type="Char">
                             <param id="0" name="Instance variable">Atck</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="319689437647163" type="Chat">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="319689437647163" type="Char">
                             <param id="0" name="Control">3</param>
                         </action>
-                        <action id="4" name="Set animation" sid="852457337024806" type="Chat">
+                        <action id="4" name="Set animation" sid="852457337024806" type="Char">
                             <param id="0" name="Animation">&quot;Down&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -53,15 +53,15 @@
                         <condition id="2" name="Key is down" sid="327504234856460" type="Keyboard">
                             <param id="0" name="Key">68</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="502257259913391" type="Chat">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="502257259913391" type="Char">
                             <param id="0" name="Instance variable">Atck</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="361335113263343" type="Chat">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="361335113263343" type="Char">
                             <param id="0" name="Control">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="223516746628839" type="Chat">
+                        <action id="4" name="Set animation" sid="223516746628839" type="Char">
                             <param id="0" name="Animation">&quot;Right&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -72,15 +72,15 @@
                         <condition id="2" name="Key is down" sid="794477410574928" type="Keyboard">
                             <param id="0" name="Key">65</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="118310405010472" type="Chat">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="118310405010472" type="Char">
                             <param id="0" name="Instance variable">Atck</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="661865393649844" type="Chat">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="661865393649844" type="Char">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="685689462738826" type="Chat">
+                        <action id="4" name="Set animation" sid="685689462738826" type="Char">
                             <param id="0" name="Animation">&quot;Left&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -408,8 +408,8 @@
                             </conditions>
                             <actions>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="134718144375589" type="EnemyBase">
-                                    <param id="0" name="X">Chat.X</param>
-                                    <param id="1" name="Y">Chat.Y</param>
+                                    <param id="0" name="X">Char.X</param>
+                                    <param id="1" name="Y">Char.Y</param>
                                 </action>
                                 <action id="5" name="Set frame" sid="943249315918986" type="EnemyBase">
                                     <param id="0" name="Frame number">1</param>
@@ -424,17 +424,17 @@
                             </conditions>
                             <actions>
                                 <action behavior="Turret" id="0" name="Acquire target" sid="741144012233187" type="EnemyGun">
-                                    <param id="0" name="Target">Chat</param>
+                                    <param id="0" name="Target">Char</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="138282142429842">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="775652683335255" type="EnemyBase">
-                                    <param id="0" name="Object">Chat</param>
+                                    <param id="0" name="Object">Char</param>
                                 </condition>
                                 <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="314532854274120" type="EnemyBase">
-                                    <param id="0" name="Object">Chat</param>
+                                    <param id="0" name="Object">Char</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -443,8 +443,8 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="162192448874770" type="EnemyBase">
-                                    <param id="0" name="X">Chat.X</param>
-                                    <param id="1" name="Y">Chat.Y</param>
+                                    <param id="0" name="X">Char.X</param>
+                                    <param id="1" name="Y">Char.Y</param>
                                 </action>
                                 <action behavior="Turret" disabled="1" id="2" name="Clear targets" sid="321046109632283" type="EnemyGun" />
                             </actions>
@@ -453,10 +453,10 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="158337274084598" type="System" />
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="142339240061113" type="EnemyBase">
-                                    <param id="0" name="Object">Chat</param>
+                                    <param id="0" name="Object">Char</param>
                                 </condition>
                                 <condition behavior="Range" id="0" name="Has LOS to object" sid="777513233548340" type="EnemyBase">
-                                    <param id="0" name="Object">Chat</param>
+                                    <param id="0" name="Object">Char</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -483,7 +483,7 @@
                                     <param id="0" name="Interval (seconds)">0.3</param>
                                 </condition>
                                 <condition behavior="Range" id="0" inverted="1" name="Has LOS to object" sid="197223602963918" type="EnemyBase">
-                                    <param id="0" name="Object">Chat</param>
+                                    <param id="0" name="Object">Char</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -496,16 +496,16 @@
                         <event-block any="1" disabled="1" sid="506239946771722">
                             <conditions>
                                 <condition behavior="Range" id="0" name="Has LOS to object" sid="971014496528005" type="EnemyBase">
-                                    <param id="0" name="Object">Chat</param>
+                                    <param id="0" name="Object">Char</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-22" name="Set angle toward position" sid="759377906533540" type="EnemyBase">
-                                    <param id="0" name="X">Chat.X</param>
-                                    <param id="1" name="Y">Chat.Y</param>
+                                    <param id="0" name="X">Char.X</param>
+                                    <param id="1" name="Y">Char.Y</param>
                                 </action>
                                 <action behavior="Turret" id="0" name="Acquire target" sid="181842957722071" type="EnemyGun">
-                                    <param id="0" name="Target">Chat</param>
+                                    <param id="0" name="Target">Char</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -588,7 +588,7 @@
                 </event-block>
                 <event-block sid="634622195206165">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="269020354179438" type="Chat">
+                        <condition id="1" name="Is overlapping another object" sid="269020354179438" type="Char">
                             <param id="0" name="Object">Engine</param>
                         </condition>
                     </conditions>
@@ -613,7 +613,7 @@
                         <condition id="0" name="On key pressed" sid="562572515451728" type="Keyboard">
                             <param id="0" name="Key">70</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="968684298670959" type="Chat">
+                        <condition id="1" name="Is overlapping another object" sid="968684298670959" type="Char">
                             <param id="0" name="Object">Engine</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="442733369224469" type="Engine">
@@ -736,7 +736,7 @@
                         <condition id="0" name="On key pressed" sid="566436656339792" type="Keyboard">
                             <param id="0" name="Key">70</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="461995431222062" type="Chat">
+                        <condition id="1" name="Is overlapping another object" sid="461995431222062" type="Char">
                             <param id="0" name="Object">Door</param>
                         </condition>
                         <condition id="2" name="Is playing" sid="791474559695059" type="Door">
@@ -932,11 +932,11 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="887897770209835" title="Robots">
+        <event-group description="" disabled="1" sid="887897770209835" title="Robots">
             <sub-events>
-                <event-group description="" sid="492215930263984" title="id и массив">
+                <event-group description="" disabled="1" sid="492215930263984" title="id и массив">
                     <sub-events>
-                        <event-block sid="285822222537964">
+                        <event-block disabled="1" sid="285822222537964">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="947298577027537" type="System" />
                             </conditions>
@@ -963,7 +963,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="642609063530736">
+                        <event-block disabled="1" sid="642609063530736">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="235892371210987" type="System" />
                                 <condition id="-11" name="For Each" sid="693876682404751" type="System">
@@ -977,7 +977,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="197955678493052">
+                                <event-block disabled="1" sid="197955678493052">
                                     <conditions>
                                         <condition id="1" name="Compare at XY" sid="403852742980621" type="Array">
                                             <param id="0" name="X">N</param>
@@ -1038,7 +1038,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="764479556349409">
+                        <event-block disabled="1" sid="764479556349409">
                             <conditions>
                                 <condition id="0" name="On clicked" sid="936560984553163" type="Button" />
                                 <condition id="-14" name="Compare variable" sid="838875689299053" type="System">
@@ -1048,7 +1048,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="162578221050862" type="Chat">
+                                <action id="0" name="Spawn another object" sid="162578221050862" type="Char">
                                     <param id="0" name="Object">robotBase</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="Image point">0</param>
@@ -1063,7 +1063,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="829131780210079">
+                                <event-block disabled="1" sid="829131780210079">
                                     <conditions>
                                         <condition id="-12" name="Repeat" sid="724950058814763" type="System">
                                             <param id="0" name="Count">Array.Width</param>
@@ -1088,7 +1088,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="810995857507466">
+                                <event-block disabled="1" sid="810995857507466">
                                     <conditions />
                                     <actions />
                                 </event-block>
@@ -1096,9 +1096,9 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="979220650491454" title="RobotPath">
+                <event-group description="" disabled="1" sid="979220650491454" title="RobotPath">
                     <sub-events>
-                        <event-block sid="142727849019068">
+                        <event-block disabled="1" sid="142727849019068">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="761861199778420" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
@@ -1111,12 +1111,12 @@
                             </conditions>
                             <actions>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="168857309488586" type="robotBase">
-                                    <param id="0" name="X">Chat.ImagePointX(1)</param>
-                                    <param id="1" name="Y">Chat.ImagePointY(1)</param>
+                                    <param id="0" name="X">Char.ImagePointX(1)</param>
+                                    <param id="1" name="Y">Char.ImagePointY(1)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="940531998947290">
+                        <event-block disabled="1" sid="940531998947290">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="634090655474985" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
@@ -1129,12 +1129,12 @@
                             </conditions>
                             <actions>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="204084110956296" type="robotBase">
-                                    <param id="0" name="X">Chat.ImagePointX(2)</param>
-                                    <param id="1" name="Y">Chat.ImagePointY(2)</param>
+                                    <param id="0" name="X">Char.ImagePointX(2)</param>
+                                    <param id="1" name="Y">Char.ImagePointY(2)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="580963461054591">
+                        <event-block disabled="1" sid="580963461054591">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="919235124957123" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
@@ -1147,12 +1147,12 @@
                             </conditions>
                             <actions>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="594179999036621" type="robotBase">
-                                    <param id="0" name="X">Chat.ImagePointX(3)</param>
-                                    <param id="1" name="Y">Chat.ImagePointY(3)</param>
+                                    <param id="0" name="X">Char.ImagePointX(3)</param>
+                                    <param id="1" name="Y">Char.ImagePointY(3)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="640069216851444">
+                        <event-block disabled="1" sid="640069216851444">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="258470715303088" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
@@ -1165,12 +1165,12 @@
                             </conditions>
                             <actions>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="899153032030229" type="robotBase">
-                                    <param id="0" name="X">Chat.ImagePointX(4)</param>
-                                    <param id="1" name="Y">Chat.ImagePointY(4)</param>
+                                    <param id="0" name="X">Char.ImagePointX(4)</param>
+                                    <param id="1" name="Y">Char.ImagePointY(4)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="401090822277192">
+                        <event-block disabled="1" sid="401090822277192">
                             <conditions>
                                 <condition behavior="Pathfinding" id="0" name="On path found" sid="296717921894167" type="robotBase" />
                             </conditions>
@@ -1180,12 +1180,12 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="734602228370030" title="RobotDirection">
+                <event-group description="" disabled="1" sid="734602228370030" title="RobotDirection">
                     <sub-events>
-                        <event-group description="" sid="581672266593862" title="LayoutStart">
+                        <event-group description="" disabled="1" sid="581672266593862" title="LayoutStart">
                             <sub-events>
                                 <comment>При старте игры все мобы стоят лицом вправо. Мы присваиваем переменной &quot;Position&quot; значение Right. Затем мы задаем значение переменной &quot;local&quot; данные из Sprite2 , а именно, что экипированно. Экипировка = имени анимации без указания направления. Затем мы в переменную &quot;local&quot; добавляем переменную &quot;Position&quot;, и задаем объектам анимацию local (AnimationName+Position)</comment>
-                                <event-block sid="269984157842190">
+                                <event-block disabled="1" sid="269984157842190">
                                     <conditions>
                                         <condition id="-2" name="On start of layout" sid="831926099929674" type="System" />
                                     </conditions>
@@ -1203,7 +1203,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="404786138120621">
+                                <event-block disabled="1" sid="404786138120621">
                                     <conditions>
                                         <condition id="-1" name="Every tick" sid="530904990767439" type="System" />
                                     </conditions>
@@ -1252,10 +1252,10 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="918359296332619" title="Right direction">
+                        <event-group description="" disabled="1" sid="918359296332619" title="Right direction">
                             <sub-events>
                                 <variable constant="0" name="Position" sid="329153046384242" static="0" type="text"></variable>
-                                <event-block sid="472295391132769">
+                                <event-block disabled="1" sid="472295391132769">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="106059821949560" type="robotBase">
                                             <param id="0" name="First angle">315</param>
@@ -1269,7 +1269,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="906938095151352">
+                                <event-block disabled="1" sid="906938095151352">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="233352104186981" type="BodyTurn">
                                             <param id="0" name="First angle">315</param>
@@ -1294,9 +1294,9 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="914093331646268" title="Left direction">
+                        <event-group description="" disabled="1" sid="914093331646268" title="Left direction">
                             <sub-events>
-                                <event-block sid="364159755474525">
+                                <event-block disabled="1" sid="364159755474525">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="671652761323427" type="robotBase">
                                             <param id="0" name="First angle">135</param>
@@ -1310,7 +1310,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="638662395224880">
+                                <event-block disabled="1" sid="638662395224880">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="708477492590010" type="BodyTurn">
                                             <param id="0" name="First angle">135</param>
@@ -1338,9 +1338,9 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="306558573310155" title="Up direction">
+                        <event-group description="" disabled="1" sid="306558573310155" title="Up direction">
                             <sub-events>
-                                <event-block sid="692883056892793">
+                                <event-block disabled="1" sid="692883056892793">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="579070687245525" type="robotBase">
                                             <param id="0" name="First angle">225</param>
@@ -1354,7 +1354,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="918629745765481">
+                                <event-block disabled="1" sid="918629745765481">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="644051734827785" type="BodyTurn">
                                             <param id="0" name="First angle">225</param>
@@ -1382,9 +1382,9 @@
                                 </event-block>
                             </sub-events>
                         </event-group>
-                        <event-group description="" sid="898450390364297" title="Down direction">
+                        <event-group description="" disabled="1" sid="898450390364297" title="Down direction">
                             <sub-events>
-                                <event-block sid="984001786714097">
+                                <event-block disabled="1" sid="984001786714097">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="925251687581161" type="robotBase">
                                             <param id="0" name="First angle">45</param>
@@ -1398,7 +1398,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="522731269996692">
+                                <event-block disabled="1" sid="522731269996692">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="230760883825238" type="BodyTurn">
                                             <param id="0" name="First angle">45</param>
@@ -1428,9 +1428,9 @@
                         </event-group>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="936495346027739" title="RoboAi">
+                <event-group description="" disabled="1" sid="936495346027739" title="RoboAi">
                     <sub-events>
-                        <event-block sid="444619774052397">
+                        <event-block disabled="1" sid="444619774052397">
                             <conditions>
                                 <condition id="-19" name="On destroyed" sid="592224341018444" type="robotBase" />
                             </conditions>
@@ -1451,7 +1451,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="289713094641097">
+                        <event-block disabled="1" sid="289713094641097">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="500592330159974" type="robotBase">
                                     <param id="0" name="Instance variable">HP</param>
@@ -1463,7 +1463,7 @@
                                 <action id="-9" name="Destroy" sid="848114882882691" type="robotBase" />
                             </actions>
                         </event-block>
-                        <event-block sid="605319011178250">
+                        <event-block disabled="1" sid="605319011178250">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="954283981394417" type="spr_EnemyBullet">
                                     <param id="0" name="Object">robotBase</param>
@@ -1477,7 +1477,7 @@
                                 <action id="-9" name="Destroy" sid="145500336747117" type="spr_EnemyBullet" />
                             </actions>
                         </event-block>
-                        <event-block sid="255926812542738">
+                        <event-block disabled="1" sid="255926812542738">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="493359249859367" type="BodyTurn">
                                     <param id="0" name="Object">EnemyBase</param>
@@ -1489,13 +1489,13 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="559576356922312">
+                        <event-block disabled="1" sid="559576356922312">
                             <conditions>
                                 <condition behavior="RightArm" id="1" name="On shoot" sid="536749931640582" type="BodyTurn" />
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="623773264553870">
+                                <event-block disabled="1" sid="623773264553870">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="908889677793135" type="System">
                                             <param id="0" name="Interval (seconds)">0.2</param>
@@ -1509,7 +1509,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="904915006134774">
+                                <event-block disabled="1" sid="904915006134774">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="688075165802045" type="System">
                                             <param id="0" name="Interval (seconds)">0.3</param>
@@ -1527,7 +1527,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="422894996766788" title="RoboFight" />
+                <event-group description="" disabled="1" sid="422894996766788" title="RoboFight" />
             </sub-events>
         </event-group>
         <event-block sid="620245302900608">
@@ -1548,34 +1548,34 @@
                     <param id="1" name="Click type">0</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="269624558115962" type="System">
-                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Second value">-45.</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="645438692256486" type="System">
-                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Second value">45</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="527499783486698" type="Chat">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="527499783486698" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="714586111004862" type="Chat">
+                <action id="-13" name="Set boolean" sid="714586111004862" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action behavior="8Direction" id="9" name="Set vector X" sid="865127730192300" type="Chat">
+                <action behavior="8Direction" id="9" name="Set vector X" sid="865127730192300" type="Char">
                     <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
-                <action behavior="8Direction" id="10" name="Set vector Y" sid="687574408897799" type="Chat">
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="687574408897799" type="Char">
                     <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
                 <action id="0" name="Set text" sid="727099850448841" type="Text">
                     <param id="0" name="Text">&quot;Right&quot;</param>
                 </action>
-                <action id="4" name="Set animation" sid="268510539416631" type="Chat">
+                <action id="4" name="Set animation" sid="268510539416631" type="Char">
                     <param id="0" name="Animation">&quot;AttackRight&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1588,34 +1588,34 @@
                     <param id="1" name="Click type">0</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="499848202051554" type="System">
-                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Second value">-45</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="914665331645500" type="System">
-                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Second value">-135</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="286540415478238" type="Chat">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="286540415478238" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="946345299763779" type="Chat">
+                <action id="-13" name="Set boolean" sid="946345299763779" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action behavior="8Direction" id="9" name="Set vector X" sid="515584985858072" type="Chat">
+                <action behavior="8Direction" id="9" name="Set vector X" sid="515584985858072" type="Char">
                     <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
-                <action behavior="8Direction" id="10" name="Set vector Y" sid="397260463592705" type="Chat">
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="397260463592705" type="Char">
                     <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
                 <action id="0" name="Set text" sid="433257069453019" type="Text">
                     <param id="0" name="Text">&quot;Up&quot;</param>
                 </action>
-                <action id="4" name="Set animation" sid="353890573988961" type="Chat">
+                <action id="4" name="Set animation" sid="353890573988961" type="Char">
                     <param id="0" name="Animation">&quot;AttackUp&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1628,34 +1628,34 @@
                     <param id="1" name="Click type">0</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="926223947072544" type="System">
-                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Second value">45</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="607165821085252" type="System">
-                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Second value">135</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="699824098390035" type="Chat">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="699824098390035" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="122351530185894" type="Chat">
+                <action id="-13" name="Set boolean" sid="122351530185894" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action behavior="8Direction" id="9" name="Set vector X" sid="522882781749513" type="Chat">
+                <action behavior="8Direction" id="9" name="Set vector X" sid="522882781749513" type="Char">
                     <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
-                <action behavior="8Direction" id="10" name="Set vector Y" sid="402333172234574" type="Chat">
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="402333172234574" type="Char">
                     <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
                 <action id="0" name="Set text" sid="947799973494120" type="Text">
                     <param id="0" name="Text">&quot;Down&quot;</param>
                 </action>
-                <action id="4" name="Set animation" sid="483977165996384" type="Chat">
+                <action id="4" name="Set animation" sid="483977165996384" type="Char">
                     <param id="0" name="Animation">&quot;AttackDown&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1668,29 +1668,29 @@
                     <param id="1" name="Click type">0</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="646359973319824" type="System">
-                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Second value">-135</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="291229162841942" type="Chat">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="291229162841942" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="955441425888042" type="Chat">
+                <action id="-13" name="Set boolean" sid="955441425888042" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action behavior="8Direction" id="9" name="Set vector X" sid="515142788167852" type="Chat">
+                <action behavior="8Direction" id="9" name="Set vector X" sid="515142788167852" type="Char">
                     <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
-                <action behavior="8Direction" id="10" name="Set vector Y" sid="211867217898015" type="Chat">
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="211867217898015" type="Char">
                     <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
                 <action id="0" name="Set text" sid="826685141723844" type="Text">
                     <param id="0" name="Text">&quot;Left&quot;</param>
                 </action>
-                <action id="4" name="Set animation" sid="568850118229236" type="Chat">
+                <action id="4" name="Set animation" sid="568850118229236" type="Char">
                     <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1703,29 +1703,29 @@
                     <param id="1" name="Click type">0</param>
                 </condition>
                 <condition id="-8" name="Compare two values" sid="191455919351857" type="System">
-                    <param id="0" name="First value">angle(Chat.X, Chat.Y, Mouse.X, Mouse.Y)</param>
+                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Second value">135</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="208035736045210" type="Chat">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="208035736045210" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="461692213715451" type="Chat">
+                <action id="-13" name="Set boolean" sid="461692213715451" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action behavior="8Direction" id="9" name="Set vector X" sid="662687734952618" type="Chat">
+                <action behavior="8Direction" id="9" name="Set vector X" sid="662687734952618" type="Char">
                     <param id="0" name="Vector X">1000*cos(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
-                <action behavior="8Direction" id="10" name="Set vector Y" sid="314934627940973" type="Chat">
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="314934627940973" type="Char">
                     <param id="0" name="Vector Y">1000*sin(angle(Self.X,Self.Y,Mouse.X,Mouse.Y))</param>
                 </action>
                 <action id="0" name="Set text" sid="987417736054943" type="Text">
                     <param id="0" name="Text">&quot;Left&quot;</param>
                 </action>
-                <action id="4" name="Set animation" sid="557620068567529" type="Chat">
+                <action id="4" name="Set animation" sid="557620068567529" type="Char">
                     <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1733,12 +1733,12 @@
         </event-block>
         <event-block sid="528092214723712">
             <conditions>
-                <condition id="4" name="On finished" sid="955322389973429" type="Chat">
+                <condition id="4" name="On finished" sid="955322389973429" type="Char">
                     <param id="0" name="Animation">&quot;AttackRight&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="826912421374995" type="Chat">
+                <action id="-13" name="Set boolean" sid="826912421374995" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -1746,12 +1746,12 @@
         </event-block>
         <event-block sid="750491020536743">
             <conditions>
-                <condition id="4" name="On finished" sid="210271582899023" type="Chat">
+                <condition id="4" name="On finished" sid="210271582899023" type="Char">
                     <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="207220763473438" type="Chat">
+                <action id="-13" name="Set boolean" sid="207220763473438" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -1759,12 +1759,12 @@
         </event-block>
         <event-block sid="153964797902494">
             <conditions>
-                <condition id="4" name="On finished" sid="937645607539433" type="Chat">
+                <condition id="4" name="On finished" sid="937645607539433" type="Char">
                     <param id="0" name="Animation">&quot;AttackDown&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="421188832162072" type="Chat">
+                <action id="-13" name="Set boolean" sid="421188832162072" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -1772,12 +1772,12 @@
         </event-block>
         <event-block sid="769374191778132">
             <conditions>
-                <condition id="4" name="On finished" sid="820707085960333" type="Chat">
+                <condition id="4" name="On finished" sid="820707085960333" type="Char">
                     <param id="0" name="Animation">&quot;AttackUp&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="438403393926538" type="Chat">
+                <action id="-13" name="Set boolean" sid="438403393926538" type="Char">
                     <param id="0" name="Instance variable">Atck</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -1795,17 +1795,17 @@
         </event-block>
         <event-block sid="762653362346107">
             <conditions>
-                <condition id="2" name="Is playing" sid="502772532407296" type="Chat">
+                <condition id="2" name="Is playing" sid="502772532407296" type="Char">
                     <param id="0" name="Animation">&quot;AttackRight&quot;</param>
                 </condition>
-                <condition id="3" name="Compare frame" sid="829989052209994" type="Chat">
+                <condition id="3" name="Compare frame" sid="829989052209994" type="Char">
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">1</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="813612281323567" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="109041661591655" type="Chat">
+                <action id="0" name="Spawn another object" sid="109041661591655" type="Char">
                     <param id="0" name="Object">HitBox</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">5</param>
@@ -1814,17 +1814,17 @@
         </event-block>
         <event-block sid="401788807160398">
             <conditions>
-                <condition id="2" name="Is playing" sid="497054856867972" type="Chat">
+                <condition id="2" name="Is playing" sid="497054856867972" type="Char">
                     <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
                 </condition>
-                <condition id="3" name="Compare frame" sid="499550507727585" type="Chat">
+                <condition id="3" name="Compare frame" sid="499550507727585" type="Char">
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">1</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="660496805652896" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="399061931603650" type="Chat">
+                <action id="0" name="Spawn another object" sid="399061931603650" type="Char">
                     <param id="0" name="Object">HitBox</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">5</param>
@@ -1833,17 +1833,17 @@
         </event-block>
         <event-block sid="813633906752115">
             <conditions>
-                <condition id="2" name="Is playing" sid="282052490147470" type="Chat">
+                <condition id="2" name="Is playing" sid="282052490147470" type="Char">
                     <param id="0" name="Animation">&quot;AttackUp&quot;</param>
                 </condition>
-                <condition id="3" name="Compare frame" sid="202161896833966" type="Chat">
+                <condition id="3" name="Compare frame" sid="202161896833966" type="Char">
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">1</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="792035656493127" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="885143127560220" type="Chat">
+                <action id="0" name="Spawn another object" sid="885143127560220" type="Char">
                     <param id="0" name="Object">HitBox</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">5</param>
@@ -1852,22 +1852,32 @@
         </event-block>
         <event-block sid="606154851604168">
             <conditions>
-                <condition id="2" name="Is playing" sid="659849863281250" type="Chat">
+                <condition id="2" name="Is playing" sid="659849863281250" type="Char">
                     <param id="0" name="Animation">&quot;AttackDown&quot;</param>
                 </condition>
-                <condition id="3" name="Compare frame" sid="676230655325231" type="Chat">
+                <condition id="3" name="Compare frame" sid="676230655325231" type="Char">
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">1</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="807541842103460" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="648636457227433" type="Chat">
+                <action id="0" name="Spawn another object" sid="648636457227433" type="Char">
                     <param id="0" name="Object">HitBox</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="Image point">5</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="635390758542424">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="872982842409207" type="System">
+                    <param id="0" name="Variable">dstr</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
