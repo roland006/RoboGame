@@ -2426,7 +2426,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="79">
+                <instance type="cursor" uid="79">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2436,8 +2436,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>718.908691406</x>
-                        <y>248.657180786</y>
+                        <x>760.258117676</x>
+                        <y>-22.975845337</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>

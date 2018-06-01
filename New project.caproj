@@ -1312,7 +1312,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="705134514781359">
+        <object-type name="cursor" sid="705134514781359">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757542546099760" speed="5">
