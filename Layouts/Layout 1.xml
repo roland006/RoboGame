@@ -112,8 +112,8 @@
                         <x>627</x>
                         <y>364</y>
                         <z>0</z>
-                        <width>22.026191711</width>
-                        <height>20.570156097</height>
+                        <width>20</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -562,8 +562,8 @@
                         <x>428</x>
                         <y>360</y>
                         <z>0</z>
-                        <width>19.830408096</width>
-                        <height>19.230194092</height>
+                        <width>20</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -809,7 +809,7 @@
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>360</rotate-speed>
-                                <rotate-object>Yes</rotate-object>
+                                <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -909,7 +909,7 @@
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

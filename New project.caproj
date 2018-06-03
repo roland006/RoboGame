@@ -73,7 +73,7 @@
             </behaviors>
             <animation-folder>
                 <animation-folder name="Attack">
-                    <animation framecount="3" loop="0" name="AttackRight" pingpong="0" repeatcount="1" repeatto="0" sid="650610286984021" speed="10">
+                    <animation framecount="3" loop="0" name="AttackRight" pingpong="0" repeatcount="1" repeatto="0" sid="650610286984021" speed="15">
                         <frame duration="1" hotspotX="0.15873" hotspotY="0.444444">
                             <image-point name="Imagepoint 1" x="2.22222" y="0.47619" />
                             <image-point name="Imagepoint 2" x="0.47619" y="2.25397" />
@@ -88,7 +88,7 @@
                             <image-point name="Imagepoint 4" x="0.47619" y="-1.04762" />
                             <image-point name="Imagepoint 5" x="0.761905" y="0.507937" />
                         </frame>
-                        <frame duration="1" hotspotX="0.126984" hotspotY="0.412698">
+                        <frame duration="2" hotspotX="0.126984" hotspotY="0.412698">
                             <image-point name="Imagepoint 1" x="2.22222" y="0.47619" />
                             <image-point name="Imagepoint 2" x="0.47619" y="2.25397" />
                             <image-point name="Imagepoint 3" x="-1.07937" y="0.571429" />
@@ -96,7 +96,7 @@
                             <image-point name="Imagepoint 5" x="0.761905" y="0.507937" />
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="AttackLeft" pingpong="0" repeatcount="1" repeatto="0" sid="711513730034459" speed="10">
+                    <animation framecount="3" loop="0" name="AttackLeft" pingpong="0" repeatcount="1" repeatto="0" sid="711513730034459" speed="15">
                         <frame duration="1" hotspotX="0.84127" hotspotY="0.444444">
                             <image-point name="Imagepoint 1" x="-1.22222" y="0.47619" />
                             <image-point name="Imagepoint 2" x="0.52381" y="2.25397" />
@@ -123,7 +123,7 @@
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.84127" hotspotY="0.444444">
+                        <frame duration="2" hotspotX="0.84127" hotspotY="0.444444">
                             <image-point name="Imagepoint 1" x="-1.22222" y="0.47619" />
                             <image-point name="Imagepoint 2" x="0.52381" y="2.25397" />
                             <image-point name="Imagepoint 3" x="2.07937" y="0.571429" />
@@ -137,7 +137,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="AttackDown" pingpong="0" repeatcount="1" repeatto="0" sid="549425736678960" speed="10">
+                    <animation framecount="3" loop="0" name="AttackDown" pingpong="0" repeatcount="1" repeatto="0" sid="549425736678960" speed="15">
                         <frame duration="1" hotspotX="0.492308" hotspotY="0.3">
                             <image-point name="Imagepoint 1" x="0.523077" y="0.95" />
                             <image-point name="Imagepoint 2" x="-0.353846" y="0.28" />
@@ -164,7 +164,7 @@
                                 <point x="0.2" y="0.83" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.492308" hotspotY="0.3">
+                        <frame duration="2" hotspotX="0.492308" hotspotY="0.3">
                             <image-point name="Imagepoint 1" x="0.523077" y="0.95" />
                             <image-point name="Imagepoint 2" x="-0.353846" y="0.28" />
                             <image-point name="Imagepoint 3" x="0.476923" y="-0.42" />
@@ -178,7 +178,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="AttackUp" pingpong="0" repeatcount="1" repeatto="0" sid="670164685243523" speed="10">
+                    <animation framecount="3" loop="0" name="AttackUp" pingpong="0" repeatcount="1" repeatto="0" sid="670164685243523" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.71">
                             <image-point name="Imagepoint 1" x="0.53125" y="-0.08" />
                             <image-point name="Imagepoint 2" x="1.3125" y="0.6" />
@@ -205,7 +205,7 @@
                                 <point x="0.15625" y="0.83" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.71">
+                        <frame duration="2" hotspotX="0.5" hotspotY="0.71">
                             <image-point name="Imagepoint 1" x="0.515625" y="-0.1" />
                             <image-point name="Imagepoint 2" x="1.51563" y="0.53" />
                             <image-point name="Imagepoint 3" x="0.546875" y="1.1" />
@@ -1320,14 +1320,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="644678747695659">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273917999902776" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="HitBox" sid="845171623343193">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1393,6 +1385,7 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>robots.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
