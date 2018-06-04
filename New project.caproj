@@ -62,6 +62,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Atck" sid="919878160031595" type="boolean" />
+                <instance-variable name="command" sid="873208044767165" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="153610629234900">
@@ -273,6 +274,8 @@
                 <instance-variable name="SprDirection" sid="632733354323749" type="string" />
                 <instance-variable name="iUid" sid="921172305191078" type="number" />
                 <instance-variable name="HP" sid="735238515622937" type="number" />
+                <instance-variable name="targetX" sid="627577301789426" type="number" />
+                <instance-variable name="targetY" sid="995703868530800" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="378515558058347">

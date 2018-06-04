@@ -235,20 +235,33 @@
                                 <condition id="-6" name="Every X seconds" sid="771586575161717" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="496327090259799" type="robotBase">
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="453029626239016" type="robotBase">
+                                    <param id="0" name="X">Self.targetX</param>
+                                    <param id="1" name="Y">Self.targetY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="652967086050068">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="314629074165497" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="515384584823412" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="453029626239016" type="robotBase">
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="208619316126408" type="robotBase">
                                     <param id="0" name="X">Char.ImagePointX(1)</param>
                                     <param id="1" name="Y">Char.ImagePointY(1)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="595268774448940">
+                        <event-block disabled="1" sid="595268774448940">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="347823190124457" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
@@ -266,7 +279,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="863133481372218">
+                        <event-block disabled="1" sid="863133481372218">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="194119246661912" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
@@ -284,7 +297,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="782338274034603">
+                        <event-block disabled="1" sid="782338274034603">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="504446783791064" type="System">
                                     <param id="0" name="Interval (seconds)">0.5</param>
@@ -386,7 +399,6 @@
                         </event-group>
                         <event-group description="" sid="796631651429653" title="Right direction2">
                             <sub-events>
-                                <variable constant="0" name="Position" sid="305009319794272" static="0" type="text"></variable>
                                 <event-block sid="396816296109762">
                                     <conditions>
                                         <condition id="-13" name="Is between angles" sid="294864284743425" type="robotBase">
@@ -660,6 +672,49 @@
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="792214155036545" title="RoboFight2" />
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="367912134442613" title="Commands">
+            <sub-events>
+                <event-block sid="608683177185623">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="153328840167864" type="Keyboard">
+                            <param id="0" name="Key">74</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="789115312668109" type="Char">
+                            <param id="0" name="Instance variable">command</param>
+                            <param id="1" name="Value">&quot;atk&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="822807070103592">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="615869164135294" type="Keyboard">
+                            <param id="0" name="Key">75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="491251749484137" type="Char">
+                            <param id="0" name="Instance variable">command</param>
+                            <param id="1" name="Value">&quot;def&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="483944370834305">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="748829136633853" type="Keyboard">
+                            <param id="0" name="Key">76</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="946753140412606" type="Char">
+                            <param id="0" name="Instance variable">command</param>
+                            <param id="1" name="Value">&quot;hold&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

@@ -38,6 +38,7 @@
                     </properties>
                     <instance-variables>
                         <Atck>false</Atck>
+                        <command>def</command>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -89,6 +90,8 @@
                         <SprDirection></SprDirection>
                         <iUid>5</iUid>
                         <HP>100</HP>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -539,6 +542,8 @@
                         <SprDirection></SprDirection>
                         <iUid>5</iUid>
                         <HP>100</HP>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
