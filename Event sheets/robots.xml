@@ -32,6 +32,10 @@
                                     <param id="1" name="Y">0</param>
                                     <param id="2" name="Value">3</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="172572732972424" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="480870732884383">
@@ -51,57 +55,57 @@
                                 <event-block sid="566201720838586">
                                     <conditions>
                                         <condition id="1" name="Compare at XY" sid="422764633719488" type="Array">
-                                            <param id="0" name="X">N</param>
+                                            <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">1</param>
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Value">0</param>
                                         </condition>
-                                        <condition id="-14" name="Compare variable" sid="364234346699292" type="System">
-                                            <param id="0" name="Variable">N</param>
+                                        <condition id="-8" name="Compare two values" sid="364234346699292" type="System">
+                                            <param id="0" name="First value">loopindex</param>
                                             <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">4</param>
+                                            <param id="2" name="Second value">4</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="3" name="Set at XY" sid="618191859127374" type="Array">
-                                            <param id="0" name="X">N</param>
+                                            <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">1</param>
                                             <param id="2" name="Value">robotBase.UID</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="855981398523231" type="Array">
-                                            <param id="0" name="X">N</param>
+                                            <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">2</param>
                                             <param id="2" name="Value">robotBase.GunR</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="256481690520101" type="Array">
-                                            <param id="0" name="X">N</param>
+                                            <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">3</param>
                                             <param id="2" name="Value">robotBase.GunL</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="497723743960111" type="Array">
-                                            <param id="0" name="X">N</param>
+                                            <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">4</param>
                                             <param id="2" name="Value">robotBase.Head</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="600971710420520" type="Array">
-                                            <param id="0" name="X">N</param>
+                                            <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">5</param>
                                             <param id="2" name="Value">robotBase.Body</param>
                                         </action>
                                         <action id="3" name="Set at XY" sid="568511579254796" type="Array">
-                                            <param id="0" name="X">N</param>
+                                            <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">6</param>
                                             <param id="2" name="Value">robotBase.Leg</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="395413808701768" type="robotBase">
                                             <param id="0" name="Instance variable">idmob</param>
-                                            <param id="1" name="Value">N</param>
+                                            <param id="1" name="Value">loopindex</param>
                                         </action>
                                         <action id="-10" name="Add to" sid="227916268025570" type="System">
                                             <param id="0" name="Variable">quantity</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-10" name="Add to" sid="335847514879055" type="System">
+                                        <action disabled="1" id="-10" name="Add to" sid="335847514879055" type="System">
                                             <param id="0" name="Variable">N</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
@@ -323,6 +327,72 @@
                                 <action behavior="Pathfinding" id="1" name="Move along path" sid="594975441843773" type="robotBase" />
                             </actions>
                         </event-block>
+                        <event-block sid="489626494312457">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="231194535708849" type="Char">
+                                    <param id="0" name="Instance variable">command</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;atk&quot;</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="926361803556093" type="System">
+                                    <param id="0" name="Object">robotBase</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="763209977509513" type="Enemy">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">robotBase.X</param>
+                                    <param id="2" name="Y">robotBase.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="745423515309401" type="robotBase">
+                                    <param id="0" name="Instance variable">targetX</param>
+                                    <param id="1" name="Value">Enemy.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="339158081337669" type="robotBase">
+                                    <param id="0" name="Instance variable">targetY</param>
+                                    <param id="1" name="Value">Enemy.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="388195986250991">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="967637065627749" type="Char">
+                                    <param id="0" name="Instance variable">command</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;def&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="580734237994710" type="robotBase">
+                                    <param id="0" name="Instance variable">targetX</param>
+                                    <param id="1" name="Value">Char.ImagePointX(Self.idmob+1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="740459283077523" type="robotBase">
+                                    <param id="0" name="Instance variable">targetY</param>
+                                    <param id="1" name="Value">Char.ImagePointY(Self.idmob+1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="125964562496174">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="300811061047825" type="Char">
+                                    <param id="0" name="Instance variable">command</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;hold&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="107069222364771" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="293873450782169" type="robotBase">
+                                    <param id="0" name="Instance variable">targetX</param>
+                                    <param id="1" name="Value">Char.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="644865580529274" type="robotBase">
+                                    <param id="0" name="Instance variable">targetY</param>
+                                    <param id="1" name="Value">Char.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="101348106143037" title="RobotDirection2">
@@ -392,6 +462,10 @@
                                         <action id="4" name="Set animation" sid="331946041826459" type="spr_Head">
                                             <param id="0" name="Animation">arr_head.At(robotBase.Head,1) &amp; BodyTurn.SprDirection</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="371934976700642" type="BodyTurn">
+                                            <param id="0" name="X">robotBase.X</param>
+                                            <param id="1" name="Y">robotBase.Y</param>
                                         </action>
                                     </actions>
                                 </event-block>
