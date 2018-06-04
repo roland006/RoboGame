@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Layout 1</layout>
-        <event-sheet order="1">Event sheet 1</event-sheet>
-        <event-sheet active="1" order="2">robots</event-sheet>
+        <event-sheet active="1" order="1">Event sheet 1</event-sheet>
+        <event-sheet order="2">robots</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,7 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="Items" />
         <family expanded="0" name="Player" />
-        <family expanded="0" name="Enemy" />
+        <family expanded="1" name="Enemy" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -35,6 +35,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Char/" />
         <folder expanded="1" path="animation-folder/Char/Attack/" />
+        <folder expanded="1" path="animation-folder/Char/Tired/" />
+        <folder expanded="1" path="animation-folder/Char/Run/" />
         <folder expanded="1" path="animation-folder/robotBase/" />
         <folder expanded="1" path="animation-folder/Slider/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
@@ -78,6 +80,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Spawner/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/cursor/" />
-        <folder expanded="1" path="animation-folder/HitBox/" />
+        <folder expanded="1" path="animation-folder/HitBoxVert/" />
+        <folder expanded="1" path="animation-folder/HitBoxHor/" />
+        <folder expanded="1" path="animation-folder/EnemyTest/" />
+        <folder expanded="1" path="animation-folder/ShieldHor/" />
+        <folder expanded="1" path="animation-folder/ShieldVert/" />
     </folders-expanded>
 </c2uistate>
