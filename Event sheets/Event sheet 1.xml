@@ -1486,6 +1486,11 @@
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">33</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="132990976784241" type="Char">
+                                    <param id="0" name="Instance variable">Animation</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;Block&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="8Direction" id="4" name="Set max speed" sid="611265717082173" type="Char">
@@ -1496,7 +1501,7 @@
                                     <param id="1" name="Value">Char.EnergyCD</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="879627515374400" type="Char">
-                                    <param id="0" name="Instance variable">IsTired</param>
+                                    <param id="0" name="Instance variable">Animation</param>
                                     <param id="1" name="Value">&quot;Run&quot;</param>
                                 </action>
                             </actions>
@@ -1520,14 +1525,14 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="986309348320992" type="System" />
                                 <condition id="-7" inverted="1" name="Compare instance variable" sid="550341116787245" type="Char">
-                                    <param id="0" name="Instance variable">IsTired</param>
+                                    <param id="0" name="Instance variable">Animation</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Tired&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="318299892417437" type="Char">
-                                    <param id="0" name="Instance variable">IsTired</param>
+                                    <param id="0" name="Instance variable">Animation</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -1550,7 +1555,7 @@
                                     <param id="0" name="Control">2</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="915593282276208" type="Char">
-                                    <param id="0" name="Animation">Char.IsTired&amp;&quot;Up&quot;</param>
+                                    <param id="0" name="Animation">Char.Animation&amp;&quot;Up&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -1569,7 +1574,7 @@
                                     <param id="0" name="Control">3</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="852457337024806" type="Char">
-                                    <param id="0" name="Animation">Char.IsTired&amp;&quot;Down&quot;</param>
+                                    <param id="0" name="Animation">Char.Animation&amp;&quot;Down&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -1588,7 +1593,7 @@
                                     <param id="0" name="Control">1</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="223516746628839" type="Char">
-                                    <param id="0" name="Animation">Char.IsTired&amp;&quot;Right&quot;</param>
+                                    <param id="0" name="Animation">Char.Animation&amp;&quot;Right&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -1607,7 +1612,7 @@
                                     <param id="0" name="Control">0</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="685689462738826" type="Char">
-                                    <param id="0" name="Animation">Char.IsTired&amp;&quot;Left&quot;</param>
+                                    <param id="0" name="Animation">Char.Animation&amp;&quot;Left&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -1624,6 +1629,9 @@
                             <actions>
                                 <action id="3" name="Set progress" sid="599767561801540" type="EnergyBar">
                                     <param id="0" name="Value">Char.Energy</param>
+                                </action>
+                                <action id="3" name="Set progress" sid="504906805799205" type="Battery">
+                                    <param id="0" name="Value">Char.Battery</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1681,7 +1689,7 @@
                                     <param id="0" name="Max Speed">Char.MovementSpeed/2</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="423120061298178" type="Char">
-                                    <param id="0" name="Instance variable">IsTired</param>
+                                    <param id="0" name="Instance variable">Animation</param>
                                     <param id="1" name="Value">&quot;Tired&quot;</param>
                                 </action>
                             </actions>
@@ -1692,13 +1700,16 @@
                                 <condition id="2" inverted="1" name="Key is down" sid="612252063458124" type="Keyboard">
                                     <param id="0" name="Key">16</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Mouse button is down" sid="572041722650757" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="8Direction" id="4" name="Set max speed" sid="804724399195295" type="Char">
                                     <param id="0" name="Max Speed">Char.MovementSpeed</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="612789030001816" type="Char">
-                                    <param id="0" name="Instance variable">IsTired</param>
+                                    <param id="0" name="Instance variable">Animation</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -2054,13 +2065,249 @@
                 <action behavior="Pathfinding" id="2" name="Stop" sid="707644705785840" type="EnemyTest" />
             </actions>
         </event-block>
-        <event-block sid="488105062075539">
+        <event-group description="" sid="470491654259547" title="CharBlock">
+            <sub-events>
+                <event-block sid="531653114345820">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="447161467778926" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="309307346969322" type="Char">
+                            <param id="0" name="Instance variable">IsBlock</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="180314326289679">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="165909300206070" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="556620619846523" type="Char">
+                            <param id="0" name="Instance variable">IsBlock</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="445529129492872">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="684455655553045" type="Char">
+                            <param id="0" name="Instance variable">IsBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="928882140270099" type="Char">
+                            <param id="0" name="Max Speed">Char.MovementSpeed / 2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="839542311061920">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="680764477834631" type="System">
+                                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">-45.</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="772436603842917" type="System">
+                                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">45</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="389079522278584" type="Char">
+                                    <param id="0" name="Animation">&quot;BlockRight&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="558343240563104">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="894838396187553" type="System">
+                                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-45</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="155308018790982" type="System">
+                                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">-135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="381471052321021" type="Char">
+                                    <param id="0" name="Animation">&quot;BlockUp&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="489368402976124">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="247889257808967" type="System">
+                                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">45</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="308255132540207" type="System">
+                                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="427689601723081" type="Char">
+                                    <param id="0" name="Animation">&quot;BlockDown&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="639411908500296">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="614937399820560" type="System">
+                                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-135</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="340181266218042" type="System">
+                                    <param id="0" name="First value">angle(Char.X, Char.Y, Mouse.X, Mouse.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">135</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="913832612407975" type="Char">
+                                    <param id="0" name="Animation">&quot;BlockLeft&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="406884662994018">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="525915200197212" type="System">
+                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="469285211231717">
             <conditions>
-                <condition id="2" name="Mouse button is down" sid="215097013895210" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
+                <condition id="2" name="Is playing" sid="284766273381637" type="Char">
+                    <param id="0" name="Animation">&quot;BlockRight&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="565085002187250" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="713087573006142" type="ShieldVert" />
+                <action id="-9" name="Destroy" sid="104302228991588" type="ShieldHor" />
+                <action id="0" name="Spawn another object" sid="492043758620090" type="Char">
+                    <param id="0" name="Object">ShieldVert</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="165672013539820">
+            <conditions>
+                <condition id="-22" name="Else" sid="845355498362151" type="System" />
+                <condition id="2" name="Is playing" sid="873943496048972" type="Char">
+                    <param id="0" name="Animation">&quot;BlockLeft&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="288439780412994" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="567553252691321" type="ShieldVert" />
+                <action id="-9" name="Destroy" sid="182634178739665" type="ShieldHor" />
+                <action id="0" name="Spawn another object" sid="159745854516284" type="Char">
+                    <param id="0" name="Object">ShieldVert</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="515916018275985">
+            <conditions>
+                <condition id="-22" name="Else" sid="272556857679656" type="System" />
+                <condition id="2" name="Is playing" sid="117297951653320" type="Char">
+                    <param id="0" name="Animation">&quot;BlockUp&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="354059472096179" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="702268720839045" type="ShieldVert" />
+                <action id="-9" name="Destroy" sid="635816540387438" type="ShieldHor" />
+                <action id="0" name="Spawn another object" sid="696677184390033" type="Char">
+                    <param id="0" name="Object">ShieldHor</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="356236617534843">
+            <conditions>
+                <condition id="-22" name="Else" sid="508607157588627" type="System" />
+                <condition id="2" name="Is playing" sid="809734798802953" type="Char">
+                    <param id="0" name="Animation">&quot;BlockDown&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="339410173535583" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="526546776014796" type="ShieldVert" />
+                <action id="-9" name="Destroy" sid="552879857597085" type="ShieldHor" />
+                <action id="0" name="Spawn another object" sid="738520976673806" type="Char">
+                    <param id="0" name="Object">ShieldHor</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="310459777157044">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="872408185680999" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="173727790349422" type="ShieldVert">
+                    <param id="0" name="Object">Char</param>
+                    <param id="1" name="Image point (optional)">5</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="229280285190965" type="ShieldHor">
+                    <param id="0" name="Object">Char</param>
+                    <param id="1" name="Image point (optional)">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="259267029568612">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="183003222999467" type="Char">
+                    <param id="0" name="Instance variable">IsBlock</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-9" name="Destroy" sid="478121876838816" type="ShieldVert" />
+                <action id="-9" name="Destroy" sid="314221215797740" type="ShieldHor" />
+            </actions>
+        </event-block>
+        <event-block sid="868496033673463">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="433877462411863" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set CSS style" sid="557118870782919" type="EnergyBar">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;darkorange&quot;</param>
+                </action>
+                <action id="2" name="Set CSS style" sid="988662415184241" type="Battery">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;dodgerblue&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

@@ -65,8 +65,10 @@
                 <instance-variable name="command" sid="873208044767165" type="string" />
                 <instance-variable comment="Шкала усталости" name="Energy" sid="429039628363937" type="number" />
                 <instance-variable comment="Кулдаун в милисекундах" name="EnergyCD" sid="287220516467144" type="number" />
-                <instance-variable comment='Если устал - значение &quot;Tired&quot;, если нет, то пустое' name="IsTired" sid="747304096039019" type="string" />
+                <instance-variable comment='Если устал - значение &quot;Tired&quot;, Если бежит - &quot;Run&quot;, Если ставит блок - &quot;Block&quot;' name="Animation" sid="747304096039019" type="string" />
                 <instance-variable name="MovementSpeed" sid="278342060868548" type="number" />
+                <instance-variable name="IsBlock" sid="466570711669512" type="boolean" />
+                <instance-variable comment="Энергия щита" name="Battery" sid="434684092775304" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="153610629234900">
@@ -304,6 +306,44 @@
                             <image-point name="Imagepoint 3" x="0.461538" y="-0.923077" />
                             <image-point name="Imagepoint 4" x="2.10256" y="0.430769" />
                             <image-point name="Imagepoint 5" x="0.487179" y="1.16923" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+                <animation-folder name="Block">
+                    <animation framecount="1" loop="0" name="BlockRight" pingpong="0" repeatcount="1" repeatto="0" sid="408043362374091" speed="5">
+                        <frame duration="1" hotspotX="0.478261" hotspotY="0.428571">
+                            <image-point name="Imagepoint 1" x="2.21739" y="0.47619" />
+                            <image-point name="Imagepoint 2" x="0.478261" y="2.25397" />
+                            <image-point name="Imagepoint 3" x="-1.08696" y="0.571429" />
+                            <image-point name="Imagepoint 4" x="0.478261" y="-1.04762" />
+                            <image-point name="Imagepoint 5" x="1.6087" y="0.444444" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="BlockDown" pingpong="0" repeatcount="1" repeatto="0" sid="563655093094165" speed="5">
+                        <frame duration="1" hotspotX="0.564103" hotspotY="0.446154">
+                            <image-point name="Imagepoint 1" x="0.461538" y="2.04615" />
+                            <image-point name="Imagepoint 2" x="-1.07692" y="0.507692" />
+                            <image-point name="Imagepoint 3" x="0.461538" y="-0.923077" />
+                            <image-point name="Imagepoint 4" x="2.10256" y="0.430769" />
+                            <image-point name="Imagepoint 5" x="0.487179" y="1.16923" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="BlockLeft" pingpong="0" repeatcount="1" repeatto="0" sid="866598419916911" speed="5">
+                        <frame duration="1" hotspotX="0.565217" hotspotY="0.444444">
+                            <image-point name="Imagepoint 1" x="-1.69565" y="0.444444" />
+                            <image-point name="Imagepoint 2" x="0.391304" y="-1.01587" />
+                            <image-point name="Imagepoint 3" x="2.56522" y="0.444444" />
+                            <image-point name="Imagepoint 4" x="0.347826" y="1.95238" />
+                            <image-point name="Imagepoint 5" x="-0.347826" y="0.492063" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="BlockUp" pingpong="0" repeatcount="1" repeatto="0" sid="514709810725098" speed="5">
+                        <frame duration="1" hotspotX="0.522727" hotspotY="0.492308">
+                            <image-point name="Imagepoint 1" x="-1" y="-1" />
+                            <image-point name="Imagepoint 2" x="-1" y="-1" />
+                            <image-point name="Imagepoint 3" x="-1" y="-1" />
+                            <image-point name="Imagepoint 4" x="-1" y="-1" />
+                            <image-point name="Imagepoint 5" x="0.522727" y="-0.123077" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -1467,6 +1507,9 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Battery" sid="818740671041929">
+            <plugin id="progressbar" />
         </object-type>
     </object-folder>
     <families>
