@@ -2077,6 +2077,12 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">10</param>
                         </condition>
+                        <condition id="2" inverted="1" name="Mouse button is down" sid="451301984232331" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="149005695790415" type="Char">
+                            <param id="0" name="Instance variable">Atck</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="309307346969322" type="Char">
@@ -2095,6 +2101,10 @@
                         <action id="-13" name="Set boolean" sid="556620619846523" type="Char">
                             <param id="0" name="Instance variable">IsBlock</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="434692024640333" type="Char">
+                            <param id="0" name="Animation">&quot;Down&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2408,6 +2418,26 @@
                 <action id="2" name="Set CSS style" sid="988662415184241" type="Battery">
                     <param id="0" name="Property name">&quot;color&quot;</param>
                     <param id="1" name="Value">&quot;dodgerblue&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="277086134280757">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="350381584922649" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+                <condition id="2" name="Mouse button is down" sid="789795290575790" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="152998751313800" type="Char">
+                    <param id="0" name="Instance variable">IsBlock</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="889255729318765" type="Char">
+                    <param id="0" name="Instance variable">Atck</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
