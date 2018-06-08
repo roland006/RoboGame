@@ -2072,6 +2072,11 @@
                         <condition id="2" name="Mouse button is down" sid="447161467778926" type="Mouse">
                             <param id="0" name="Mouse button">2</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="300464759432735" type="Char">
+                            <param id="0" name="Instance variable">Battery</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="309307346969322" type="Char">
@@ -2088,6 +2093,38 @@
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="556620619846523" type="Char">
+                            <param id="0" name="Instance variable">IsBlock</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="290865792348282">
+                    <conditions>
+                        <condition id="0" name="On click" sid="928078685406396" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                        <condition id="2" name="Mouse button is down" sid="358594505556374" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="707654890858402" type="Char">
+                            <param id="0" name="Instance variable">IsBlock</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="537503890527253">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="382396231385392" type="Char">
+                            <param id="0" name="Instance variable">Battery</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="132669569431209" type="Char">
                             <param id="0" name="Instance variable">IsBlock</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -2124,6 +2161,21 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="677516329531506">
+                                    <conditions>
+                                        <condition id="3" name="On button released" sid="167879896511272" type="Mouse">
+                                            <param id="0" name="Mouse button">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="667981930617127" type="Char">
+                                            <param id="0" name="Animation">&quot;Right&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="558343240563104">
                             <conditions>
@@ -2144,6 +2196,21 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="898464549121776">
+                                    <conditions>
+                                        <condition id="3" name="On button released" sid="306590930322650" type="Mouse">
+                                            <param id="0" name="Mouse button">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="722856097115004" type="Char">
+                                            <param id="0" name="Animation">&quot;Up&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="489368402976124">
                             <conditions>
@@ -2164,6 +2231,21 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="481961010658564">
+                                    <conditions>
+                                        <condition id="3" name="On button released" sid="836272807321308" type="Mouse">
+                                            <param id="0" name="Mouse button">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="259731857408862" type="Char">
+                                            <param id="0" name="Animation">&quot;Down&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block any="1" sid="639411908500296">
                             <conditions>
@@ -2184,6 +2266,21 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="756230381981329">
+                                    <conditions>
+                                        <condition id="3" name="On button released" sid="396178656701631" type="Mouse">
+                                            <param id="0" name="Mouse button">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="626275993976429" type="Char">
+                                            <param id="0" name="Animation">&quot;Left&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="406884662994018">
                             <conditions>
@@ -2191,7 +2288,12 @@
                                     <param id="0" name="Interval (seconds)">0.1</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="110982414673801" type="Char">
+                                    <param id="0" name="Instance variable">Battery</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
