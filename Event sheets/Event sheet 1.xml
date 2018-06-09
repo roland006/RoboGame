@@ -1708,7 +1708,7 @@
                                 <action behavior="8Direction" id="4" name="Set max speed" sid="804724399195295" type="Char">
                                     <param id="0" name="Max Speed">Char.MovementSpeed</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="612789030001816" type="Char">
+                                <action disabled="1" id="-10" name="Set value" sid="612789030001816" type="Char">
                                     <param id="0" name="Instance variable">Animation</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
                                 </action>
@@ -1843,6 +1843,19 @@
                                         <action id="4" name="Set animation" sid="379696604329402" type="Char">
                                             <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="316768188164580">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="419583545139632" type="Char">
+                                            <param id="0" name="Instance variable">IsBlock</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="560376526538866" type="Char">
+                                            <param id="0" name="Instance variable">IsBlock</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2096,13 +2109,16 @@
                         <condition id="3" name="On button released" sid="165909300206070" type="Mouse">
                             <param id="0" name="Mouse button">2</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="359896559962899" type="Char">
+                            <param id="0" name="Instance variable">IsBlock</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="556620619846523" type="Char">
                             <param id="0" name="Instance variable">IsBlock</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="434692024640333" type="Char">
+                        <action disabled="1" id="4" name="Set animation" sid="434692024640333" type="Char">
                             <param id="0" name="Animation">&quot;Down&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -2116,6 +2132,9 @@
                         </condition>
                         <condition id="2" name="Mouse button is down" sid="358594505556374" type="Mouse">
                             <param id="0" name="Mouse button">2</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="221569908611274" type="Char">
+                            <param id="0" name="Instance variable">IsBlock</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2428,6 +2447,9 @@
                 </condition>
                 <condition id="2" name="Mouse button is down" sid="789795290575790" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="457182953658439" type="Char">
+                    <param id="0" name="Instance variable">IsBlock</param>
                 </condition>
             </conditions>
             <actions>
