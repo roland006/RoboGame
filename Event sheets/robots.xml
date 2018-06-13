@@ -177,29 +177,33 @@
                                 <condition id="1" name="Is overlapping another object" sid="926146085163902" type="Char">
                                     <param id="0" name="Object">Table</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="455593080990383" type="System">
+                                <condition disabled="1" id="-14" name="Compare variable" sid="455593080990383" type="System">
                                     <param id="0" name="Variable">quantity</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="700655696163934" type="Table">
+                                <action disabled="1" id="0" name="Spawn another object" sid="700655696163934" type="Table">
                                     <param id="0" name="Object">robotBase</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="755695592337778" type="robotBase">
+                                <action disabled="1" id="-10" name="Set value" sid="755695592337778" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-10" name="Add to" sid="619499363379439" type="System">
+                                <action disabled="1" id="-10" name="Add to" sid="619499363379439" type="System">
                                     <param id="0" name="Variable">quantity</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="491095590154208" type="Function">
+                                    <param id="0" name="Name">&quot;createRobot&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="244721973518534">
+                                <event-block disabled="1" sid="244721973518534">
                                     <conditions>
                                         <condition id="-12" name="Repeat" sid="124654168794248" type="System">
                                             <param id="0" name="Count">Array.Width</param>
@@ -240,12 +244,41 @@
                                     <param id="0" name="Interval (seconds)">0.5</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="453029626239016" type="robotBase">
-                                    <param id="0" name="X">Self.targetX</param>
-                                    <param id="1" name="Y">Self.targetY</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="616368738942497">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="549263959129580" type="System">
+                                            <param id="0" name="Object">robotBase</param>
+                                            <param id="1" name="Expression">distance(robotBase.X, robotBase.Y, robotBase.targetX, robotBase.targetY)</param>
+                                            <param id="2" name="Comparison">4</param>
+                                            <param id="3" name="Value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="453029626239016" type="robotBase">
+                                            <param id="0" name="X">Self.targetX</param>
+                                            <param id="1" name="Y">Self.targetY</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="587861135046371">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="348010653417817" type="System">
+                                            <param id="0" name="Object">robotBase</param>
+                                            <param id="1" name="Expression">distance(robotBase.X, robotBase.Y, robotBase.targetX, robotBase.targetY)</param>
+                                            <param id="2" name="Comparison">3</param>
+                                            <param id="3" name="Value">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="517038025803137" type="robotBase">
+                                            <param id="0" name="X">Self.X+cos(random(360))*random(60)</param>
+                                            <param id="1" name="Y">Self.Y+sin(random(360))*random(60)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block disabled="1" sid="652967086050068">
                             <conditions>
@@ -791,5 +824,146 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="415642216891573">
+            <conditions>
+                <condition id="0" name="On function" sid="405564009974479" type="Function">
+                    <param id="0" name="Name">&quot;createRobot&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="874190605749125">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="704169448559789" type="System">
+                            <param id="0" name="Variable">quantity</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="319391640501907" type="Char">
+                            <param id="0" name="Object">robotBase</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="232971849313643" type="robotBase">
+                            <param id="0" name="Instance variable">idmob</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="703481897222171" type="System">
+                            <param id="0" name="Variable">quantity</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="768745666273285">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="684673279705875" type="System">
+                                    <param id="0" name="Count">Array.Width</param>
+                                </condition>
+                                <condition id="1" name="Compare at XY" sid="826047263472719" type="Array">
+                                    <param id="0" name="X">loopindex</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Stop loop" sid="688457208499060" type="System" />
+                                <action id="3" name="Set at XY" sid="628547516505237" type="Array">
+                                    <param id="0" name="X">loopindex</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">choose(0,1,2)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="953847339772352" type="Array">
+                                    <param id="0" name="X">loopindex</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">robotBase.UID</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="506372931000332" type="Array">
+                                    <param id="0" name="X">loopindex</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">choose(1,2,3)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="388326759527480" type="Array">
+                                    <param id="0" name="X">loopindex</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Value">choose(1,2,3)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="157932368015879" type="Array">
+                                    <param id="0" name="X">loopindex</param>
+                                    <param id="1" name="Y">4</param>
+                                    <param id="2" name="Value">choose(1,2,3)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="643483753499427" type="Array">
+                                    <param id="0" name="X">loopindex</param>
+                                    <param id="1" name="Y">5</param>
+                                    <param id="2" name="Value">choose(1,2,3)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="328029948987422" type="Array">
+                                    <param id="0" name="X">loopindex</param>
+                                    <param id="1" name="Y">6</param>
+                                    <param id="2" name="Value">choose(1,2,3)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="414410308640010" type="robotBase">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Value">Array.At(loopindex,0)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="197784218525250" type="robotBase">
+                                    <param id="0" name="Instance variable">idmob</param>
+                                    <param id="1" name="Value">loopindex</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="304821691461438" type="robotBase">
+                                    <param id="0" name="Instance variable">GunR</param>
+                                    <param id="1" name="Value">Array.At(loopindex,2)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="789427406367425" type="robotBase">
+                                    <param id="0" name="Instance variable">GunL</param>
+                                    <param id="1" name="Value">Array.At(loopindex,3)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="289813693048986" type="robotBase">
+                                    <param id="0" name="Instance variable">Head</param>
+                                    <param id="1" name="Value">Array.At(loopindex,4)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="473237140490303" type="robotBase">
+                                    <param id="0" name="Instance variable">Body</param>
+                                    <param id="1" name="Value">Array.At(loopindex,5)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="333910440530970" type="robotBase">
+                                    <param id="0" name="Instance variable">Leg</param>
+                                    <param id="1" name="Value">Array.At(loopindex,6)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="510349047437713" type="BodyTurn">
+                                    <param id="0" name="Pin to">robotBase</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="521219559857207" type="spr_Head">
+                                    <param id="0" name="Layer">6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="842457105883177">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="316687679033705">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="347676741752717" type="robotBase">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="232545913670345" type="robotBase">
+                    <param id="0" name="Vector X">3000*cos(angle(Player.X,Player.Y,Self.X,Self.Y))</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="108027595728970" type="robotBase">
+                    <param id="0" name="Vector Y">3000*sin(angle(Player.X,Player.Y,Self.X,Self.Y))</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
