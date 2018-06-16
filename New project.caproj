@@ -31,6 +31,7 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -76,6 +77,9 @@
                 </behavior-type>
                 <behavior-type name="Solid" sid="783295694903118">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="544523989538595">
+                    <behavior id="scrollto" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -634,19 +638,19 @@
             <animation-folder>
                 <animation-folder name="Body1">
                     <animation framecount="1" loop="1" name="Body1Right" pingpong="0" repeatcount="1" repeatto="0" sid="475049964126290" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.863636">
-                            <image-point name="Head" x="0.5" y="0.136364" />
-                            <image-point name="GunR" x="0.357143" y="0.818182" />
-                            <image-point name="GunL" x="0.785714" y="0.454545" />
-                            <image-point name="Leg" x="0.571429" y="0.863636" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.833333">
+                            <image-point name="Head" x="0.5" y="0.166667" />
+                            <image-point name="GunR" x="0.375" y="0.791667" />
+                            <image-point name="GunL" x="0.75" y="0.458333" />
+                            <image-point name="Leg" x="0.5625" y="0.833333" />
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body1Down" pingpong="0" repeatcount="1" repeatto="0" sid="947713786914343" speed="5">
-                        <frame duration="1" hotspotX="0.48" hotspotY="0.947368">
-                            <image-point name="Head" x="0.48" y="0.0526316" />
-                            <image-point name="GunR" x="0.08" y="0.842105" />
-                            <image-point name="GunL" x="0.88" y="0.842105" />
-                            <image-point name="Leg" x="0.48" y="1" />
+                        <frame duration="1" hotspotX="0.481481" hotspotY="0.904762">
+                            <image-point name="Head" x="0.481481" y="0.0952381" />
+                            <image-point name="GunR" x="0.111111" y="0.809524" />
+                            <image-point name="GunL" x="0.851852" y="0.809524" />
+                            <image-point name="Leg" x="0.481481" y="0.952381" />
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body1Left" pingpong="0" repeatcount="1" repeatto="0" sid="296322943603313" speed="5">
@@ -708,11 +712,17 @@
                 </animation-folder>
                 <animation-folder name="Body3">
                     <animation framecount="1" loop="1" name="Body3Right" pingpong="0" repeatcount="1" repeatto="0" sid="525564258421738" speed="5">
-                        <frame duration="1" hotspotX="0.473684" hotspotY="1">
-                            <image-point name="Head" x="0.473684" y="0" />
-                            <image-point name="GunR" x="0.421053" y="0.818182" />
-                            <image-point name="GunL" x="0.473684" y="0.818182" />
-                            <image-point name="Leg" x="0.473684" y="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.96">
+                            <image-point name="Head" x="0.5" y="0.04" />
+                            <image-point name="GunR" x="0.55" y="0.8" />
+                            <image-point name="GunL" x="0.5" y="0.8" />
+                            <image-point name="Leg" x="0.5" y="0.96" />
+                            <collision-poly>
+                                <point x="0.95" y="0.96" />
+                                <point x="0" y="0.96" />
+                                <point x="0" y="0.04" />
+                                <point x="0.95" y="0.04" />
+                            </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Body3Down" pingpong="0" repeatcount="1" repeatto="0" sid="684371224189580" speed="5">
@@ -1597,6 +1607,7 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>robots.xml</event-sheet>
+        <event-sheet>AI &amp; Levels.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

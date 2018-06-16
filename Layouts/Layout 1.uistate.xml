@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>496.249</position-x>
-        <position-y>457.055</position-y>
-        <position-z>123.966</position-z>
-        <lookat-x>496.249</lookat-x>
-        <lookat-y>457.055</lookat-y>
+        <position-x>932.977</position-x>
+        <position-y>795.121</position-y>
+        <position-z>199.649</position-z>
+        <lookat-x>932.977</lookat-x>
+        <lookat-y>795.121</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -19,18 +19,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <translucent-inactive-layers>0</translucent-inactive-layers>
     <properties>
         <property expanded="1" name="Layout properties" />
-        <property expanded="0" name="Layout Size" />
+        <property expanded="1" name="Layout Size" />
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="TopHead" />
+    <active-layer name="Layer 0" />
     <layers>
         <layer locked="0" name="Layer 0" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="GUI" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="EmptyLayer" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Bot" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="MidBot" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="MidTop" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Top" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="TopHead" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="GUI" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>
