@@ -32,27 +32,29 @@
                                     <param id="1" name="Y">0</param>
                                     <param id="2" name="Value">3</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="172572732972424" type="System">
-                                    <param id="0" name="Variable">quantity</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="480870732884383">
                             <conditions>
                                 <condition id="-2" name="On start of layout" sid="772505129738624" type="System" />
-                                <condition id="-11" name="For Each" sid="304009985442242" type="System">
+                                <condition disabled="1" id="-11" name="For Each" sid="304009985442242" type="System">
                                     <param id="0" name="Object">robotBase</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="230946488038861" type="robotBase">
+                                <condition disabled="1" id="-7" name="Compare instance variable" sid="230946488038861" type="robotBase">
                                     <param id="0" name="Instance variable">idmob</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Destroy" sid="305414892565656" type="robotBase" />
+                                <action id="-9" name="Set value" sid="172572732972424" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="566201720838586">
+                                <event-block disabled="1" sid="566201720838586">
                                     <conditions>
                                         <condition id="1" name="Compare at XY" sid="422764633719488" type="Array">
                                             <param id="0" name="X">loopindex</param>
@@ -106,8 +108,21 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action disabled="1" id="-10" name="Add to" sid="335847514879055" type="System">
-                                            <param id="0" name="Variable">N</param>
+                                            <param id="0" name="Variable">Level1Robots</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="237522428372306">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="287935132419331" type="System">
+                                            <param id="0" name="Count">Level1Robots</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="904739999144430" type="Function">
+                                            <param id="0" name="Name">&quot;createRobot&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -743,13 +758,26 @@
                         <event-block sid="216928865520404">
                             <conditions>
                                 <condition behavior="RightArm" id="1" name="On shoot" sid="486599966790095" type="BodyTurn" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="124280292852024" type="BodyTurn">
+                                    <param id="0" name="Instance variable">GunL</param>
+                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="785266578511445" type="BodyTurn">
+                                    <param id="0" name="Duration">arr_gun_l.At(robotBase.GunL,2)</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;GunL&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="974338062509527" type="BodyTurn">
+                                    <param id="0" name="Instance variable">GunL</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="191985314769433">
+                                <event-block sid="439610168729052">
                                     <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="797619157860606" type="System">
-                                            <param id="0" name="Interval (seconds)">0.2</param>
+                                        <condition id="-12" name="Repeat" sid="902603178236609" type="System">
+                                            <param id="0" name="Count">arr_gun_l.At(robotBase.GunL,4)</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -758,23 +786,84 @@
                                             <param id="1" name="Layer">0</param>
                                             <param id="2" name="Image point">1</param>
                                         </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="970108362712268">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="243704057079400" type="System">
-                                            <param id="0" name="Interval (seconds)">0.3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Spawn another object" sid="385203611840242" type="BodyTurn">
-                                            <param id="0" name="Object">spr_RoboBullet</param>
-                                            <param id="1" name="Layer">0</param>
-                                            <param id="2" name="Image point">2</param>
+                                        <action id="-8" name="Set angle" sid="610962935514935" type="spr_RoboBullet">
+                                            <param id="0" name="Angle">Self.Angle + (-1)^ loopindex * ceil (loopindex/2) * 10</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="527691874580484" type="spr_RoboBullet">
+                                            <param id="0" name="Instance variable">damage</param>
+                                            <param id="1" name="Value">arr_gun_l.At(robotBase.GunL,3)</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="191985314769433">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="671180291369499" type="BodyTurn">
+                                    <param id="0" name="Tag">&quot;GunL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="222973939043891" type="BodyTurn">
+                                    <param id="0" name="Instance variable">GunL</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="284703913674665">
+                            <conditions>
+                                <condition behavior="RightArm" id="1" name="On shoot" sid="662795061154256" type="BodyTurn" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="622332174660448" type="BodyTurn">
+                                    <param id="0" name="Instance variable">GunR</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="344330730815760" type="BodyTurn">
+                                    <param id="0" name="Duration">arr_gun_r.At(robotBase.GunR,2)</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;GunR&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="677058947463432" type="BodyTurn">
+                                    <param id="0" name="Instance variable">GunR</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="746458404451245">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="436668576124760" type="System">
+                                            <param id="0" name="Count">arr_gun_r.At(robotBase.GunR,4)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="127485590030838" type="BodyTurn">
+                                            <param id="0" name="Object">spr_RoboBullet</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="963159022470072" type="spr_RoboBullet">
+                                            <param id="0" name="Angle">Self.Angle + (-1)^ loopindex * ceil (loopindex/2) * 10</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="321613427832685" type="spr_RoboBullet">
+                                            <param id="0" name="Instance variable">damage</param>
+                                            <param id="1" name="Value">arr_gun_r.At(robotBase.GunR,3)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="259664164222846">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="585393470086281" type="BodyTurn">
+                                    <param id="0" name="Tag">&quot;GunR&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="808648581859975" type="BodyTurn">
+                                    <param id="0" name="Instance variable">GunR</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -939,6 +1028,10 @@
                                 </action>
                                 <action id="-26" name="Move to layer" sid="521219559857207" type="spr_Head">
                                     <param id="0" name="Layer">6</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="511080803041869" type="robotBase">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Value">100 + arr_body.At(robotBase.Body,2) + arr_head.At(robotBase.Head,2) + arr_leg.At(robotBase.Leg,2)</param>
                                 </action>
                             </actions>
                         </event-block>

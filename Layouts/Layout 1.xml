@@ -697,6 +697,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -722,8 +723,8 @@
                     </properties>
                     <instance-variables>
                         <SprDirection></SprDirection>
-                        <Var1>false</Var1>
-                        <Var2>0</Var2>
+                        <GunL>false</GunL>
+                        <GunR>false</GunR>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -738,7 +739,7 @@
                         <behavior-instance type="RightArm">
                             <properties>
                                 <range>300</range>
-                                <rate-of-fire>0.1</rate-of-fire>
+                                <rate-of-fire>0.01</rate-of-fire>
                                 <rotate>Yes</rotate>
                                 <rotate-speed>180</rotate-speed>
                                 <target-mode>Nearest</target-mode>
@@ -830,7 +831,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <HP>20000</HP>
+                        <HP>200</HP>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -1972,6 +1973,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <damage>0</damage>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
@@ -1983,6 +1987,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

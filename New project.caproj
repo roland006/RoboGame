@@ -31,6 +31,7 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -1288,6 +1289,9 @@
                 <behavior-type name="Bullet" sid="203212844189178">
                     <behavior id="Bullet" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="499467436477239">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742508961823084" speed="5">
@@ -1306,8 +1310,8 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="SprDirection" sid="345896324636807" type="string" />
-                <instance-variable name="Var1" sid="318578417886493" type="boolean" />
-                <instance-variable name="Var2" sid="912335446084346" type="number" />
+                <instance-variable name="GunL" sid="318578417886493" type="boolean" />
+                <instance-variable name="GunR" sid="912335446084346" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="920638983914428">
@@ -1371,9 +1375,15 @@
         </object-type>
         <object-type name="spr_RoboBullet" sid="973184665450771">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="damage" sid="760554406627515" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="878566228192022">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="106021586928948">
+                    <behavior id="destroy" />
                 </behavior-type>
             </behaviors>
             <animation-folder>

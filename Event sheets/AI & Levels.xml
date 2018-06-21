@@ -415,9 +415,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="921078458350216" title="EasyEnemyAI">
+        <event-group description="" sid="921078458350216" title="EasyEnemyAI">
             <sub-events>
-                <event-block disabled="1" sid="489087076459946">
+                <event-block sid="489087076459946">
                     <conditions>
                         <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="379460932830818" type="EnemyGun">
                             <param id="0" name="Object">Player</param>
@@ -435,7 +435,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="930377651250175">
+                <event-block sid="930377651250175">
                     <conditions>
                         <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="293951222284051" type="EnemyGun">
                             <param id="0" name="Object">Player</param>
@@ -446,7 +446,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="347955752030661">
+                        <event-block sid="347955752030661">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="143176001002350" type="System">
                                     <param id="0" name="Interval (seconds)">0.3</param>
@@ -462,7 +462,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="370039734572134">
+                <event-block sid="370039734572134">
                     <conditions>
                         <condition behavior="Pathfinding" id="0" name="On path found" sid="610647102297292" type="EnemyBase" />
                     </conditions>
@@ -470,7 +470,7 @@
                         <action behavior="Pathfinding" id="1" name="Move along path" sid="945300111877861" type="EnemyBase" />
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="437778150225590">
+                <event-block sid="437778150225590">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="123120454372803" type="spr_RoboBullet">
                             <param id="0" name="Object">EnemyBase</param>
@@ -479,12 +479,12 @@
                     <actions>
                         <action id="-12" name="Subtract from" sid="640731048422371" type="EnemyBase">
                             <param id="0" name="Instance variable">HP</param>
-                            <param id="1" name="Value">10</param>
+                            <param id="1" name="Value">spr_RoboBullet.damage</param>
                         </action>
                         <action id="-9" name="Destroy" sid="661571052559604" type="spr_RoboBullet" />
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="110036935809553">
+                <event-block sid="110036935809553">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="392688553162397" type="EnemyBase">
                             <param id="0" name="Instance variable">HP</param>
@@ -496,7 +496,7 @@
                         <action id="-9" name="Destroy" sid="421783678290404" type="EnemyBase" />
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="393715912351668">
+                <event-block sid="393715912351668">
                     <conditions>
                         <condition id="-18" name="On created" sid="533309060088173" type="EnemyBase" />
                     </conditions>
@@ -507,7 +507,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="283581569543978">
+                <event-block sid="283581569543978">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="193509493159610" type="System" />
                     </conditions>
@@ -518,7 +518,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="264865371240648">
+                <event-block sid="264865371240648">
                     <conditions>
                         <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="280456331947737" type="EnemyGun">
                             <param id="0" name="Object">Player</param>
@@ -529,7 +529,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="683211740964827">
+                        <event-block sid="683211740964827">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="740204500338219" type="System">
                                     <param id="0" name="Interval (seconds)">0.3</param>
@@ -547,7 +547,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="189025954145901">
+                <event-block sid="189025954145901">
                     <conditions>
                         <condition behavior="Range" id="0" name="Has LOS to object" sid="332934239571268" type="EnemyGun">
                             <param id="0" name="Object">Player</param>
@@ -562,13 +562,13 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="281061708718716">
+                <event-block sid="281061708718716">
                     <conditions>
                         <condition behavior="Turret" id="0" name="Has target" sid="572997006750645" type="EnemyGun" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="546278070270611">
+                        <event-block sid="546278070270611">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="981638846116253" type="System">
                                     <param id="0" name="Interval (seconds)">1.0</param>
