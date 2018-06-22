@@ -1480,20 +1480,20 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="9" name="Set vector X" sid="305884752444109" type="EnemyTest">
+                <action behavior="8Direction2" id="9" name="Set vector X" sid="305884752444109" type="Enemy">
                     <param id="0" name="Vector X">10000*cos(angle(Char.X,Char.Y,Self.X,Self.Y))</param>
                 </action>
-                <action behavior="8Direction" id="10" name="Set vector Y" sid="585004027073420" type="EnemyTest">
+                <action behavior="8Direction2" id="10" name="Set vector Y" sid="585004027073420" type="Enemy">
                     <param id="0" name="Vector Y">10000*sin(angle(Char.X,Char.Y,Self.X,Self.Y))</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="135017444488878">
             <conditions>
-                <condition behavior="8Direction" id="0" name="Is moving" sid="885597473209150" type="EnemyTest" />
+                <condition behavior="8Direction2" id="0" name="Is moving" sid="885597473209150" type="Enemy" />
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="2" name="Stop" sid="707644705785840" type="EnemyTest" />
+                <action behavior="8Direction2" id="0" name="Stop" sid="707644705785840" type="Enemy" />
             </actions>
         </event-block>
         <event-group description="" sid="470491654259547" title="CharBlock">
