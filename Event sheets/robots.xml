@@ -746,12 +746,12 @@
                         <event-block sid="662309346428533">
                             <conditions>
                                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="654786906418317" type="BodyTurn">
-                                    <param id="0" name="Object">EnemyBase</param>
+                                    <param id="0" name="Object">Enemy</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action behavior="RightArm" id="1" name="Add object to target" sid="954859990837942" type="BodyTurn">
-                                    <param id="0" name="Target">EnemyBase</param>
+                                    <param id="0" name="Target">Enemy</param>
                                 </action>
                             </actions>
                         </event-block>
