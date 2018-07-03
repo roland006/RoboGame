@@ -52,6 +52,10 @@
                                     <param id="0" name="Variable">quantity</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="915648304183824" type="Button" />
+                                <action id="-9" name="Destroy" sid="468220549429181" type="Button2" />
+                                <action id="-9" name="Destroy" sid="774975951612924" type="Slider" />
+                                <action id="-9" name="Destroy" sid="315996836183590" type="Sprite4" />
                             </actions>
                             <sub-events>
                                 <event-block disabled="1" sid="566201720838586">
@@ -120,132 +124,11 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="904739999144430" type="Function">
+                                        <action id="0" name="Call function" sid="675238315574616" type="Function">
                                             <param id="0" name="Name">&quot;createRobot&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">choose(1,2,3){###}choose(1,2,3){###}choose(1,2,3){###}choose(1,2,3){###}choose(1,2,3){###}choose(1,2,3)</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="187494311338509">
-                            <conditions>
-                                <condition id="0" name="On clicked" sid="605414718075135" type="Button" />
-                                <condition id="-14" name="Compare variable" sid="945008414511548" type="System">
-                                    <param id="0" name="Variable">quantity</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="782997344207980" type="Char">
-                                    <param id="0" name="Object">robotBase</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="416882767799813" type="robotBase">
-                                    <param id="0" name="Instance variable">idmob</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="101958661800834" type="System">
-                                    <param id="0" name="Variable">quantity</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="582977529286084">
-                                    <conditions>
-                                        <condition id="-12" name="Repeat" sid="812970117865090" type="System">
-                                            <param id="0" name="Count">Array.Width</param>
-                                        </condition>
-                                        <condition id="1" name="Compare at XY" sid="948332123525368" type="Array">
-                                            <param id="0" name="X">loopindex</param>
-                                            <param id="1" name="Y">1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-24" name="Stop loop" sid="725223306294600" type="System" />
-                                        <action id="3" name="Set at XY" sid="621925424745859" type="Array">
-                                            <param id="0" name="X">loopindex</param>
-                                            <param id="1" name="Y">1</param>
-                                            <param id="2" name="Value">robotBase.UID</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="870203623281095" type="robotBase">
-                                            <param id="0" name="Instance variable">idmob</param>
-                                            <param id="1" name="Value">loopindex</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="599820357547279">
-                                    <conditions />
-                                    <actions />
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="732993360930178">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="148866582218668" type="Keyboard">
-                                    <param id="0" name="Key">70</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="926146085163902" type="Char">
-                                    <param id="0" name="Object">Table</param>
-                                </condition>
-                                <condition disabled="1" id="-14" name="Compare variable" sid="455593080990383" type="System">
-                                    <param id="0" name="Variable">quantity</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="0" name="Spawn another object" sid="700655696163934" type="Table">
-                                    <param id="0" name="Object">robotBase</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action disabled="1" id="-10" name="Set value" sid="755695592337778" type="robotBase">
-                                    <param id="0" name="Instance variable">idmob</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action disabled="1" id="-10" name="Add to" sid="619499363379439" type="System">
-                                    <param id="0" name="Variable">quantity</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="491095590154208" type="Function">
-                                    <param id="0" name="Name">&quot;createRobot&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block disabled="1" sid="244721973518534">
-                                    <conditions>
-                                        <condition id="-12" name="Repeat" sid="124654168794248" type="System">
-                                            <param id="0" name="Count">Array.Width</param>
-                                        </condition>
-                                        <condition id="1" name="Compare at XY" sid="280830663215481" type="Array">
-                                            <param id="0" name="X">loopindex</param>
-                                            <param id="1" name="Y">1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-24" name="Stop loop" sid="374213332091004" type="System" />
-                                        <action id="3" name="Set at XY" sid="394377918444110" type="Array">
-                                            <param id="0" name="X">loopindex</param>
-                                            <param id="1" name="Y">1</param>
-                                            <param id="2" name="Value">robotBase.UID</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="852626726773695" type="robotBase">
-                                            <param id="0" name="Instance variable">idmob</param>
-                                            <param id="1" name="Value">loopindex</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="717563949101386">
-                                    <conditions />
-                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -913,136 +796,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="415642216891573">
-            <conditions>
-                <condition id="0" name="On function" sid="405564009974479" type="Function">
-                    <param id="0" name="Name">&quot;createRobot&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="874190605749125">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="704169448559789" type="System">
-                            <param id="0" name="Variable">quantity</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="319391640501907" type="Char">
-                            <param id="0" name="Object">robotBase</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="232971849313643" type="robotBase">
-                            <param id="0" name="Instance variable">idmob</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="703481897222171" type="System">
-                            <param id="0" name="Variable">quantity</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="768745666273285">
-                            <conditions>
-                                <condition id="-12" name="Repeat" sid="684673279705875" type="System">
-                                    <param id="0" name="Count">Array.Width</param>
-                                </condition>
-                                <condition id="1" name="Compare at XY" sid="826047263472719" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-24" name="Stop loop" sid="688457208499060" type="System" />
-                                <action id="3" name="Set at XY" sid="628547516505237" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">0</param>
-                                    <param id="2" name="Value">choose(0,1,2)</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="953847339772352" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">robotBase.UID</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="506372931000332" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">choose(1,2,3)</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="388326759527480" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">choose(1,2,3)</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="157932368015879" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">choose(1,2,3)</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="643483753499427" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">choose(1,2,3)</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="328029948987422" type="Array">
-                                    <param id="0" name="X">loopindex</param>
-                                    <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">choose(1,2,3)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="414410308640010" type="robotBase">
-                                    <param id="0" name="Instance variable">type</param>
-                                    <param id="1" name="Value">Array.At(loopindex,0)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="197784218525250" type="robotBase">
-                                    <param id="0" name="Instance variable">idmob</param>
-                                    <param id="1" name="Value">loopindex</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="304821691461438" type="robotBase">
-                                    <param id="0" name="Instance variable">GunR</param>
-                                    <param id="1" name="Value">Array.At(loopindex,2)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="789427406367425" type="robotBase">
-                                    <param id="0" name="Instance variable">GunL</param>
-                                    <param id="1" name="Value">Array.At(loopindex,3)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="289813693048986" type="robotBase">
-                                    <param id="0" name="Instance variable">Head</param>
-                                    <param id="1" name="Value">Array.At(loopindex,4)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="473237140490303" type="robotBase">
-                                    <param id="0" name="Instance variable">Body</param>
-                                    <param id="1" name="Value">Array.At(loopindex,5)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="333910440530970" type="robotBase">
-                                    <param id="0" name="Instance variable">Leg</param>
-                                    <param id="1" name="Value">Array.At(loopindex,6)</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="510349047437713" type="BodyTurn">
-                                    <param id="0" name="Pin to">robotBase</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-26" name="Move to layer" sid="521219559857207" type="spr_Head">
-                                    <param id="0" name="Layer">6</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="511080803041869" type="robotBase">
-                                    <param id="0" name="Instance variable">HP</param>
-                                    <param id="1" name="Value">100 + arr_body.At(robotBase.Body,2) + arr_head.At(robotBase.Head,2) + arr_leg.At(robotBase.Leg,2)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="842457105883177">
-                            <conditions />
-                            <actions />
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="316687679033705">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="347676741752717" type="robotBase">
@@ -1058,5 +811,875 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="159725928966148" title="creation">
+            <sub-events>
+                <event-block sid="935148237871028">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="102746477761645" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="786673347978483" type="Char">
+                            <param id="0" name="Object">Table</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="201219158612890" type="Table">
+                            <param id="0" name="Instance variable">used</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-3" name="Create object" sid="767929401746856" type="System">
+                            <param id="0" name="Object to create">Slider</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1105</param>
+                            <param id="3" name="Y">300</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="418466893768532" type="System">
+                            <param id="0" name="Object to create">Button2</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1155</param>
+                            <param id="3" name="Y">112</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="402630097172103" type="Button2">
+                            <param id="0" name="Text">str(Self.IID + 1)</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="970829204085382" type="System">
+                            <param id="0" name="Object to create">Button2</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1205</param>
+                            <param id="3" name="Y">112</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="452638171881854" type="Button2">
+                            <param id="0" name="Text">str(Self.IID + 1)</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="703819001260232" type="System">
+                            <param id="0" name="Object to create">Button2</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1255</param>
+                            <param id="3" name="Y">112</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="146678239529436" type="Button2">
+                            <param id="0" name="Text">str(Self.IID + 1)</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="126079849092671" type="System">
+                            <param id="0" name="Object to create">Button2</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1305</param>
+                            <param id="3" name="Y">112</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="153443765248752" type="Button2">
+                            <param id="0" name="Text">str(Self.IID + 1)</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="639227157826168" type="System">
+                            <param id="0" name="Object to create">Sprite4</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1230</param>
+                            <param id="3" name="Y">180</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="815150520430378" type="Sprite4">
+                            <param id="0" name="Instance variable">Index</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="385604771206438" type="Sprite4">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">&quot;Chip&quot;</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="880155811972817" type="System">
+                            <param id="0" name="Object to create">Sprite4</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1160</param>
+                            <param id="3" name="Y">215</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="966903341411213" type="Sprite4">
+                            <param id="0" name="Instance variable">Index</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="404697537276879" type="Sprite4">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">&quot;Gun&quot;</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="546294256413511" type="System">
+                            <param id="0" name="Object to create">Sprite4</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1230</param>
+                            <param id="3" name="Y">215</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="926022585785638" type="Sprite4">
+                            <param id="0" name="Instance variable">Index</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="746736500756589" type="Sprite4">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">&quot;Gun&quot;</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="381350563776071" type="System">
+                            <param id="0" name="Object to create">Sprite4</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1195</param>
+                            <param id="3" name="Y">180</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="119159689898238" type="Sprite4">
+                            <param id="0" name="Instance variable">Index</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="333872248413324" type="Sprite4">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">&quot;Head&quot;</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="483501592126986" type="System">
+                            <param id="0" name="Object to create">Sprite4</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1195</param>
+                            <param id="3" name="Y">215</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="878697471541135" type="Sprite4">
+                            <param id="0" name="Instance variable">Index</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="939812484876925" type="Sprite4">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">&quot;Body&quot;</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="997832723118336" type="System">
+                            <param id="0" name="Object to create">Sprite4</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1195</param>
+                            <param id="3" name="Y">250</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="492740549205395" type="Sprite4">
+                            <param id="0" name="Instance variable">Index</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="679499069229997" type="Sprite4">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">&quot;Leg&quot;</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="556966941849536" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                            <param id="2" name="X">1155</param>
+                            <param id="3" name="Y">450</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="484271657763326" type="Table">
+                            <param id="0" name="Instance variable">used</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="916409905319852" type="System">
+                            <param id="0" name="Layer">&quot;GUI2&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="266583889732478" type="button_create">
+                            <param id="0" name="Instance variable">currentRobot</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="698790900387049">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="564650636733537" type="Array">
+                                    <param id="0" name="X">button_create.currentRobot</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="4" name="Set animation" sid="264352726972157" type="Sprite4">
+                                    <param id="0" name="Animation">Self.type &amp; Array.At(button_create.currentRobot,Self.Index)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="506884043402991" type="craft_chip">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,0)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="334546394569502" type="craft_gunR">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,2)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="109987576446394" type="craft_gunL">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,3)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="192238584506562" type="craft_body">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,4)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="104391984436254" type="craft_head">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,5)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="675231101255928" type="craft_leg">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,6)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="521002323854601">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="732539269990728" type="Array">
+                                    <param id="0" name="X">button_create.currentRobot</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="4" name="Set animation" sid="147365975922453" type="Sprite4">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" sid="633447342614075" type="Sprite4">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="781209833688991" type="craft_chip">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="987065922028108" type="craft_gunR">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="100867145299301" type="craft_gunL">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="215152189512055" type="craft_body">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="332709731282031" type="craft_head">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="790142372890384" type="craft_leg">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="415642216891573">
+                    <conditions>
+                        <condition id="0" name="On function" sid="405564009974479" type="Function">
+                            <param id="0" name="Name">&quot;createRobot&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="209931156360353" type="Button" />
+                        <action id="-9" name="Destroy" sid="346735213789057" type="Button2" />
+                        <action id="-9" name="Destroy" sid="539372879900582" type="Slider" />
+                        <action id="-9" name="Destroy" sid="465773670039515" type="Sprite4" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="874190605749125">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="704169448559789" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="319391640501907" type="Char">
+                                    <param id="0" name="Object">robotBase</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action disabled="1" id="-10" name="Set value" sid="232971849313643" type="robotBase">
+                                    <param id="0" name="Instance variable">idmob</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="703481897222171" type="System">
+                                    <param id="0" name="Variable">quantity</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="768745666273285">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="684673279705875" type="System">
+                                            <param id="0" name="Count">Array.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="826047263472719" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-24" name="Stop loop" sid="688457208499060" type="System" />
+                                        <action id="3" name="Set at XY" sid="628547516505237" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="953847339772352" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">robotBase.UID</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="506372931000332" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">Function.Param(1)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="388326759527480" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">Function.Param(2)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="157932368015879" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">Function.Param(3)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="643483753499427" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">5</param>
+                                            <param id="2" name="Value">Function.Param(4)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="328029948987422" type="Array">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">6</param>
+                                            <param id="2" name="Value">Function.Param(5)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="414410308640010" type="robotBase">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Value">Array.At(loopindex,0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="197784218525250" type="robotBase">
+                                            <param id="0" name="Instance variable">idmob</param>
+                                            <param id="1" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="304821691461438" type="robotBase">
+                                            <param id="0" name="Instance variable">GunR</param>
+                                            <param id="1" name="Value">Array.At(loopindex,2)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="789427406367425" type="robotBase">
+                                            <param id="0" name="Instance variable">GunL</param>
+                                            <param id="1" name="Value">Array.At(loopindex,3)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="289813693048986" type="robotBase">
+                                            <param id="0" name="Instance variable">Head</param>
+                                            <param id="1" name="Value">Array.At(loopindex,4)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="473237140490303" type="robotBase">
+                                            <param id="0" name="Instance variable">Body</param>
+                                            <param id="1" name="Value">Array.At(loopindex,5)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="333910440530970" type="robotBase">
+                                            <param id="0" name="Instance variable">Leg</param>
+                                            <param id="1" name="Value">Array.At(loopindex,6)</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="510349047437713" type="BodyTurn">
+                                            <param id="0" name="Pin to">robotBase</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="521219559857207" type="spr_Head">
+                                            <param id="0" name="Layer">6</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="511080803041869" type="robotBase">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Value">100 + arr_body.At(robotBase.Body,2) + arr_head.At(robotBase.Head,2) + arr_leg.At(robotBase.Leg,2)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="343525436945533" type="robotBase">
+                                            <param id="0" name="Instance variable">targetX</param>
+                                            <param id="1" name="Value">Char.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="430152541261893" type="robotBase">
+                                            <param id="0" name="Instance variable">targetY</param>
+                                            <param id="1" name="Value">Char.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="909104502710890">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="334858234511868" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="371569330160431">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="623349459036451" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">button_select</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="924929624251333" type="button_create">
+                            <param id="0" name="Instance variable">currentRobot</param>
+                            <param id="1" name="Value">button_select.IID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="753171905243079">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="748154950203000" type="Array">
+                                    <param id="0" name="X">button_create.currentRobot</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="4" name="Set animation" sid="258653014438382" type="Sprite4">
+                                    <param id="0" name="Animation">Self.type &amp; Array.At(button_create.currentRobot,Self.Index)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="722074408610605" type="craft_chip">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,0)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="743768102748047" type="craft_gunR">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,2)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="655616219477984" type="craft_gunL">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,3)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="230057922989860" type="craft_body">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,4)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="990381326836386" type="craft_head">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,5)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="593050889263543" type="craft_leg">
+                                    <param id="0" name="Frame number">Array.At(button_create.currentRobot,6)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="885241332676928">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="309047184274490" type="Array">
+                                    <param id="0" name="X">button_create.currentRobot</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="4" name="Set animation" sid="561965301184453" type="Sprite4">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action disabled="1" id="5" name="Set frame" sid="809466191081996" type="Sprite4">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="225163100130350" type="craft_chip">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="202901364422630" type="craft_gunR">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="972350167493342" type="craft_gunL">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="482158553081291" type="craft_body">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="624686966432649" type="craft_head">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="421044866038152" type="craft_leg">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="689806555800711">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="105080954142961" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">button_create</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="991697502416338" type="button_create" />
+                        <condition id="3" name="Compare frame" sid="275922976032857" type="button_create">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="665134168516326" type="Function">
+                            <param id="0" name="Name">&quot;createRobot&quot;</param>
+                            <param id="1" name="Parameter {n}">craft_chip.AnimationFrame{###}craft_gunR.AnimationFrame{###}craft_gunL.AnimationFrame{###}craft_body.AnimationFrame{###}craft_head.AnimationFrame{###}craft_leg.AnimationFrame</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="349046116243839" type="System">
+                            <param id="0" name="Layer">&quot;GUI2&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="124151766891838" type="Table">
+                            <param id="0" name="Instance variable">used</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="195007096037702">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="540485377642939" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">button_back</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="165515035002528" type="button_back" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="358817729168217" type="System">
+                            <param id="0" name="Layer">&quot;GUI2&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="209415671716009" type="Table">
+                            <param id="0" name="Instance variable">used</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234901201632375">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="200120112133336" type="button_select">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">button_create.currentRobot</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="361014969168719" type="button_select">
+                            <param id="0" name="Animation">&quot;Selected&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="773625022237783" type="button_select">
+                            <param id="0" name="Animation">&quot;Selected&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="186834309516088">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Compare frame" sid="686567300683664" type="button_select">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">button_create.currentRobot</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="944991387289771" type="button_select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="757211539393540" type="button_select">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="811045923931401">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="949230112536202" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">craft_chip</param>
+                        </condition>
+                        <condition id="1" name="Compare at XY" sid="806959963602704" type="Array">
+                            <param id="0" name="X">button_create.currentRobot</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="655177177507583">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="588866540460779" type="craft_chip">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="481052171099910" type="craft_chip">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="804196268250739">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="300970204774129" type="System" />
+                                <condition id="3" inverted="1" name="Compare frame" sid="161015925208194" type="craft_chip">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="465755494612441" type="craft_chip">
+                                    <param id="0" name="Frame number">Self.AnimationFrame + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="223157459393539">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="322115814035150" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">craft_gunR</param>
+                        </condition>
+                        <condition id="1" name="Compare at XY" sid="133259112847931" type="Array">
+                            <param id="0" name="X">button_create.currentRobot</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="921123917194218">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="753117551332671" type="craft_gunR">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="107539157563639" type="craft_gunR">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="796556731413597">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="639735208089058" type="System" />
+                                <condition id="3" inverted="1" name="Compare frame" sid="335759880098835" type="craft_gunR">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="115140854323976" type="craft_gunR">
+                                    <param id="0" name="Frame number">Self.AnimationFrame + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="565274939975292">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="139166038703951" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">craft_gunL</param>
+                        </condition>
+                        <condition id="1" name="Compare at XY" sid="646763627548918" type="Array">
+                            <param id="0" name="X">button_create.currentRobot</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="924223712195682">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="489674205828335" type="craft_gunL">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="648915736834029" type="craft_gunL">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="187878329841005">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="248581485236494" type="System" />
+                                <condition id="3" inverted="1" name="Compare frame" sid="354601599979568" type="craft_gunL">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="303496786671322" type="craft_gunL">
+                                    <param id="0" name="Frame number">Self.AnimationFrame + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="827432057552202">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="178480684023987" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">craft_body</param>
+                        </condition>
+                        <condition id="1" name="Compare at XY" sid="145150271688393" type="Array">
+                            <param id="0" name="X">button_create.currentRobot</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="320184859164190">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="661967465882239" type="craft_body">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="502892706623376" type="craft_body">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="884579660507032">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="437506495734909" type="System" />
+                                <condition id="3" inverted="1" name="Compare frame" sid="474154473104029" type="craft_body">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="772149429760940" type="craft_body">
+                                    <param id="0" name="Frame number">Self.AnimationFrame + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="107565058258131">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="559900979729969" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">craft_head</param>
+                        </condition>
+                        <condition id="1" name="Compare at XY" sid="863042465679054" type="Array">
+                            <param id="0" name="X">button_create.currentRobot</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="228297919595520">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="307996368865276" type="craft_head">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="951511595784081" type="craft_head">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="684012526531276">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="851683483952779" type="System" />
+                                <condition id="3" inverted="1" name="Compare frame" sid="471628903703380" type="craft_head">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="549294410850206" type="craft_head">
+                                    <param id="0" name="Frame number">Self.AnimationFrame + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="342079495031211">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="386905427023701" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">craft_leg</param>
+                        </condition>
+                        <condition id="1" name="Compare at XY" sid="820036536235966" type="Array">
+                            <param id="0" name="X">button_create.currentRobot</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="410060905965236">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="102343892687772" type="craft_leg">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="778792065383953" type="craft_leg">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="313987723776452">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="579291670438135" type="System" />
+                                <condition id="3" inverted="1" name="Compare frame" sid="730102116107977" type="craft_leg">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="318288397945307" type="craft_leg">
+                                    <param id="0" name="Frame number">Self.AnimationFrame + 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="783143200131294">
+                    <conditions>
+                        <condition id="1" name="Compare at XY" sid="827541442050673" type="Array">
+                            <param id="0" name="X">button_create.currentRobot</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="835279647501172" type="craft_chip">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="941541708348639" type="craft_gunR">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="450877779587579" type="craft_gunL">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="854417111384167" type="craft_body">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="275911036590690" type="craft_head">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Compare frame" sid="925634031394367" type="craft_leg">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="621753214174277" type="button_create">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="113330849807634">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="878530812202966" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="445075237048583" type="button_create">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

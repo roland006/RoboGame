@@ -961,6 +961,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <used>false</used>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
@@ -2152,7 +2155,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Переключатель>0</Переключатель>
+                        <currentRobot>0</currentRobot>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2161,7 +2164,7 @@
                         <y>183</y>
                         <z>0</z>
                         <width>264</width>
-                        <height>398.984985352</height>
+                        <height>402</height>
                         <depth>0</depth>
                         <hotspotX>0.011363637</hotspotX>
                         <hotspotY>0.49751243</hotspotY>
@@ -2207,6 +2210,7 @@
                         <Category>0</Category>
                         <Index>3</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2237,6 +2241,7 @@
                         <Category>0</Category>
                         <Index>2</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2267,6 +2272,7 @@
                         <Category>0</Category>
                         <Index>5</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2297,6 +2303,7 @@
                         <Category>0</Category>
                         <Index>4</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2327,6 +2334,7 @@
                         <Category>0</Category>
                         <Index>6</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2357,6 +2365,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2387,6 +2396,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2417,6 +2427,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2447,6 +2458,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2477,6 +2489,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2507,6 +2520,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2537,6 +2551,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2567,6 +2582,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2597,6 +2613,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2627,6 +2644,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2657,6 +2675,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2687,6 +2706,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2717,6 +2737,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2747,6 +2768,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2777,6 +2799,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2807,6 +2830,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2837,6 +2861,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2867,6 +2892,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2897,6 +2923,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2927,6 +2954,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2957,6 +2985,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -2987,6 +3016,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -3017,6 +3047,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -3047,6 +3078,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -3077,6 +3109,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -3107,6 +3140,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -3137,6 +3171,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -3167,6 +3202,7 @@
                         <Category>0</Category>
                         <Index>0</Index>
                         <IsEnabled>false</IsEnabled>
+                        <type></type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -3206,7 +3242,7 @@
                         <x>2135</x>
                         <y>-3</y>
                         <z>0</z>
-                        <width>36.269042969</width>
+                        <width>36</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -3233,7 +3269,7 @@
                         <x>2185</x>
                         <y>-3</y>
                         <z>0</z>
-                        <width>36.269042969</width>
+                        <width>36</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -3260,7 +3296,7 @@
                         <x>2235</x>
                         <y>-3</y>
                         <z>0</z>
-                        <width>36.269042969</width>
+                        <width>36</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -3287,7 +3323,7 @@
                         <x>2285</x>
                         <y>-3</y>
                         <z>0</z>
-                        <width>36.269042969</width>
+                        <width>36</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -3425,6 +3461,318 @@
                         <z>0</z>
                         <width>1821</width>
                         <height>54</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="GUI2" sid="168426347443564">
+            <initially-visible>0</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="9patch" uid="112">
+                    <properties>
+                        <left-margin>5</left-margin>
+                        <right-margin>5</right-margin>
+                        <top-margin>5</top-margin>
+                        <bottom-margin>5</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>1366</width>
+                        <height>768</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="craft_head" uid="113">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>593</x>
+                        <y>126</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="craft_body" uid="114">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>593</x>
+                        <y>244</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="craft_gunR" uid="115">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>502</x>
+                        <y>236</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="craft_gunL" uid="116">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>691</x>
+                        <y>236</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="craft_leg" uid="117">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>593</x>
+                        <y>362</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="craft_chip" uid="118">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>675</x>
+                        <y>121</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="button_create" uid="119">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <currentRobot>0</currentRobot>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>509</x>
+                        <y>509</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="button_back" uid="120">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>693</x>
+                        <y>510</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="button_select" uid="121">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>513</x>
+                        <y>51</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="button_select" uid="122">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>563</x>
+                        <y>51</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="button_select" uid="123">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>2</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>615</x>
+                        <y>51</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="button_select" uid="124">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>3</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>669</x>
+                        <y>51</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

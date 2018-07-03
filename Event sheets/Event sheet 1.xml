@@ -99,7 +99,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="143546244693423" type="Slider">
-                                            <param id="0" name="Instance variable">Переключатель</param>
+                                            <param id="0" name="Instance variable">currentRobot</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -113,7 +113,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="495357633329808" type="Slider">
-                                            <param id="0" name="Instance variable">Переключатель</param>
+                                            <param id="0" name="Instance variable">currentRobot</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
@@ -123,7 +123,7 @@
                         <event-block disabled="1" sid="934654778003000">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="934849201840133" type="Slider">
-                                    <param id="0" name="Instance variable">Переключатель</param>
+                                    <param id="0" name="Instance variable">currentRobot</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -154,7 +154,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="828519984143492" type="Slider">
-                                            <param id="0" name="Instance variable">Переключатель</param>
+                                            <param id="0" name="Instance variable">currentRobot</param>
                                             <param id="1" name="Value">2</param>
                                         </action>
                                         <action id="-1" name="Set X" sid="410666202007020" type="Slider">
@@ -171,7 +171,7 @@
                         <event-block disabled="1" sid="409356470614545">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="484455537380278" type="Slider">
-                                    <param id="0" name="Instance variable">Переключатель</param>
+                                    <param id="0" name="Instance variable">currentRobot</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
@@ -199,7 +199,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="708125192161225" type="Slider">
-                                            <param id="0" name="Instance variable">Переключатель</param>
+                                            <param id="0" name="Instance variable">currentRobot</param>
                                             <param id="1" name="Value">2</param>
                                         </action>
                                         <action id="-1" name="Set X" sid="187253559937326" type="Slider">
