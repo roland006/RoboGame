@@ -25,6 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Items" />
         <family expanded="0" name="Player" />
         <family expanded="1" name="Enemy" />
+        <family expanded="0" name="otherSlot" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -97,5 +98,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/button_create/" />
         <folder expanded="1" path="animation-folder/button_back/" />
         <folder expanded="1" path="animation-folder/button_select/" />
+        <folder expanded="1" path="animation-folder/invSlot/" />
     </folders-expanded>
 </c2uistate>

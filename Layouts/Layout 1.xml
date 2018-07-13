@@ -182,7 +182,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <UIDItem>0</UIDItem>
+                        <SlotID>0</SlotID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
@@ -201,28 +201,19 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>Yes</active-at-start>
-                                <fade-in-time>0.3</fade-in-time>
-                                <wait-time>40</wait-time>
-                                <fade-out-time>5</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>722</x>
-                        <y>-77</y>
+                        <x>728</x>
+                        <y>-63</y>
                         <z>0</z>
-                        <width>25</width>
-                        <height>25</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
-                        <hotspotX>0.519999981</hotspotX>
-                        <hotspotY>0.519999981</hotspotY>
+                        <hotspotX>0.53125</hotspotX>
+                        <hotspotY>0.53125</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -389,8 +380,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>455.085357666</x>
-                        <y>-46.963912964</y>
+                        <x>448</x>
+                        <y>-47</y>
                         <z>0</z>
                         <width>25</width>
                         <height>25</height>
@@ -447,8 +438,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>396.9503479</x>
-                        <y>-46.481964111</y>
+                        <x>403</x>
+                        <y>-46</y>
                         <z>0</z>
                         <width>25</width>
                         <height>25</height>
@@ -2072,8 +2063,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>760.258117676</x>
-                        <y>-22.975845337</y>
+                        <x>762</x>
+                        <y>-22</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
@@ -3482,7 +3473,7 @@
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
-            <global>0</global>
+            <global>1</global>
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
@@ -3780,6 +3771,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="invSlot" uid="125">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <slotID>0</slotID>
+                        <used>false</used>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>833</x>
+                        <y>-60</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -3836,6 +3853,13 @@
             <properties>
                 <width>24</width>
                 <height>2</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Database" uid="126">
+            <properties>
+                <width>15</width>
+                <height>3</height>
                 <depth>1</depth>
             </properties>
         </instance>

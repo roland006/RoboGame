@@ -1153,7 +1153,7 @@
         <object-type name="InvImgItems" sid="968838029260262">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="UIDItem" sid="344494023137018" type="number" />
+                <instance-variable name="SlotID" sid="344494023137018" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DragDrop" sid="833580526859227">
@@ -1162,22 +1162,29 @@
                 <behavior-type name="Bullet" sid="479853012708949">
                     <behavior id="Bullet" />
                 </behavior-type>
-                <behavior-type name="Fade" sid="911378821309806">
-                    <behavior id="Fade" />
-                </behavior-type>
                 <behavior-type name="Pin" sid="970510015958498">
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="174620903146745" speed="0">
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
+                <animation framecount="17" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="174620903146745" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1691,6 +1698,17 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="invSlot" sid="347610801619597">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="309553856463989" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Database" sid="941079820466346">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Items" plugin-id="Sprite" sid="540936915956645">
@@ -1743,6 +1761,15 @@
                     <behavior id="EightDir" />
                 </behavior-type>
             </behaviors>
+        </family>
+        <family name="otherSlot" plugin-id="Sprite" sid="517184313329938">
+            <members>
+                <member>invSlot</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="slotID" sid="711866709674852" type="number" />
+                <instance-variable name="used" sid="378263524317907" type="boolean" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>

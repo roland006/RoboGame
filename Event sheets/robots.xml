@@ -33,6 +33,22 @@
                                     <param id="2" name="Value">3</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="858172014878576">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="901005686708075" type="arr_Inv">
+                                            <param id="0" name="Axes">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="969555538057998" type="arr_Inv">
+                                            <param id="0" name="X">Self.CurX</param>
+                                            <param id="1" name="Y">Self.CurY</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="480870732884383">
                             <conditions>
@@ -56,6 +72,20 @@
                                 <action id="-9" name="Destroy" sid="468220549429181" type="Button2" />
                                 <action id="-9" name="Destroy" sid="774975951612924" type="Slider" />
                                 <action id="-9" name="Destroy" sid="315996836183590" type="Sprite4" />
+                                <action id="-9" name="Destroy" sid="519782577916224" type="invSlot" />
+                                <action id="0" name="Call function" sid="293165267911175" type="Function">
+                                    <param id="0" name="Name">&quot;addItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">1{###}1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="679800436948312" type="Function">
+                                    <param id="0" name="Name">&quot;addItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">3{###}4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="255419758451401" type="Function">
+                                    <param id="0" name="Name">&quot;addItem&quot;</param>
+                                    <param id="1" name="Parameter {n}">5{###}2</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="165345578376582" type="InvImgItems" />
                             </actions>
                             <sub-events>
                                 <event-block disabled="1" sid="566201720838586">
@@ -826,138 +856,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-3" name="Create object" sid="767929401746856" type="System">
-                            <param id="0" name="Object to create">Slider</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1105</param>
-                            <param id="3" name="Y">300</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="418466893768532" type="System">
-                            <param id="0" name="Object to create">Button2</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1155</param>
-                            <param id="3" name="Y">112</param>
-                        </action>
-                        <action disabled="1" id="0" name="Set text" sid="402630097172103" type="Button2">
-                            <param id="0" name="Text">str(Self.IID + 1)</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="970829204085382" type="System">
-                            <param id="0" name="Object to create">Button2</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1205</param>
-                            <param id="3" name="Y">112</param>
-                        </action>
-                        <action disabled="1" id="0" name="Set text" sid="452638171881854" type="Button2">
-                            <param id="0" name="Text">str(Self.IID + 1)</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="703819001260232" type="System">
-                            <param id="0" name="Object to create">Button2</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1255</param>
-                            <param id="3" name="Y">112</param>
-                        </action>
-                        <action disabled="1" id="0" name="Set text" sid="146678239529436" type="Button2">
-                            <param id="0" name="Text">str(Self.IID + 1)</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="126079849092671" type="System">
-                            <param id="0" name="Object to create">Button2</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1305</param>
-                            <param id="3" name="Y">112</param>
-                        </action>
-                        <action disabled="1" id="0" name="Set text" sid="153443765248752" type="Button2">
-                            <param id="0" name="Text">str(Self.IID + 1)</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="639227157826168" type="System">
-                            <param id="0" name="Object to create">Sprite4</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1230</param>
-                            <param id="3" name="Y">180</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="815150520430378" type="Sprite4">
-                            <param id="0" name="Instance variable">Index</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="385604771206438" type="Sprite4">
-                            <param id="0" name="Instance variable">type</param>
-                            <param id="1" name="Value">&quot;Chip&quot;</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="880155811972817" type="System">
-                            <param id="0" name="Object to create">Sprite4</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1160</param>
-                            <param id="3" name="Y">215</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="966903341411213" type="Sprite4">
-                            <param id="0" name="Instance variable">Index</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="404697537276879" type="Sprite4">
-                            <param id="0" name="Instance variable">type</param>
-                            <param id="1" name="Value">&quot;Gun&quot;</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="546294256413511" type="System">
-                            <param id="0" name="Object to create">Sprite4</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1230</param>
-                            <param id="3" name="Y">215</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="926022585785638" type="Sprite4">
-                            <param id="0" name="Instance variable">Index</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="746736500756589" type="Sprite4">
-                            <param id="0" name="Instance variable">type</param>
-                            <param id="1" name="Value">&quot;Gun&quot;</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="381350563776071" type="System">
-                            <param id="0" name="Object to create">Sprite4</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1195</param>
-                            <param id="3" name="Y">180</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="119159689898238" type="Sprite4">
-                            <param id="0" name="Instance variable">Index</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="333872248413324" type="Sprite4">
-                            <param id="0" name="Instance variable">type</param>
-                            <param id="1" name="Value">&quot;Head&quot;</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="483501592126986" type="System">
-                            <param id="0" name="Object to create">Sprite4</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1195</param>
-                            <param id="3" name="Y">215</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="878697471541135" type="Sprite4">
-                            <param id="0" name="Instance variable">Index</param>
-                            <param id="1" name="Value">5</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="939812484876925" type="Sprite4">
-                            <param id="0" name="Instance variable">type</param>
-                            <param id="1" name="Value">&quot;Body&quot;</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="997832723118336" type="System">
-                            <param id="0" name="Object to create">Sprite4</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1195</param>
-                            <param id="3" name="Y">250</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="492740549205395" type="Sprite4">
-                            <param id="0" name="Instance variable">Index</param>
-                            <param id="1" name="Value">6</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="679499069229997" type="Sprite4">
-                            <param id="0" name="Instance variable">type</param>
-                            <param id="1" name="Value">&quot;Leg&quot;</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Create object" sid="556966941849536" type="System">
-                            <param id="0" name="Object to create">Button</param>
-                            <param id="1" name="Layer">&quot;GUI&quot;</param>
-                            <param id="2" name="X">1155</param>
-                            <param id="3" name="Y">450</param>
-                        </action>
                         <action id="-13" name="Set boolean" sid="484271657763326" type="Table">
                             <param id="0" name="Instance variable">used</param>
                             <param id="1" name="Value">1</param>
@@ -982,10 +880,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="4" name="Set animation" sid="264352726972157" type="Sprite4">
-                                    <param id="0" name="Animation">Self.type &amp; Array.At(button_create.currentRobot,Self.Index)</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
                                 <action id="5" name="Set frame" sid="506884043402991" type="craft_chip">
                                     <param id="0" name="Frame number">Array.At(button_create.currentRobot,0)</param>
                                 </action>
@@ -1016,13 +910,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="4" name="Set animation" sid="147365975922453" type="Sprite4">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action disabled="1" id="5" name="Set frame" sid="633447342614075" type="Sprite4">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
                                 <action id="5" name="Set frame" sid="781209833688991" type="craft_chip">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
@@ -1043,6 +930,76 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="316703663098161">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="645230632404201" type="System">
+                                    <param id="0" name="Count">arr_Inv.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="208784424410235">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="644571605829867" type="arr_Inv">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="404653651280980" type="System">
+                                            <param id="0" name="Object to create">invSlot</param>
+                                            <param id="1" name="Layer">&quot;GUI2&quot;</param>
+                                            <param id="2" name="X">820 + 50 * (loopindex/8 - int(loopindex/8)) * 8</param>
+                                            <param id="3" name="Y">200 + 50 * int(loopindex/8)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="245329725206559" type="invSlot">
+                                            <param id="0" name="Instance variable">slotID</param>
+                                            <param id="1" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="314561983549438" type="invSlot">
+                                            <param id="0" name="Instance variable">used</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="519129432120133" type="invSlot">
+                                            <param id="0" name="Object">InvImgItems</param>
+                                            <param id="1" name="Layer">&quot;GUI2&quot;</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="959039457402702" type="InvImgItems">
+                                            <param id="0" name="Frame number">arr_Inv.At(loopindex,0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="290932050080738" type="InvImgItems">
+                                            <param id="0" name="Instance variable">SlotID</param>
+                                            <param id="1" name="Value">loopindex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="867102776285540">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="902640159024034" type="arr_Inv">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="647673233798897" type="System">
+                                            <param id="0" name="Object to create">invSlot</param>
+                                            <param id="1" name="Layer">&quot;GUI2&quot;</param>
+                                            <param id="2" name="X">820 + 50 * (loopindex/8 - int(loopindex/8)) * 8</param>
+                                            <param id="3" name="Y">200 + 50 * int(loopindex/8)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="827413580285129" type="invSlot">
+                                            <param id="0" name="Instance variable">slotID</param>
+                                            <param id="1" name="Value">loopindex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="415642216891573">
@@ -1056,6 +1013,8 @@
                         <action id="-9" name="Destroy" sid="346735213789057" type="Button2" />
                         <action id="-9" name="Destroy" sid="539372879900582" type="Slider" />
                         <action id="-9" name="Destroy" sid="465773670039515" type="Sprite4" />
+                        <action id="-9" name="Destroy" sid="973892989801977" type="invSlot" />
+                        <action id="-9" name="Destroy" sid="270541690129372" type="InvImgItems" />
                     </actions>
                     <sub-events>
                         <event-block sid="874190605749125">
@@ -1324,6 +1283,8 @@
                             <param id="0" name="Instance variable">used</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="482229866557448" type="invSlot" />
+                        <action id="-9" name="Destroy" sid="871132945209854" type="InvImgItems" />
                     </actions>
                 </event-block>
                 <event-block sid="234901201632375">
@@ -1678,6 +1639,398 @@
                             <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="969340454035928" title="inventory">
+            <sub-events>
+                <event-block sid="365613469035094">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="691979067496796" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="751483467011219" type="Database">
+                            <param id="0" name="Width">17</param>
+                            <param id="1" name="Height">3</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="971489760030568" type="Database">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;PLACEHOLDER: Name&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="146224432425804" type="Database">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;PLACEHOLDER: Description&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="235674488000794" type="Database">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">&quot;PLACEHOLDER: Type&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="746932475893197" type="Database">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;AI Attack Chip&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="606872918953396" type="Database">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="997797415396846" type="Database">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="328845482293792" type="Database">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;AI Defense Chip&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="845943769234007" type="Database">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="947054966240077" type="Database">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="703153376331315" type="Database">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;AI Tech Chip&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="838041867369820" type="Database">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="665026218465306" type="Database">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="412242478990713" type="Database">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Head 1&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="992713501342794" type="Database">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="611140256711634" type="Database">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="471198719853563" type="Database">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Head 2&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="844915241904322" type="Database">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="659911991346803" type="Database">
+                            <param id="0" name="X">5</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="607731266920098" type="Database">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Head 3&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="440745966728977" type="Database">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="971866539524467" type="Database">
+                            <param id="0" name="X">6</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">2</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="453364912567775" type="Database">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Body 1&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="186939738587475" type="Database">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="201371510473951" type="Database">
+                            <param id="0" name="X">7</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="615346828596791" type="Database">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Body 2&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="357575693928942" type="Database">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="516987921505177" type="Database">
+                            <param id="0" name="X">8</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="162350615830895" type="Database">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Body 3&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="661905624855351" type="Database">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="827426053526840" type="Database">
+                            <param id="0" name="X">9</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">3</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="252902577449479" type="Database">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Gun 1&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="545532166349923" type="Database">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="529915757724879" type="Database">
+                            <param id="0" name="X">10</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">4</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="586258304388587" type="Database">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Gun 2&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="159065275635108" type="Database">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="275147950319474" type="Database">
+                            <param id="0" name="X">11</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">4</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="799005433061011" type="Database">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Gun 3&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="145724633272627" type="Database">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="268492248127886" type="Database">
+                            <param id="0" name="X">12</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">4</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="736462294414349" type="Database">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Leg 1&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="618501521859470" type="Database">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="375497766759583" type="Database">
+                            <param id="0" name="X">13</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="449804440274460" type="Database">
+                            <param id="0" name="X">14</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Leg 2&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="476775855049718" type="Database">
+                            <param id="0" name="X">14</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="432549809910542" type="Database">
+                            <param id="0" name="X">14</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="221197827348701" type="Database">
+                            <param id="0" name="X">15</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Leg 3&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="939937706137457" type="Database">
+                            <param id="0" name="X">15</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="488470693535423" type="Database">
+                            <param id="0" name="X">15</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">5</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="740753322069280" type="Database">
+                            <param id="0" name="X">16</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Stuff 1&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="335250914831770" type="Database">
+                            <param id="0" name="X">16</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">&quot;Your Text Here&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="949282682013816" type="Database">
+                            <param id="0" name="X">16</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671410859743644">
+                    <conditions>
+                        <condition id="0" name="On function" sid="465026322987677" type="Function">
+                            <param id="0" name="Name">&quot;addItem&quot;</param>
+                        </condition>
+                        <condition id="-12" name="Repeat" sid="727999024082558" type="System">
+                            <param id="0" name="Count">arr_Inv.Width</param>
+                        </condition>
+                        <condition id="1" name="Compare at XY" sid="230689768704721" type="arr_Inv">
+                            <param id="0" name="X">loopindex</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="150031233143475" type="arr_Inv">
+                            <param id="0" name="X">loopindex</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="345925789956831" type="arr_Inv">
+                            <param id="0" name="X">loopindex</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-24" name="Stop loop" sid="718145161091559" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="278571575856011">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="150964597009791" type="InvImgItems" />
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="632248145286049" type="InvImgItems" />
+                    </actions>
+                </event-block>
+                <event-block sid="780675620031128">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="582331847250689" type="InvImgItems" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="653467292835496">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="989410104949944" type="InvImgItems">
+                                    <param id="0" name="Object">invSlot</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="476823531293471" type="invSlot">
+                                    <param id="0" name="Instance variable">used</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="512663983954355" type="invSlot">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">InvImgItems.X</param>
+                                    <param id="2" name="Y">InvImgItems.Y</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="252882719735955" type="System">
+                                    <param id="0" name="Object">otherSlot</param>
+                                    <param id="1" name="Expression">otherSlot.slotID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">InvImgItems.SlotID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="326239113579708" type="invSlot">
+                                    <param id="0" name="Instance variable">used</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="140890188115472" type="arr_Inv">
+                                    <param id="0" name="X">invSlot.slotID</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">arr_Inv.At(InvImgItems.SlotID, 0)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="381918641025481" type="arr_Inv">
+                                    <param id="0" name="X">invSlot.slotID</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">arr_Inv.At(InvImgItems.SlotID, 1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="679539057023199" type="InvImgItems">
+                                    <param id="0" name="Instance variable">SlotID</param>
+                                    <param id="1" name="Value">invSlot.slotID</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="937824053774612" type="InvImgItems">
+                                    <param id="0" name="Object">invSlot</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="356930274999158" type="arr_Inv">
+                                    <param id="0" name="X">otherSlot.slotID</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="373648714858566" type="arr_Inv">
+                                    <param id="0" name="X">otherSlot.slotID</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="394628895107073" type="otherSlot">
+                                    <param id="0" name="Instance variable">used</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="253011007069027">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="674641036438738" type="System" />
+                                <condition id="-33" name="Pick by comparison" sid="880532537906060" type="System">
+                                    <param id="0" name="Object">otherSlot</param>
+                                    <param id="1" name="Expression">otherSlot.slotID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">InvImgItems.SlotID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="285091290698617" type="InvImgItems">
+                                    <param id="0" name="Object">otherSlot</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
