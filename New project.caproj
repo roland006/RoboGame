@@ -449,7 +449,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="Array" sid="704388180947320">
+        <object-type global="1" name="arr_robots" sid="704388180947320">
             <plugin id="Arr" />
         </object-type>
         <object-type name="Button" sid="989770458422127">
@@ -1154,6 +1154,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="SlotID" sid="344494023137018" type="number" />
+                <instance-variable name="type" sid="642349768043411" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DragDrop" sid="833580526859227">
@@ -1709,6 +1710,15 @@
         <object-type global="1" name="Database" sid="941079820466346">
             <plugin id="Arr" />
         </object-type>
+        <object-type global="1" name="arr_chip" sid="617112550464585">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="arr_temp_robots" sid="939426835049524">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="arr_temp_inv" sid="702952280746509">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Items" plugin-id="Sprite" sid="540936915956645">
@@ -1769,6 +1779,20 @@
             <instance-variables>
                 <instance-variable name="slotID" sid="711866709674852" type="number" />
                 <instance-variable name="used" sid="378263524317907" type="boolean" />
+            </instance-variables>
+        </family>
+        <family name="equipSlots" plugin-id="Sprite" sid="252426980804345">
+            <members>
+                <member>craft_body</member>
+                <member>craft_chip</member>
+                <member>craft_gunL</member>
+                <member>craft_gunR</member>
+                <member>craft_head</member>
+                <member>craft_leg</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="type" sid="840277939691680" type="number" />
+                <instance-variable name="returnValue" sid="979086524613861" type="number" />
             </instance-variables>
         </family>
     </families>

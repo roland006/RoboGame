@@ -24,8 +24,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="Items" />
         <family expanded="0" name="Player" />
-        <family expanded="1" name="Enemy" />
+        <family expanded="0" name="Enemy" />
         <family expanded="0" name="otherSlot" />
+        <family expanded="0" name="equipSlots" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />

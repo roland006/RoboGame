@@ -31,20 +31,23 @@
                         <condition id="-2" name="On start of layout" sid="328014139037103" type="System" />
                     </conditions>
                     <actions>
+                        <action id="11" name="Load" sid="973219689119688" type="arr_chip">
+                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Attack Chip&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Defense Chip&quot;&quot;],[10]], &#x0D;&#x0A;&#x09;&#x09;[[3],[&quot;&quot;Technical Chip&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
+                        </action>
                         <action id="11" name="Load" sid="591882997330621" type="arr_gun_l">
-                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,5,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0], [0], [0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Gun1&quot;&quot;],[1], [40], [1]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Gun2&quot;&quot;],[0.5], [5], [5]],&#x0D;&#x0A;&#x09;&#x09;[[3],[&quot;&quot;Gun3&quot;&quot;],[0.1], [3], [1]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
+                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,5,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0], [0], [0]],&#x0D;&#x0A;&#x09;&#x09;[[10],[&quot;&quot;Gun1&quot;&quot;],[1], [40], [1]],&#x0D;&#x0A;&#x09;&#x09;[[11],[&quot;&quot;Gun2&quot;&quot;],[0.5], [5], [5]],&#x0D;&#x0A;&#x09;&#x09;[[12],[&quot;&quot;Gun3&quot;&quot;],[0.1], [3], [1]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
                         </action>
                         <action id="11" name="Load" sid="699100391297107" type="arr_gun_r">
-                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,5,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0], [0], [0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Gun1&quot;&quot;],[1], [40], [1]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Gun2&quot;&quot;],[0.5], [5], [5]],&#x0D;&#x0A;&#x09;&#x09;[[3],[&quot;&quot;Gun3&quot;&quot;],[0.1], [3], [1]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
+                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,5,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0], [0], [0]],&#x0D;&#x0A;&#x09;&#x09;[[10],[&quot;&quot;Gun1&quot;&quot;],[1], [40], [1]],&#x0D;&#x0A;&#x09;&#x09;[[11],[&quot;&quot;Gun2&quot;&quot;],[0.5], [5], [5]],&#x0D;&#x0A;&#x09;&#x09;[[12],[&quot;&quot;Gun3&quot;&quot;],[0.1], [3], [1]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
                         </action>
                         <action id="11" name="Load" sid="128106861062738" type="arr_body">
-                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Body1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Body2&quot;&quot;],[10]], &#x0D;&#x0A;&#x09;&#x09;[[3],[&quot;&quot;Body3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
+                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[7],[&quot;&quot;Body1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[8],[&quot;&quot;Body2&quot;&quot;],[10]], &#x0D;&#x0A;&#x09;&#x09;[[9],[&quot;&quot;Body3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
                         </action>
                         <action id="11" name="Load" sid="470751246703983" type="arr_leg">
-                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Leg1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Leg2&quot;&quot;],[10]], &#x0D;&#x0A;&#x09;&#x09;[[3],[&quot;&quot;Leg3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
+                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[13],[&quot;&quot;Leg1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[14],[&quot;&quot;Leg2&quot;&quot;],[10]], &#x0D;&#x0A;&#x09;&#x09;[[15],[&quot;&quot;Leg3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
                         </action>
                         <action id="11" name="Load" sid="429657125390248" type="arr_head">
-                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[1],[&quot;&quot;Head1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[2],[&quot;&quot;Head2&quot;&quot;],[10]], &#x0D;&#x0A;&#x09;&#x09;[[3],[&quot;&quot;Head3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
+                            <param id="0" name="JSON">&quot;{&#x0D;&#x0A;&#x09;&quot;&quot;c2array&quot;&quot;:true,&#x0D;&#x0A;&#x09;&quot;&quot;size&quot;&quot;:[4,3,1],&#x0D;&#x0A;&#x09;&quot;&quot;data&quot;&quot;:[&#x0D;&#x0A;&#x09;&#x09;[[0],[&quot;&quot;Default&quot;&quot;],[0]],&#x0D;&#x0A;&#x09;&#x09;[[4],[&quot;&quot;Head1&quot;&quot;],[5]],&#x0D;&#x0A;&#x09;&#x09;[[5],[&quot;&quot;Head2&quot;&quot;],[10]], &#x0D;&#x0A;&#x09;&#x09;[[6],[&quot;&quot;Head3&quot;&quot;],[15]]&#x0D;&#x0A;&#x09;]&#x0D;&#x0A;}&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -280,22 +283,22 @@
                                 <condition id="-2" name="On start of layout" sid="947298577027537" type="System" />
                             </conditions>
                             <actions>
-                                <action id="3" name="Set at XY" sid="886036065392698" type="Array">
+                                <action id="3" name="Set at XY" sid="886036065392698" type="arr_robots">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">0</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="137105802933674" type="Array">
+                                <action id="3" name="Set at XY" sid="137105802933674" type="arr_robots">
                                     <param id="0" name="X">1</param>
                                     <param id="1" name="Y">0</param>
                                     <param id="2" name="Value">1</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="603278421205003" type="Array">
+                                <action id="3" name="Set at XY" sid="603278421205003" type="arr_robots">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">0</param>
                                     <param id="2" name="Value">2</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="442895529819486" type="Array">
+                                <action id="3" name="Set at XY" sid="442895529819486" type="arr_robots">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">0</param>
                                     <param id="2" name="Value">3</param>
@@ -318,7 +321,7 @@
                             <sub-events>
                                 <event-block disabled="1" sid="197955678493052">
                                     <conditions>
-                                        <condition id="1" name="Compare at XY" sid="403852742980621" type="Array">
+                                        <condition id="1" name="Compare at XY" sid="403852742980621" type="arr_robots">
                                             <param id="0" name="X">Level1Robots</param>
                                             <param id="1" name="Y">1</param>
                                             <param id="2" name="Comparison">0</param>
@@ -331,32 +334,32 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="3" name="Set at XY" sid="455792131435864" type="Array">
+                                        <action id="3" name="Set at XY" sid="455792131435864" type="arr_robots">
                                             <param id="0" name="X">Level1Robots</param>
                                             <param id="1" name="Y">1</param>
                                             <param id="2" name="Value">robotBase.UID</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="171309938585195" type="Array">
+                                        <action id="3" name="Set at XY" sid="171309938585195" type="arr_robots">
                                             <param id="0" name="X">Level1Robots</param>
                                             <param id="1" name="Y">2</param>
                                             <param id="2" name="Value">robotBase.GunR</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="832021402315315" type="Array">
+                                        <action id="3" name="Set at XY" sid="832021402315315" type="arr_robots">
                                             <param id="0" name="X">Level1Robots</param>
                                             <param id="1" name="Y">3</param>
                                             <param id="2" name="Value">robotBase.GunL</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="647516960902981" type="Array">
+                                        <action id="3" name="Set at XY" sid="647516960902981" type="arr_robots">
                                             <param id="0" name="X">Level1Robots</param>
                                             <param id="1" name="Y">4</param>
                                             <param id="2" name="Value">robotBase.Head</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="924859036470007" type="Array">
+                                        <action id="3" name="Set at XY" sid="924859036470007" type="arr_robots">
                                             <param id="0" name="X">Level1Robots</param>
                                             <param id="1" name="Y">5</param>
                                             <param id="2" name="Value">robotBase.Body</param>
                                         </action>
-                                        <action id="3" name="Set at XY" sid="322876349427341" type="Array">
+                                        <action id="3" name="Set at XY" sid="322876349427341" type="arr_robots">
                                             <param id="0" name="X">Level1Robots</param>
                                             <param id="1" name="Y">6</param>
                                             <param id="2" name="Value">robotBase.Leg</param>
@@ -405,9 +408,9 @@
                                 <event-block disabled="1" sid="829131780210079">
                                     <conditions>
                                         <condition id="-12" name="Repeat" sid="724950058814763" type="System">
-                                            <param id="0" name="Count">Array.Width</param>
+                                            <param id="0" name="Count">arr_robots.Width</param>
                                         </condition>
-                                        <condition id="1" name="Compare at XY" sid="445439713653628" type="Array">
+                                        <condition id="1" name="Compare at XY" sid="445439713653628" type="arr_robots">
                                             <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">1</param>
                                             <param id="2" name="Comparison">0</param>
@@ -416,7 +419,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="-24" name="Stop loop" sid="188648284723899" type="System" />
-                                        <action id="3" name="Set at XY" sid="406729222691535" type="Array">
+                                        <action id="3" name="Set at XY" sid="406729222691535" type="arr_robots">
                                             <param id="0" name="X">loopindex</param>
                                             <param id="1" name="Y">1</param>
                                             <param id="2" name="Value">robotBase.UID</param>
@@ -783,7 +786,7 @@
                                     <param id="0" name="Variable">quantity</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="921650093501392" type="Array">
+                                <action id="3" name="Set at XY" sid="921650093501392" type="arr_robots">
                                     <param id="0" name="X">robotBase.idmob</param>
                                     <param id="1" name="Y">1</param>
                                     <param id="2" name="Value">0</param>

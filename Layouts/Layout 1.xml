@@ -183,6 +183,7 @@
                     </properties>
                     <instance-variables>
                         <SlotID>0</SlotID>
+                        <type>0</type>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
@@ -212,8 +213,8 @@
                         <width>32</width>
                         <height>32</height>
                         <depth>0</depth>
-                        <hotspotX>0.53125</hotspotX>
-                        <hotspotY>0.53125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3511,6 +3512,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <type>2</type>
+                        <returnValue>4</returnValue>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3533,6 +3538,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <type>3</type>
+                        <returnValue>5</returnValue>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3555,6 +3564,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <type>4</type>
+                        <returnValue>2</returnValue>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3577,6 +3590,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <type>4</type>
+                        <returnValue>3</returnValue>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3599,6 +3616,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <type>5</type>
+                        <returnValue>6</returnValue>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3621,6 +3642,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <type>1</type>
+                        <returnValue>0</returnValue>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -3802,7 +3827,7 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="Array" uid="14">
+        <instance type="arr_robots" uid="14">
             <properties>
                 <width>4</width>
                 <height>7</height>
@@ -3860,6 +3885,27 @@
             <properties>
                 <width>15</width>
                 <height>3</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="arr_chip" uid="127">
+            <properties>
+                <width>4</width>
+                <height>3</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="arr_temp_robots" uid="128">
+            <properties>
+                <width>4</width>
+                <height>7</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="arr_temp_inv" uid="129">
+            <properties>
+                <width>24</width>
+                <height>2</height>
                 <depth>1</depth>
             </properties>
         </instance>
