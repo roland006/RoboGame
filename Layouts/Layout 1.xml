@@ -3514,7 +3514,7 @@
                     </properties>
                     <instance-variables>
                         <type>2</type>
-                        <returnValue>4</returnValue>
+                        <returnValue>0</returnValue>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3540,7 +3540,7 @@
                     </properties>
                     <instance-variables>
                         <type>3</type>
-                        <returnValue>5</returnValue>
+                        <returnValue>0</returnValue>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3566,7 +3566,7 @@
                     </properties>
                     <instance-variables>
                         <type>4</type>
-                        <returnValue>2</returnValue>
+                        <returnValue>0</returnValue>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3592,7 +3592,7 @@
                     </properties>
                     <instance-variables>
                         <type>4</type>
-                        <returnValue>3</returnValue>
+                        <returnValue>0</returnValue>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3618,7 +3618,7 @@
                     </properties>
                     <instance-variables>
                         <type>5</type>
-                        <returnValue>6</returnValue>
+                        <returnValue>0</returnValue>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
