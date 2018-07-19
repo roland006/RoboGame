@@ -842,6 +842,7 @@
         </event-block>
         <event-group description="" sid="159725928966148" title="creation">
             <sub-events>
+                <comment>переход в интерфейс</comment>
                 <event-block sid="935148237871028">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="102746477761645" type="Keyboard">
@@ -1084,6 +1085,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>создание робота</comment>
                 <event-block sid="415642216891573">
                     <conditions>
                         <condition id="0" name="On function" sid="405564009974479" type="Function">
@@ -1225,6 +1227,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>смена частей робота</comment>
                 <event-block sid="320866594207597">
                     <conditions>
                         <condition id="0" name="On function" sid="107580320331919" type="Function">
@@ -1298,6 +1301,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>смена робота в интерфейсе</comment>
                 <event-block sid="371569330160431">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="623349459036451" type="Mouse">
@@ -1478,6 +1482,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>кнопка создания</comment>
                 <event-block sid="362169867183020">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="683501566892777" type="Mouse">
@@ -1660,6 +1665,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>кнопка назад</comment>
                 <event-block sid="195007096037702">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="540485377642939" type="Mouse">
@@ -1682,6 +1688,7 @@
                         <action id="-9" name="Destroy" sid="871132945209854" type="InvImgItems" />
                     </actions>
                 </event-block>
+                <comment>цвет кнопки</comment>
                 <event-block sid="234901201632375">
                     <conditions>
                         <condition id="3" name="Compare frame" sid="200120112133336" type="button_select">
@@ -1986,7 +1993,8 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="783143200131294">
+                <comment>цвет кнопки</comment>
+                <event-block disabled="1" sid="783143200131294">
                     <conditions>
                         <condition id="1" name="Compare at XY" sid="827541442050673" type="arr_robots">
                             <param id="0" name="X">button_create.currentRobot</param>
@@ -2025,7 +2033,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="113330849807634">
+                <event-block disabled="1" sid="113330849807634">
                     <conditions>
                         <condition id="-22" name="Else" sid="878530812202966" type="System" />
                     </conditions>
@@ -2039,6 +2047,7 @@
         </event-group>
         <event-group description="" sid="969340454035928" title="inventory">
             <sub-events>
+                <comment>датабейз</comment>
                 <event-block sid="365613469035094">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="691979067496796" type="System" />
@@ -2306,6 +2315,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>функции</comment>
                 <event-block sid="671410859743644">
                     <conditions>
                         <condition id="0" name="On function" sid="465026322987677" type="Function">
@@ -2372,6 +2382,7 @@
                         <action id="-24" name="Move to top" sid="632248145286049" type="InvImgItems" />
                     </actions>
                 </event-block>
+                <comment>перетаскивание</comment>
                 <event-block sid="780675620031128">
                     <conditions>
                         <condition behavior="DragDrop" id="2" name="On drop" sid="582331847250689" type="InvImgItems" />
@@ -3135,6 +3146,836 @@
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>ПКМ мышью</comment>
+                <event-block sid="182628622212753">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="651060885726169" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">InvImgItems</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="477896695067078" type="System">
+                            <param id="0" name="Object">equipSlots</param>
+                            <param id="1" name="Expression">equipSlots.type</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Database.At(InvImgItems.AnimationFrame, 2)</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="843690482721458" type="System">
+                            <param id="0" name="Object">invSlot</param>
+                            <param id="1" name="Expression">invSlot.slotID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">InvImgItems.SlotID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="891815083207720">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="849823676145827" type="equipSlots">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="934470835664348">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="329976955018088" type="equipSlots">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="305188617283930" type="System">
+                                            <param id="0" name="Count">arr_chip.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="512567462522506" type="arr_chip">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="963497431687753" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="402089053724306" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="986141092857462" type="System" />
+                                        <action id="-4" name="Set position to another object" sid="998573919243987" type="InvImgItems">
+                                            <param id="0" name="Object">invSlot</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="702166665253791" type="InvImgItems">
+                                            <param id="0" name="Frame number">equipSlots.returnValue</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="919294925128963" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_chip.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="663962002607580" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">InvImgItems.AnimationFrame</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="280838333180822" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="493777090306482">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="861327937587456" type="System" />
+                                        <condition id="3" name="Compare frame" sid="676155500934678" type="equipSlots">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="535268067772615" type="System">
+                                            <param id="0" name="Count">arr_chip.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="625504015953532" type="arr_chip">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="638867671582323" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="799652716335438" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="824671871163346" type="System" />
+                                        <action id="-10" name="Set value" sid="290159973339319" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_chip.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="590392104672888" type="InvImgItems" />
+                                        <action id="-13" name="Set boolean" sid="913028948215395" type="invSlot">
+                                            <param id="0" name="Instance variable">used</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="844947247843927" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="823351108924146" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="961056369723444">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="773832327795897" type="equipSlots">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="842285604542548">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="353172636825731" type="equipSlots">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="177264037949134" type="System">
+                                            <param id="0" name="Count">arr_head.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="613718387238699" type="arr_head">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="724949293434918" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="701091250409440" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="938896234079955" type="System" />
+                                        <action id="-4" name="Set position to another object" sid="192244654368089" type="InvImgItems">
+                                            <param id="0" name="Object">invSlot</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="659930810636358" type="InvImgItems">
+                                            <param id="0" name="Frame number">equipSlots.returnValue</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="847574209383514" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_head.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="487899350806502" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">InvImgItems.AnimationFrame</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="901050808447769" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="937213261060334">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="300499862467184" type="System" />
+                                        <condition id="3" name="Compare frame" sid="821580887989139" type="equipSlots">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="294062329737462" type="System">
+                                            <param id="0" name="Count">arr_head.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="780133122225673" type="arr_head">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="386456157331592" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="597256785575919" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="719408485783787" type="System" />
+                                        <action id="-10" name="Set value" sid="824665017629586" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_head.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="372152444924354" type="InvImgItems" />
+                                        <action id="-13" name="Set boolean" sid="717824559487491" type="invSlot">
+                                            <param id="0" name="Instance variable">used</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="767786984121096" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="699619648124345" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="110404158173267">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="531314406455113" type="equipSlots">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="464068161793633">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="906143291038344" type="equipSlots">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="638204364004999" type="System">
+                                            <param id="0" name="Count">arr_body.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="865126656953941" type="arr_body">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="652953352582690" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">5</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="441597306740610" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="357980038051321" type="System" />
+                                        <action id="-4" name="Set position to another object" sid="615005772324515" type="InvImgItems">
+                                            <param id="0" name="Object">invSlot</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="288455188444031" type="InvImgItems">
+                                            <param id="0" name="Frame number">equipSlots.returnValue</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="284087283309402" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_body.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="857486162840897" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">InvImgItems.AnimationFrame</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="615276098196483" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="966794125923267">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="552939848384557" type="System" />
+                                        <condition id="3" name="Compare frame" sid="746551001052439" type="equipSlots">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="528124877565819" type="System">
+                                            <param id="0" name="Count">arr_body.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="177460958291346" type="arr_body">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="536607165310354" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">5</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="477557084153263" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="281265967402371" type="System" />
+                                        <action id="-10" name="Set value" sid="368569672144142" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_body.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="693537311468840" type="InvImgItems" />
+                                        <action id="-13" name="Set boolean" sid="508434214026582" type="invSlot">
+                                            <param id="0" name="Instance variable">used</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="845409046962541" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="474533882908251" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="349886024540582">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="227041696542396" type="equipSlots">
+                                            <param id="0" name="Instance variable">type</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="416862636875454" type="craft_gunR">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="341455168776622" type="craft_gunL">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="248042133399957" type="System">
+                                            <param id="0" name="Object">equipSlots</param>
+                                            <param id="1" name="Expression">equipSlots.UID</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">craft_gunR.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="366660031578483">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="546148136374411" type="equipSlots">
+                                                    <param id="0" name="Comparison">1</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
+                                                <condition id="-12" name="Repeat" sid="971083993701579" type="System">
+                                                    <param id="0" name="Count">arr_gun_l.Width</param>
+                                                </condition>
+                                                <condition id="1" name="Compare at XY" sid="538735380867026" type="arr_gun_l">
+                                                    <param id="0" name="X">loopindex</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="356569381329876" type="arr_temp_robots">
+                                                    <param id="0" name="X">button_create.currentRobot</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">loopindex</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="943140338202967" type="equipSlots">
+                                                    <param id="0" name="Frame number">loopindex</param>
+                                                </action>
+                                                <action id="-24" name="Stop loop" sid="235967220754533" type="System" />
+                                                <action id="-4" name="Set position to another object" sid="762713415359777" type="InvImgItems">
+                                                    <param id="0" name="Object">invSlot</param>
+                                                    <param id="1" name="Image point (optional)">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="451467381019210" type="InvImgItems">
+                                                    <param id="0" name="Frame number">equipSlots.returnValue</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="692319878657389" type="equipSlots">
+                                                    <param id="0" name="Instance variable">returnValue</param>
+                                                    <param id="1" name="Value">arr_gun_l.At(Self.AnimationFrame,0)</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="206239576401628" type="arr_temp_inv">
+                                                    <param id="0" name="X">invSlot.slotID</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">InvImgItems.AnimationFrame</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="895940847890090" type="arr_temp_inv">
+                                                    <param id="0" name="X">invSlot.slotID</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="763291884758469">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="252767091692369" type="System" />
+                                                <condition id="3" name="Compare frame" sid="908866430987975" type="equipSlots">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
+                                                <condition id="-12" name="Repeat" sid="319927740534319" type="System">
+                                                    <param id="0" name="Count">arr_gun_l.Width</param>
+                                                </condition>
+                                                <condition id="1" name="Compare at XY" sid="563535299810563" type="arr_gun_l">
+                                                    <param id="0" name="X">loopindex</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set at XY" sid="143821546067011" type="arr_temp_robots">
+                                                    <param id="0" name="X">button_create.currentRobot</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">loopindex</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="150449071804347" type="equipSlots">
+                                                    <param id="0" name="Frame number">loopindex</param>
+                                                </action>
+                                                <action id="-24" name="Stop loop" sid="331551597093265" type="System" />
+                                                <action id="-10" name="Set value" sid="964171866641851" type="equipSlots">
+                                                    <param id="0" name="Instance variable">returnValue</param>
+                                                    <param id="1" name="Value">arr_gun_l.At(Self.AnimationFrame,0)</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="966881259530390" type="InvImgItems" />
+                                                <action id="-13" name="Set boolean" sid="887919568403044" type="invSlot">
+                                                    <param id="0" name="Instance variable">used</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="697550960499833" type="arr_temp_inv">
+                                                    <param id="0" name="X">invSlot.slotID</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="883843626054554" type="arr_temp_inv">
+                                                    <param id="0" name="X">invSlot.slotID</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="678606331471580">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="568520971240265" type="equipSlots">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="463368590028227" type="craft_gunR">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="375303708977060" type="craft_gunL">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="838278724500418" type="System">
+                                    <param id="0" name="Object">equipSlots</param>
+                                    <param id="1" name="Expression">equipSlots.UID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">craft_gunL.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="569832425704211">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="798595489624930" type="equipSlots">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="611904932221013" type="System">
+                                            <param id="0" name="Count">arr_gun_r.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="120814619986120" type="arr_gun_r">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="977822728132512" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="917002872880010" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="378130825473311" type="System" />
+                                        <action id="-4" name="Set position to another object" sid="853875623986420" type="InvImgItems">
+                                            <param id="0" name="Object">invSlot</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="951342583891772" type="InvImgItems">
+                                            <param id="0" name="Frame number">equipSlots.returnValue</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="248112661428071" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_gun_r.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="115700079085844" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">InvImgItems.AnimationFrame</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="497381738760526" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="751693954592110">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="860929478309036" type="System" />
+                                        <condition id="3" name="Compare frame" sid="895703962705732" type="equipSlots">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="817887280612382" type="System">
+                                            <param id="0" name="Count">arr_gun_r.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="306588415817187" type="arr_gun_r">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="229305888290535" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="345574719545144" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="766338279309739" type="System" />
+                                        <action id="-10" name="Set value" sid="332747284671585" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_gun_r.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="909650434259108" type="InvImgItems" />
+                                        <action id="-13" name="Set boolean" sid="429111158144981" type="invSlot">
+                                            <param id="0" name="Instance variable">used</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="968586210850429" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="933183727641405" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="419415815074841">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="723762678167928" type="equipSlots">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="112891818884674" type="craft_gunR">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="647335803126570" type="craft_gunL">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="875937612678974" type="System">
+                                    <param id="0" name="Object">equipSlots</param>
+                                    <param id="1" name="Expression">equipSlots.UID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">craft_gunR.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="482863412092431">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="136887773390167" type="equipSlots">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="489019883050656" type="System">
+                                            <param id="0" name="Count">arr_gun_l.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="620254170997503" type="arr_gun_l">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="240591875844568" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="125815110110627" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="607735268110497" type="System" />
+                                        <action id="-4" name="Set position to another object" sid="417085718132419" type="InvImgItems">
+                                            <param id="0" name="Object">invSlot</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="448398361419970" type="InvImgItems">
+                                            <param id="0" name="Frame number">equipSlots.returnValue</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="604472376683161" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_gun_l.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="902270728988590" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">InvImgItems.AnimationFrame</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="719055202260161" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="587717258637155">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="851843567554019" type="System" />
+                                        <condition id="3" name="Compare frame" sid="573630279354882" type="equipSlots">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="923912503523189" type="System">
+                                            <param id="0" name="Count">arr_gun_l.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="934360321657116" type="arr_gun_l">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="442750470376317" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="306866746564609" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="376862940505432" type="System" />
+                                        <action id="-10" name="Set value" sid="332322325615731" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_gun_l.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="848068408405874" type="InvImgItems" />
+                                        <action id="-13" name="Set boolean" sid="729838053390774" type="invSlot">
+                                            <param id="0" name="Instance variable">used</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="549577386162304" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="736672207600585" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="829797603872552">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="503138095681098" type="equipSlots">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="286546088091138">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="831240763774905" type="equipSlots">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="687967164507907" type="System">
+                                            <param id="0" name="Count">arr_leg.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="730483440674796" type="arr_leg">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="325669815317660" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">6</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="641098905290530" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="723129932843540" type="System" />
+                                        <action id="-4" name="Set position to another object" sid="690766376887550" type="InvImgItems">
+                                            <param id="0" name="Object">invSlot</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="988928208718567" type="InvImgItems">
+                                            <param id="0" name="Frame number">equipSlots.returnValue</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="155937672309870" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_leg.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="392008395184523" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">InvImgItems.AnimationFrame</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="354188644083448" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="569587751130286">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="754422859993071" type="System" />
+                                        <condition id="3" name="Compare frame" sid="259448411829148" type="equipSlots">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="-12" name="Repeat" sid="641422170969961" type="System">
+                                            <param id="0" name="Count">arr_leg.Width</param>
+                                        </condition>
+                                        <condition id="1" name="Compare at XY" sid="315733651587724" type="arr_leg">
+                                            <param id="0" name="X">loopindex</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">InvImgItems.AnimationFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="438387229447785" type="arr_temp_robots">
+                                            <param id="0" name="X">button_create.currentRobot</param>
+                                            <param id="1" name="Y">6</param>
+                                            <param id="2" name="Value">loopindex</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="678176609483644" type="equipSlots">
+                                            <param id="0" name="Frame number">loopindex</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="151568020112808" type="System" />
+                                        <action id="-10" name="Set value" sid="225929485513045" type="equipSlots">
+                                            <param id="0" name="Instance variable">returnValue</param>
+                                            <param id="1" name="Value">arr_leg.At(Self.AnimationFrame,0)</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="733079892824837" type="InvImgItems" />
+                                        <action id="-13" name="Set boolean" sid="366149127468510" type="invSlot">
+                                            <param id="0" name="Instance variable">used</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="259951537112042" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="728278955580889" type="arr_temp_inv">
+                                            <param id="0" name="X">invSlot.slotID</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
